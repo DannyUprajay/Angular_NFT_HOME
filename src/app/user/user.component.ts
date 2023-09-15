@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {UserInterface} from "../user.interface";
 import {FormControl, FormGroup} from "@angular/forms";
 import {DatePipe} from "@angular/common";
-import {UserService} from "../user.service";
+import {UserService} from "../services/user.service";
 
 
 @Component({

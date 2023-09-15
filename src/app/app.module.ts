@@ -6,11 +6,19 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {DatePipe} from "@angular/common";
 import { UserComponent } from './user/user.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { NftComponent } from './nft/nft.component';
+import { EthComponent } from './eth/eth.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    HomeComponent,
+    HeaderComponent,
+    NftComponent,
+    EthComponent
   ],
   imports: [
     BrowserModule,
