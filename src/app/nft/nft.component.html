@@ -23,14 +23,14 @@
 <div class="modal" id="modalNft" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header ">
-        <h5 class="modal-title text-center ">{{nftDetail?.name}}</h5>
+      <div class="modal-header text-center">
+        <h5 class="modal-title mx-auto" style="width: 700px;">{{nftDetail?.name}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="row">
-      <div class="modal-body col-2">
-        <img style="width: 200px;" src="{{nftDetail?.pathImage}}" alt="">
-      </div>
+        <div class="modal-body col-2">
+          <img style="width: 200px; height: 300px; object-fit: contain" src="{{nftDetail?.pathImage}}" alt="">
+        </div>
         <div class="modal-body col-6">
           <p class="text-center">{{nftDetail?.price}}</p>
         </div>
