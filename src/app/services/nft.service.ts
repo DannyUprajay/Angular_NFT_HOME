@@ -20,4 +20,5 @@ export class NftService {
     return this.http.get<NftInterface>('http://127.0.0.1:8000/nft/' + id);
   }
 
+
 }
