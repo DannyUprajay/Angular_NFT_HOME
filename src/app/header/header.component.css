@@ -10,14 +10,13 @@ nav a{
 }
 
 nav ul a:hover{
-  color: white;
+  color: #54b068;
   transition: 0.5s;
   text-decoration: underline white;
 }
 .active{
-  color: white;
-  /*transition: 0.5s;*/
-  text-decoration: underline white;
+  color: #54b068;
+  text-decoration: underline #54b068;
 }
 
 hr{
