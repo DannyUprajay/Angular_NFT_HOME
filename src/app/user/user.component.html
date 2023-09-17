@@ -52,46 +52,64 @@
 </div>
 
 
+<div class="container text-light">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">Prénom</label>
+      <div class="col-md-6">
+        <input type="text" id="firstName" formControlName="firstName" class="form-control" required>
+      </div>
+      </div>
 
-<form class="container" [formGroup]="form" (ngSubmit)="onSubmit()">
-
-  <div class="mb-3">
-    <label class="form-label">Prénom</label>
-    <input type="text" formControlName="firstName" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Nom de famille</label>
-    <input type="text" formControlName="lastName" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Email</label>
-    <input type="email" formControlName="email" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Mot de passe</label>
-    <input type="password" formControlName="password" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Genre</label>
-    <input type="text" formControlName="gender" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Adresse</label>
-    <input type="text" formControlName="label" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Code postal</label>
-    <input type="text" formControlName="postalCode" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Pays</label>
-    <input type="text" formControlName="contry" required>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Date de naissance</label>
-    <input type="date" formControlName="birth" required>
-  </div>
-
-  <button type="submit" [disabled]="!form.valid">Valider</button>
-</form>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Nom de famille</label>
+      <div class="col-md-6">
+      <input type="text" id="lastName" formControlName="lastName" class="form-control" required>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <div class="col-md-6">
+      <input type="email" id="email" formControlName="email" class="form-control" required>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Mot de passe</label>
+      <div class="col-md-6">
+      <input type="password" id="password" formControlName="password" class="form-control" required>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="gender" class="form-label">Genre</label>
+      <div class="col-md-6">
+      <input type="text" id="gender" formControlName="gender" class="form-control" required>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Adresse</label>
+      <div class="col-md-6">
+      <input type="text" id="address" formControlName="label" class="form-control" required>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="postalCode" class="form-label">Code postal</label>
+      <div class="col-md-6">
+      <input type="text" id="postalCode" formControlName="postalCode" class="form-control" required>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="country" class="form-label">Pays</label>
+      <div class="col-md-6">
+      <input type="text" id="country" formControlName="country" class="form-control" required>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="birthDate" class="form-label">Date de naissance</label>
+      <div class="col-md-6">
+      <input type="date" id="birthDate" formControlName="birth" class="form-control" required>
+    </div>
+    </div>
+    <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Valider</button>
+  </form>
+</div>
 

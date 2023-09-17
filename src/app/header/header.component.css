@@ -5,12 +5,18 @@
 }
 
 nav a{
-  color: dimgrey;
+  color: white;
   font-family: 'Rubik', sans-serif;
 }
 
 nav ul a:hover{
   color: white;
+  transition: 0.5s;
+  text-decoration: underline white;
+}
+.active{
+  color: white;
+  /*transition: 0.5s;*/
   text-decoration: underline white;
 }
 
