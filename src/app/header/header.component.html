@@ -1,24 +1,34 @@
-<nav class="navbar navbar-expand-lg bg-light">
+
+
+<nav style="" class="navbar navbar-expand-lg navbar-light p-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="logo navbar-brand text-light" href="#">Lové <span style="color:  #54b068"> NFT</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+
+    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+          <a class="nav-link mx-2" aria-current="page" routerLink="">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="user">user</a>
+          <a class="nav-link mx-2" routerLink="nft">NFT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="nft">NFT</a>
+          <a class="nav-link mx-2" routerLink="eth">ETH</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="eth">ETH</a>
+      </ul>
+      <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+        <li class="nav-item mx-2">
+          <a routerLink="user">
+          <img class="rounded-circle" style="width: 50px;" src="https://i.pinimg.com/564x/18/01/6d/18016d92bf8d27634bdc9adfe8a636cf.jpg" alt="">
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<hr>
