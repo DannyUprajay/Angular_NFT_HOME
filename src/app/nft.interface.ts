@@ -3,5 +3,6 @@ export interface NftInterface {
   name: string,
   pathImage: string,
   price: number,
+  username: string,
   date: any
 }

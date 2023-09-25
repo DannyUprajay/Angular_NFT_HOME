@@ -10,8 +10,9 @@
       <div class="card-body ">
         <p class="card-text"><small class="text-muted">${{nft.price}}</small></p>
         <h5 class="card-title">{{nft.name}}</h5>
+        <h5 class="card-title">{{nft.us}}</h5>
         <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>
-        <button (click)="viewOneNft(nft.id)" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalNft">Voir le NFT</button>
+<!--     <button (click)="viewOneNft(nft.id)" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalNft">Voir le NFT</button>-->
       </div>
     </div>
   </div>
@@ -19,26 +20,25 @@
 </div>
 </div>
 
-
-<div class="modal" id="modalNft" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h5 class="modal-title mx-auto" style="width: 700px;">{{nftDetail?.name}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="row">
-        <div class="modal-body col-2">
-          <img style="width: 200px; height: 300px; object-fit: contain" src="{{nftDetail?.pathImage}}" alt="">
-        </div>
-        <div class="modal-body col-6">
-          <p class="text-center">{{nftDetail?.price}}</p>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+<!--<div class="modal" id="modalNft" tabindex="-1">-->
+<!--  <div class="modal-dialog">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header text-center">-->
+<!--        <h5 class="modal-title mx-auto" style="width: 700px;">{{nftDetail?.name}}</h5>-->
+<!--        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--      </div>-->
+<!--      <div class="row">-->
+<!--        <div class="modal-body col-2">-->
+<!--          <img style="width: 200px; height: 300px; object-fit: contain" src="{{nftDetail?.pathImage}}" alt="">-->
+<!--        </div>-->
+<!--        <div class="modal-body col-6">-->
+<!--          <p class="text-center">{{nftDetail?.price}}</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
