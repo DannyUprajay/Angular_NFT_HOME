@@ -25,12 +25,12 @@ export class NftComponent implements OnInit{
     });
   }
 
-  // viewOneNft(id:number){
-  //   this.serviceNft.getNftById(id).subscribe(nftResult => {
-  //     this.nftDetail = nftResult;
-  //     console.log(this.nftDetail);
-  //   })
-  // }
+  viewOneNft(id:number){
+    this.serviceNft.getNftById(id).subscribe(nftResult => {
+      this.nftDetail = nftResult;
+      console.log(this.nftDetail);
+    })
+  }
 
 
 }
