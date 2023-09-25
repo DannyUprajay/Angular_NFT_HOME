@@ -4,13 +4,15 @@
 <div class="container">
   <div class="row">
   <div *ngFor="let nft of nfts; let index = index;" class="col-4 ">
+
     <div  class="card mb-3 p-2">
+      <h5 class="card-title text-center ">{{nft.user.username}}</h5>
       <img style="width: 300px; height: 350px; object-fit: cover; margin: 0 auto 10px;" src="{{nft.pathImage}}"  class="img-fluid rounded-start" alt="...">
     <div class="text-center">
       <div class="card-body ">
-        <p class="card-text"><small class="text-muted">${{nft.price}}</small></p>
+        <p class="card-text"><small class="text-muted">{{nft.price}}ETH</small></p>
         <h5 class="card-title">{{nft.name}}</h5>
-        <h5 class="card-title">{{nft.us}}</h5>
+
         <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>
 <!--     <button (click)="viewOneNft(nft.id)" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalNft">Voir le NFT</button>-->
       </div>
