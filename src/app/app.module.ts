@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { NftComponent } from './nft/nft.component';
 import { EthComponent } from './eth/eth.component';
 import { LoginComponent } from './login/login.component';
+import { NftDetailComponent } from './nft-detail/nft-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     NftComponent,
     EthComponent,
-    LoginComponent
+    LoginComponent,
+    NftDetailComponent
   ],
   imports: [
     BrowserModule,

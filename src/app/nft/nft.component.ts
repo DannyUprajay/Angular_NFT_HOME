@@ -90,4 +90,6 @@ export class NftComponent implements OnInit{
 
   }
 
+
+
 }

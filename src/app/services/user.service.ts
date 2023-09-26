@@ -30,4 +30,6 @@ export class UserService {
   deleteUser(id: number): Observable<result>{
     return this.http.delete<result>('https://127.0.0.1:8000/user/' + id);
   }
+
+
 }
