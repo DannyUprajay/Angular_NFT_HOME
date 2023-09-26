@@ -10,22 +10,22 @@ export class AuthService {
     private route:Router
   ) { }
 
-  saveToken(token:string){
-    localStorage.setItem('token',token);
+  saveToken(token: string) {
+    localStorage.setItem('token', token);
     this.route.navigate(['/portables']);
   }
 
-  isLogged():boolean{
+  isLogged(): boolean {
     const token = localStorage.getItem('token');
-    return !! token;
+    return !!token;
   }
 
-  clearToken(){
+  clearToken() {
     localStorage.removeItem('token');
     this.route.navigate(['/']);
   }
 
-  getToken(){
+  getToken() {
     return localStorage.getItem('token');
   }
 

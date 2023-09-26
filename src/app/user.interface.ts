@@ -6,7 +6,8 @@ export interface UserInterface {
   adress: AdressInterface,
   gender: string,
   password: string,
-  birth: any
+  birth: any,
+  username: string
 }
 
 export interface  AdressInterface {

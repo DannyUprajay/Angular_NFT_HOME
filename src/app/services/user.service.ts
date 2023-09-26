@@ -13,21 +13,21 @@ export class UserService {
 
 
   getAllUser(): Observable<UserInterface[]>{
-    return this.http.get<UserInterface[] >("http://127.0.0.1:8000/user/");
+    return this.http.get<UserInterface[] >("https://127.0.0.1:8000/user/");
   }
 
   getUserById(id: number): Observable<UserInterface>{
-    return this.http.get<UserInterface>('http://127.0.0.1:8000/user/' + id);
+    return this.http.get<UserInterface>('https://127.0.0.1:8000/user/' + id);
   }
 
   addUser(user: UserInterface): Observable<result> {
     const body = JSON.stringify(user);
     const header = { 'content-type': 'application/x-www-form-urlencoded'};
-    return this.http.post<result>("http://127.0.0.1:8000/user/new", body, {'headers': header})
+    return this.http.post<result>("https://127.0.0.1:8000/user/new", body, {'headers': header})
 
   }
 
   deleteUser(id: number): Observable<result>{
-    return this.http.delete<result>('http://127.0.0.1:8000/user/' + id);
+    return this.http.delete<result>('https://127.0.0.1:8000/user/' + id);
   }
 }

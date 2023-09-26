@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 import {NftInterface} from "../nft.interface";
-import {UserInterface} from "../user.interface";
+import {result, UserInterface} from "../user.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +20,14 @@ export class NftService {
     return this.http.get<NftInterface>('https://127.0.0.1:8000/nft/' + id);
   }
 
+  addNft(nft: NftInterface, token: string): Observable<result> {
+    const body = JSON.stringify(nft);
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+
+    return this.http.post<result>('https://127.0.0.1:8000/nft/new', body, { headers });
+  }
 
 }

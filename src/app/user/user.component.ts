@@ -26,6 +26,7 @@ export class UserComponent {
     postalCode: new FormControl(''),
     contry: new FormControl(''),
     birth: new FormControl(''),
+    username: new FormControl(''),
     // image: new FormControl('')
   });
   constructor(private service: UserService, private datePipe: DatePipe) {
@@ -48,7 +49,7 @@ export class UserComponent {
   onSubmit() {
     // window.location.reload();
     if (this.form.valid) {
-      window.location.reload();
+      // window.location.reload();
       const formattedBirth = this.datePipe.transform(this.form.value.birth, 'dd/MM/yyyy');
 
       const user: UserInterface = {
@@ -57,6 +58,7 @@ export class UserComponent {
         lastName: this.form.value.lastName,
         email: this.form.value.email,
         gender: this.form.value.gender,
+          username: this.form.value.username,
         adress: {
           label: this.form.value.label,
           contry: this.form.value.contry,

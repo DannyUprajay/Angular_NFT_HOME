@@ -4,13 +4,13 @@
   <div class="row">
     <div *ngFor="let nft of nfts; let index = index;" class="col-4">
       <div class="card mb-3 p-2 h-100">
-        <h5 class="card-title text-center">{{nft.user.username}}</h5>
+<!--        <h5 class="card-title text-center">{{nft.user.username}}</h5>-->
         <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect" alt="NFT Image">
         <div class="text-center">
           <div class="card-body">
             <p class="card-text p-0 m-0"><small class="text-muted">{{nft.price}} ETH</small></p>
             <h5 class="card-title">{{nft.name}}</h5>
-            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>
+<!--            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>-->
             <div class="likes">
               <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>
               <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span>
@@ -22,3 +22,29 @@
     </div>
   </div>
 </div>
+
+
+<div class="container text-light">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <div class="col-md-6">
+        <input type="text" id="name" formControlName="name" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="pathImage" class="form-label">Image Path</label>
+      <div class="col-md-6">
+        <input type="text" id="pathImage" formControlName="pathImage" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <div class="col-md-6">
+        <input type="number" id="price" formControlName="price" class="form-control" required>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Create NFT</button>
+  </form>
+</div>
+
