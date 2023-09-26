@@ -13,11 +13,11 @@ export class NftService {
   constructor(private http: HttpClient) { }
 
   getAllNft(): Observable<NftInterface[]>{
-    return this.http.get<NftInterface[] >("http://127.0.0.1:8000/nft/");
+    return this.http.get<NftInterface[] >("https://127.0.0.1:8000/nft/");
   }
 
   getNftById(id: number): Observable<NftInterface>{
-    return this.http.get<NftInterface>('http://127.0.0.1:8000/nft/' + id);
+    return this.http.get<NftInterface>('https://127.0.0.1:8000/nft/' + id);
   }
 
 
