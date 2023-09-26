@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   public form:FormGroup = new FormGroup({
-    username: new FormControl("test@test.com"),
+    username: new FormControl("vegeta@gmail.com"),
     password: new FormControl("toto123")
   })
 
