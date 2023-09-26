@@ -32,5 +32,19 @@ export class NftComponent implements OnInit{
     })
   }
 
+  likesState: { [key: number]: boolean } = {};
+
+  // ...
+
+  toggleLike(nftId: number) {
+    // Utilisez l'ID du NFT pour identifier le NFT concerné
+    if (!this.likesState[nftId]) {
+      this.likesState[nftId] = true;
+      // Vous pouvez ajouter ici la logique pour envoyer une requête à votre API pour ajouter un like
+    } else {
+      this.likesState[nftId] = false;
+      // Vous pouvez ajouter ici la logique pour envoyer une requête à votre API pour retirer un like
+    }
+  }
 
 }

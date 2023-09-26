@@ -1,0 +1,53 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.heart {
+  font-size: 20px;
+  color: red;
+  margin-right: 5px;
+}
+
+.like-count {
+  font-size: 16px;
+  color: #333;
+}
+.nft-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.like-cursor {
+  cursor: pointer;
+}
