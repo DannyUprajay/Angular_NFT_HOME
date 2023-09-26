@@ -20,9 +20,17 @@ export interface result{
   err: string | undefined
   userApi: string | undefined
 
-
-
 }
+export interface ICredentials {
+  "email": string,
+  "password": number
+}
+
+export interface IToken{
+  token : string
+}
+
+
 
 // {
 //   "id": 1,

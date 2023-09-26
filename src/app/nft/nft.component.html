@@ -5,7 +5,7 @@
     <div *ngFor="let nft of nfts; let index = index;" class="col-4">
       <div class="card mb-3 p-2 h-100">
         <h5 class="card-title text-center">{{nft.user.username}}</h5>
-        <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 " alt="NFT Image">
+        <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect" alt="NFT Image">
         <div class="text-center">
           <div class="card-body">
             <p class="card-text p-0 m-0"><small class="text-muted">{{nft.price}} ETH</small></p>
@@ -13,7 +13,7 @@
             <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>
             <div class="likes">
               <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>
-              <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span> <!-- Affiche 1 si liké, 0 sinon -->
+              <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span>
             </div>
             <button (click)="viewOneNft(nft.id)" type="button" class="btn btn-dark">Voir le NFT</button>
           </div>
@@ -22,4 +22,3 @@
     </div>
   </div>
 </div>
-

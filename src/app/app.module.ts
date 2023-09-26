@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { NftComponent } from './nft/nft.component';
 import { EthComponent } from './eth/eth.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EthComponent } from './eth/eth.component';
     HomeComponent,
     HeaderComponent,
     NftComponent,
-    EthComponent
+    EthComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

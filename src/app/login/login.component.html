@@ -1,0 +1,19 @@
+<p>login works!</p>
+
+<div class="text-center">
+  <form (ngSubmit)="handleSubmit()" [formGroup]="form">
+    <div>
+      <label class="text-danger">Email </label>
+      <div>
+        <input type="email" formControlName="username" required/>
+      </div>
+    </div>
+    <div>
+      <label>Password</label>
+      <div>
+        <input type="password" formControlName="password" required/>
+      </div>
+    </div>
+    <button type="submit">Valider</button>
+  </form>
+</div>

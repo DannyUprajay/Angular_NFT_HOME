@@ -51,3 +51,11 @@
 .like-cursor {
   cursor: pointer;
 }
+.image-3d-effect {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-3d-effect:hover {
+  transform: perspective(1000px) translateZ(20px); /* Ajustez les valeurs selon vos préférences */
+}
+

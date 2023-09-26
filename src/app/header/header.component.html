@@ -19,6 +19,12 @@
         <li class="nav-item" [routerLinkActive]="'active'" >
           <a class="nav-link mx-2" routerLink="eth">ETH</a>
         </li>
+        <li class="nav-item" [routerLinkActive]="'active'" >
+          <a class="nav-link mx-2" routerLink="login">login</a>
+        </li>
+        <li class="nav-item" *ngIf="checkIsLogged()">
+          <a class="nav-link" (click)="logout()">se déconnecter</a>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
         <li class="nav-item mx-2">
