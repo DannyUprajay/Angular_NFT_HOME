@@ -82,4 +82,12 @@ export class NftComponent implements OnInit{
     }
   }
 
+  delete(id: number, index: number) {
+    this.serviceNft.deleteNft(id).subscribe(resultatDelete => {
+      this.nfts.splice(index,1);
+      console.log(this.nfts);
+    });
+
+  }
+
 }

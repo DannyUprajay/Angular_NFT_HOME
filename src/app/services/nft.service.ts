@@ -30,4 +30,8 @@ export class NftService {
     return this.http.post<result>('https://127.0.0.1:8000/nft/new', body, { headers });
   }
 
+  deleteNft(id: number): Observable<result>{
+    return this.http.delete<result>('https://127.0.0.1:8000/nft/' + id);
+  }
+
 }
