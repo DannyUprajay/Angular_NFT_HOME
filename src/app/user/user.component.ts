@@ -58,7 +58,7 @@ export class UserComponent {
         lastName: this.form.value.lastName,
         email: this.form.value.email,
         gender: this.form.value.gender,
-          username: this.form.value.username,
+        username: this.form.value.username,
         adress: {
           label: this.form.value.label,
           contry: this.form.value.contry,

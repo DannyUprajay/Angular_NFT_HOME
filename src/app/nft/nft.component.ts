@@ -43,28 +43,22 @@ export class NftComponent implements OnInit{
 
   likesState: { [key: number]: boolean } = {};
 
-  // ...
-
   toggleLike(nftId: number) {
-    // Utilisez l'ID du NFT pour identifier le NFT concerné
+
     if (!this.likesState[nftId]) {
       this.likesState[nftId] = true;
-      // Vous pouvez ajouter ici la logique pour envoyer une requête à votre API pour ajouter un like
     } else {
       this.likesState[nftId] = false;
-      // Vous pouvez ajouter ici la logique pour envoyer une requête à votre API pour retirer un like
+
     }
   }
 
 
   onSubmit() {
     if (this.form.valid) {
-      // Check if the user is logged in
+      // window.location.reload();
       if (this.authService.isLogged()) {
-        // Get the user's token
         const token = this.authService.getToken();
-
-        // Check if the token is not null before calling addNft
         if (token !== null) {
           const nft: NftInterface = {
             id: 0,
@@ -72,11 +66,8 @@ export class NftComponent implements OnInit{
             pathImage: this.form.value.pathImage,
             price: this.form.value.price,
           };
-
-          // Pass the token to addNft method
           this.serviceNft.addNft(nft, token).subscribe(response => {
-            this.getNft();
-            this.form.reset();
+
           });
         } else {
           console.log('User token is null');
@@ -84,6 +75,8 @@ export class NftComponent implements OnInit{
       } else {
         console.log('User not authenticated');
       }
+      this.getNft();
+      this.form.reset();
     } else {
       console.log('Form is invalid');
     }
