@@ -12,16 +12,16 @@
 }
 .home_content h1{
   font-family: 'Rubik', sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: justify;
   text-justify: inter-word;
-  margin-left: 8%;
+  margin-left: 10%;
   color: white;
 }
 
 .home_content p {
   text-align: justify;
-  margin-left: 9%;
+  margin-left: 11%;
   color: white;
 }
 .home_content button{
@@ -54,7 +54,7 @@
 
 .img_home {
   border: solid dimgrey 10px;
-  height: 70%;
+  height: 60%;
   margin-top: 20px;
 }
 
