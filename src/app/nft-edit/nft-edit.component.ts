@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {NftService} from "../services/nft.service";
 import {FormControl, FormGroup} from "@angular/forms";
 
@@ -13,7 +13,8 @@ export class NftEditComponent implements OnInit{
 
   constructor(
     private route:ActivatedRoute,
-    private nftService : NftService
+    private nftService : NftService,
+    private router: Router
 
   ) {
   }
@@ -37,9 +38,10 @@ export class NftEditComponent implements OnInit{
     price: new FormControl(''),
   });
 
-  onSubmit(){
+  update(){
   this.nftService.updateNft(this.route.snapshot.params['id'], this.editNft.value).subscribe((result)  => {
     console.log(result);
+    this.router.navigate(['/nft/'+ this.route.snapshot.params['id']]);
   })
   }
 }
