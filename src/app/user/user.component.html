@@ -1,37 +1,29 @@
 <h1 class="text-center mb-5">user !</h1>
 
-<div class="container  text-align-center;">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div *ngFor="let user of listUsers; let index = index;" class="col">
-      <div>
-        <div class="card text-center pt-3">
+
+
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let user of listUsers; let index = index;" class="col-4">
+      <div class="card mb-3 p-2 h-100">
+        <h5 class="card-title text-center">By {{user.username}}</h5>
+        <img src="{{user.profilPicture}}" class="nft-image img-fluid rounded-circle w-25 mx-auto image-3d-effect" alt="NFT Image">
+        <div class="text-center">
           <div class="card-body">
-            <div>
-              <h1>{{user.firstName}}</h1>
-            </div>
-            <div>
-              <h1>{{ user.adress.label }}</h1>
-            </div>
-            <p>Code postal: {{ user.adress.postalCode }}</p>
-            <p>Pays: {{ user.adress.contry }}</p>
+            <p class="card-text p-0 m-0"><small class="text-muted">{{user.firstName}} ETH</small></p>
+            <button (click)="viewOneUser(user.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Detail
+            </button>
+            <button (click)="delete(user.id, index)" type="button" class="btn btn-primary m-5">
+              Delete
+            </button>
           </div>
-          <div>
-            <h1>Gallery</h1>
-          </div>
-          <!--      <p>Nom: {{ test.galleries[0].name }}</p>-->
-          <!--      <p>Description: {{ test.galleries[0].description }}</p>-->
         </div>
-        <button (click)="viewOneUser(user.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Detail
-        </button>
-        <button (click)="delete(user.id, index)" type="button" class="btn btn-primary m-5">
-          Delete
-        </button>
       </div>
     </div>
   </div>
 </div>
-
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

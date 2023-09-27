@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../auth.service";
+import {UserInterface} from "../user.interface";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-header',
@@ -10,10 +12,26 @@ export class HeaderComponent implements OnInit {
 
   isLogin: boolean = false;
 
-  constructor(private auth: AuthService) {
+  user: UserInterface | undefined;
+
+  constructor(
+    private auth: AuthService,
+    private userService: UserService
+    ) {
   }
 
   ngOnInit() {
+    if(this.checkIsLogged()){
+      console.log(this.user);
+    }
+
+  }
+
+  getUserById(id: number){
+    this.userService.getUserById(id).subscribe(userResult => {
+      this.user = userResult;
+     console.log(this.user);
+    });
   }
 
   logout(){
@@ -22,6 +40,7 @@ export class HeaderComponent implements OnInit {
 
   checkIsLogged(): boolean {
     return this.auth.isLogged();
+
   }
 
 }

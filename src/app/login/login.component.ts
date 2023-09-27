@@ -27,10 +27,10 @@ export class LoginComponent implements OnInit {
   })
 
   handleSubmit(){
-    console.log(this.form.value);
+    // console.log(this.form.value);
     this.service.login(this.form.value).subscribe(
       (data:IToken)=>{
-        console.log(data.token);
+        // console.log(data.token);
         this.auth.saveToken(data.token)
       },
       err => console.log(err),

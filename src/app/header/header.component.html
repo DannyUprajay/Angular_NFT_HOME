@@ -13,11 +13,12 @@
         </li>
         <li class="nav-item" [routerLinkActive]="'active'">
           <a class="nav-link mx-2" routerLink="nft">NFT</a>
+
         </li>
         <li class="nav-item" [routerLinkActive]="'active'">
           <a class="nav-link mx-2" routerLink="eth">ETH</a>
         </li>
-        <li class="nav-item" [routerLinkActive]="'active'">
+        <li class="nav-item" [routerLinkActive]="'active'" *ngIf="!checkIsLogged()">
           <a class="nav-link mx-2" routerLink="login">login</a>
         </li>
         <li class="nav-item" *ngIf="checkIsLogged()">
@@ -34,7 +35,7 @@
             </div>
             <div *ngIf="checkIsLogged()">
               <img class="rounded-circle" style="width: 50px;"
-                   src="https://i.pinimg.com/564x/18/01/6d/18016d92bf8d27634bdc9adfe8a636cf.jpg" alt="">
+                   [src]="user?.profilPicture" alt="">
             </div>
           </a>
         </li>
