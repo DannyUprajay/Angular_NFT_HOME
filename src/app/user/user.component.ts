@@ -27,7 +27,7 @@ export class UserComponent {
     contry: new FormControl(''),
     birth: new FormControl(''),
     username: new FormControl(''),
-    // image: new FormControl('')
+    profilPicture: new FormControl('')
   });
   constructor(private service: UserService, private datePipe: DatePipe) {
   }
@@ -59,6 +59,7 @@ export class UserComponent {
         email: this.form.value.email,
         gender: this.form.value.gender,
         username: this.form.value.username,
+        profilPicture: this.form.value.profilPicture,
         adress: {
           label: this.form.value.label,
           contry: this.form.value.contry,

@@ -1,5 +1,3 @@
-
-
 <nav style="" class="navbar navbar-expand-lg navbar-light p-3">
   <div class="container-fluid">
     <a class="logo navbar-brand text-light" href="#">Lové <span style="color:  #54b068"> NFT</span></a>
@@ -10,16 +8,16 @@
 
     <div class=" collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto ">
-        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" >
+        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link mx-2" aria-current="page" routerLink="">Home</a>
         </li>
-        <li class="nav-item" [routerLinkActive]="'active'" >
+        <li class="nav-item" [routerLinkActive]="'active'">
           <a class="nav-link mx-2" routerLink="nft">NFT</a>
         </li>
-        <li class="nav-item" [routerLinkActive]="'active'" >
+        <li class="nav-item" [routerLinkActive]="'active'">
           <a class="nav-link mx-2" routerLink="eth">ETH</a>
         </li>
-        <li class="nav-item" [routerLinkActive]="'active'" >
+        <li class="nav-item" [routerLinkActive]="'active'">
           <a class="nav-link mx-2" routerLink="login">login</a>
         </li>
         <li class="nav-item" *ngIf="checkIsLogged()">
@@ -28,8 +26,16 @@
       </ul>
       <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
         <li class="nav-item mx-2">
+
           <a routerLink="user">
-          <img class="rounded-circle" style="width: 50px;" src="https://i.pinimg.com/564x/18/01/6d/18016d92bf8d27634bdc9adfe8a636cf.jpg" alt="">
+            <div *ngIf="!checkIsLogged()">
+              <img class="rounded-circle" style="width: 50px;"
+                   src="  https://i.pinimg.com/564x/ef/66/8d/ef668d9b195722020e22366c94141a24.jpg" alt="">
+            </div>
+            <div *ngIf="checkIsLogged()">
+              <img class="rounded-circle" style="width: 50px;"
+                   src="https://i.pinimg.com/564x/18/01/6d/18016d92bf8d27634bdc9adfe8a636cf.jpg" alt="">
+            </div>
           </a>
         </li>
       </ul>
