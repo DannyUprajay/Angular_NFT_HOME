@@ -22,11 +22,7 @@ export class NftDetailComponent implements OnInit{
     private authService: AuthService
   ) {}
 
-  public form: FormGroup = new FormGroup({
-    name: new FormControl(''),
-    pathImage: new FormControl(''),
-    price: new FormControl(''),
-  });
+
     ngOnInit() {
         this.route.params.subscribe(params => {
             const nftId = +params['id'];

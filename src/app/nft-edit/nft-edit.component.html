@@ -1,1 +1,26 @@
 <p class="text-center text-danger">nft-edit works!</p>
+
+
+<div class="container text-light">
+  <form [formGroup]="editNft" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <div class="col-md-6">
+        <input type="text" id="name" formControlName="name" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="pathImage" class="form-label">Image Path</label>
+      <div class="col-md-6">
+        <input type="text" id="pathImage" formControlName="pathImage" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <div class="col-md-6">
+        <input type="number" id="price" formControlName="price" class="form-control" required>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!editNft.valid" class="btn btn-primary">Create NFT</button>
+  </form>
+</div>
