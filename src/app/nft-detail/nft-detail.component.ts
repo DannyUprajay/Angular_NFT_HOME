@@ -41,29 +41,6 @@ export class NftDetailComponent implements OnInit{
         });
     }
 
-    // editNft(){
-    //
-    //   console.log(this.nft?.price + "salut");
-    // }
 
-  editNft() {
-    if (this.form.valid) {
-      let name = this.form.value.name;
-      let pathImage = this.form.value.pathImage;
-      let price = this.form.value.price;
-
-      // Update the nft object properties
-      if (this.nft) {
-        this.nft.name = name;
-        this.nft.pathImage = pathImage;
-        this.nft.price = price;
-      }
-
-      // Log the updated nft properties
-      console.log('Updated NFT Name:', this.nft?.name);
-      console.log('Updated NFT Path Image:', this.nft?.pathImage);
-      console.log('Updated NFT Price:', this.nft?.price);
-    }
-  }
 
 }
