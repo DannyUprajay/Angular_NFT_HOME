@@ -4,7 +4,7 @@
   <div class="row">
     <div *ngFor="let nft of nfts; let index = index;" class="col-4">
       <div class="card mb-3 p-2 h-100">
-<!--        <h5 class="card-title text-center">{{nft.user.username}}</h5>-->
+        <h5 class="card-title text-center">By {{nft.user.username}}</h5>
         <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect" alt="NFT Image">
         <div class="text-center">
           <div class="card-body">

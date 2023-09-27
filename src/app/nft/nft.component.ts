@@ -63,6 +63,9 @@ export class NftComponent implements OnInit{
           const nft: NftInterface = {
             id: 0,
             name: this.form.value.name,
+            user: {
+              username :''
+            },
             pathImage: this.form.value.pathImage,
             price: this.form.value.price,
           };

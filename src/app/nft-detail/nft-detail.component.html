@@ -1,13 +1,43 @@
 <p>nft-detail works!</p>
 
-<div class="container">
-  <div class="row">
-    <div class="col md-6">
-      <img style="width: 20rem;" src="{{nft?.pathImage}}" alt="">
-    </div>
-    <div class="col md-6 p-5">
-      <h4 class="text-center text-danger">{{nft?.name}}</h4>
-      <p class="text-danger">Price : {{nft?.price}}</p>
+<div class="d-flex justify-content-center">
+  <div class="ms-5">
+    <div class="card" style="width: 18rem;">
+      <img src="{{nft?.pathImage}}" class="card-img-top" alt="...">
+      <div class="card-body text-center">
+        <h5 class="card-title ">{{nft?.name}}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-center">{{nft?.price}}ETH</li>
+      </ul>
+      <div class="card-body text-center">
+<!--        <a  (click)="editNft()" class="card-link">Edit</a>-->
+      </div>
     </div>
   </div>
+</div>
+
+<div class="container text-light">
+  <form [formGroup]="form" (ngSubmit)="editNft()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <div class="col-md-6">
+        <input type="text" id="name" formControlName="name" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="pathImage" class="form-label">Image Path</label>
+      <div class="col-md-6">
+        <input type="text" id="pathImage" formControlName="pathImage" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <div class="col-md-6">
+        <input type="number" id="price" formControlName="price" class="form-control" required>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Create NFT</button>
+  </form>
 </div>
