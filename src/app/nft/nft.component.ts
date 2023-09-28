@@ -20,7 +20,16 @@ export class NftComponent implements OnInit{
     pathImage: new FormControl(''),
     price: new FormControl(''),
   });
-  constructor(private serviceNft: NftService, private authService: AuthService) {
+  constructor(
+    private serviceNft: NftService,
+    private authService: AuthService,
+
+    ) {
+  }
+
+  checkIsLogged(): boolean {
+    return this.authService.isLogged();
+
   }
 
   ngOnInit() {
