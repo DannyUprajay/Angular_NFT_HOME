@@ -72,6 +72,7 @@ export class UserComponent {
       this.service.addUser(user).subscribe(response => {
         this.getUser();
         this.form.reset();
+        console.log(user);
       });
     } else {
       console.log('Formulaire invalide');

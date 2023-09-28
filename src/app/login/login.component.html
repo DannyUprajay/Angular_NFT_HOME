@@ -20,31 +20,42 @@
 <!--</div>-->
 
 
-<h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+
 <div class="container" id="container">
   <div class="form-container sign-up-container">
-    <form action="#">
-      <h1>Create Account</h1>
-<!--      <div class="social-container">-->
-<!--        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>-->
-<!--        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>-->
-<!--        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>-->
-<!--      </div>-->
+    <form [formGroup]="formRegister" (ngSubmit)="register()">
+      <h2 >Create Account</h2>
+          <input type="text" placeholder="firstName"  formControlName="firstName" class="form-control" required>
+          <input type="text" placeholder="profilPicture"  formControlName="profilPicture" class="form-control" required>
+          <input type="text" placeholder="lastName" formControlName="lastName" class="form-control" required>
+          <input type="text" placeholder="username" formControlName="username" class="form-control" required>
+          <input type="email" placeholder="email" formControlName="email" class="form-control" required>
+          <input type="password" placeholder="password" formControlName="password" class="form-control" required>
+          <input type="text" placeholder="genre"  formControlName="gender" class="form-control" required>
+          <input type="text" placeholder="Adresse" formControlName="label" class="form-control" required>
+          <input type="text" placeholder="Code postal" formControlName="postalCode" class="form-control" required>
+          <input type="text" placeholder="Pays" formControlName="contry" class="form-control" required>
+          <input type="date" placeholder="Date de naissance" formControlName="birth" class="form-control" required>
 
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="text"  placeholder="Adresse"  formControlName="label" class="form-control" required>
-      <input type="text" placeholder="Code postal" formControlName="postalCode" required>
-      <input type="text" placeholder="Pays"  formControlName="country" class="form-control" required>
-      <input type="password" placeholder="Password" />
+
+<!--      <input type="text"  placeholder="Nom"  formControlName="firstName"/>-->
+<!--      <input type="email"  placeholder="Email"  formControlName="email" />-->
+<!--      <input type="text"  placeholder="Adresse"  formControlName="label" class="form-control" required>-->
+<!--      <input type="text" placeholder="Code postal" formControlName="postalCode" required>-->
+<!--      <input type="text" placeholder="Pays"  formControlName="contry" class="form-control" required>-->
+<!--      <input type="text"  placeholder="gender"  formControlName="gender" class="form-control" required>-->
+<!--      <input type="text" placeholder="Photo de profil" formControlName="profilPicture" required>-->
+<!--      <input type="date" placeholder="Date de naissance"  formControlName="birth" class="form-control" required>-->
+<!--      <input type="password" placeholder="Password" />-->
 
 
-      <button>Sign Up</button>
+
+      <button type="submit">Sign Up</button>
     </form>
   </div>
   <div class="form-container sign-in-container">
-    <form (ngSubmit)="handleSubmit()" [formGroup]="form">
-      <h1 class="mb-2">Sign in</h1>
+    <form (ngSubmit)="handleSubmit()" [formGroup]="formLogin">
+      <h2 class="font-weight-bold">Sign in</h2>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
