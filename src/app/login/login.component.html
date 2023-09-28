@@ -32,6 +32,18 @@
           <input type="email" placeholder="email" formControlName="email" class="form-control" required>
           <input type="password" placeholder="password" formControlName="password" class="form-control" required>
           <input type="text" placeholder="genre"  formControlName="gender" class="form-control" required>
+      <p>Genre : </p>
+      <div class="d-flex justify-content-between">
+        <input type="radio" id="contactChoice1" name="gender" [value]="'homme'" formControlName="gender" />
+        <label for="contactChoice1">Homme</label>
+
+        <input type="radio" id="contactChoice2" name="gender" [value]="'femme'" formControlName="gender" />
+        <label for="contactChoice2">Femme</label>
+
+        <input type="radio" id="contactChoice3" name="gender" [value]="'autre'" formControlName="gender" />
+        <label for="contactChoice3">Autre</label>
+      </div>
+
           <input type="text" placeholder="Adresse" formControlName="label" class="form-control" required>
           <input type="text" placeholder="Code postal" formControlName="postalCode" class="form-control" required>
           <input type="text" placeholder="Pays" formControlName="contry" class="form-control" required>
