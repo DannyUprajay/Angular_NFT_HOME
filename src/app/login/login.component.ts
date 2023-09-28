@@ -4,6 +4,8 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {IToken} from "../user.interface";
 import {AuthService} from "../auth.service";
 
+declare function login(): any;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,13 +14,14 @@ import {AuthService} from "../auth.service";
 export class LoginComponent implements OnInit {
 
 
+
   constructor(
     private service: LoginService,
     private auth: AuthService
   ) {
   }
   ngOnInit() {
-
+  login();
   }
 
   public form:FormGroup = new FormGroup({
@@ -32,11 +35,14 @@ export class LoginComponent implements OnInit {
       (data:IToken)=>{
         // console.log(data.token);
         this.auth.saveToken(data.token)
+        console.log(data);
       },
       err => console.log(err),
 
     )
 
   }
+
+
 
 }

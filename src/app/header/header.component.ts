@@ -21,26 +21,21 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(this.checkIsLogged()){
-      console.log(this.user);
-    }
+    // if(this.checkIsLogged()){
+    //   console.log(this.user);
+    //   console.log(this.user?.profilPicture);
+    // }
 
-  }
-
-  getUserById(id: number){
-    this.userService.getUserById(id).subscribe(userResult => {
-      this.user = userResult;
-     console.log(this.user);
-    });
   }
 
   logout(){
     this.auth.clearToken();
   }
 
-  checkIsLogged(): boolean {
-    return this.auth.isLogged();
 
-  }
+    checkIsLogged(): boolean {
+        return this.auth.isLogged();
+
+    }
 
 }
