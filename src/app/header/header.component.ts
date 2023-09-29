@@ -21,10 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    // if(this.checkIsLogged()){
-    //   console.log(this.user);
-    //   console.log(this.user?.profilPicture);
-    // }
+
 
   }
 
@@ -37,5 +34,7 @@ export class HeaderComponent implements OnInit {
         return this.auth.isLogged();
 
     }
+
+
 
 }
