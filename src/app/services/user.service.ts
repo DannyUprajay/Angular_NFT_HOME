@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {catchError, EMPTY, Observable} from "rxjs";
 import {result, UserInterface} from "../user.interface";
 import { map } from 'rxjs/operators';
 import {AuthService} from "../auth.service";
@@ -50,18 +50,11 @@ export class UserService {
   }
 
     onSubmit() {
-        this.getUserData().subscribe(
-            (userData) => {
-                if (userData) {
-                    console.log('Données de l\'utilisateur connecté :', userData);
-                    this.userData = userData;
-                } else {
-                    console.log('Aucun utilisateur trouvé.');
-                }
-            },
-            (error) => {
+        return this.getUserData().pipe(
+            catchError((error) => {
                 console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
-            }
+                return EMPTY; // Retourne un observable vide en cas d'erreur
+            })
         );
     }
 

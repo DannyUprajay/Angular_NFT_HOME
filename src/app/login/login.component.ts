@@ -50,19 +50,30 @@ export class LoginComponent implements OnInit {
     profilPicture: new FormControl('')
   });
 
-  handleSubmit(){
-      this.service.login(this.formLogin.value).subscribe(
-          (data: IToken) => {
-              this.auth.saveToken(data.token);
-              console.log(data);
-              this.serviceUser.onSubmit(); // Appel à onSubmit() lorsque l'utilisateur est connecté avec succès.
-          },
-          (err) => console.log(err)
-      );
-  }
+    handleSubmit() {
+        this.service.login(this.formLogin.value).subscribe(
+            (data: IToken) => {
+                this.auth.saveToken(data.token);
+                console.log(data);
+                this.serviceUser.onSubmit().subscribe(
+                    () => {
+                        console.log('Utilisateur connecté avec succès');
+                        window.location.reload();
+                    },
+                    (error) => {
+                        console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+                    }
+                );
+            },
+            (err) => {
+                console.log(err);
+            }
+        );
+    }
 
 
   register() {
+
     if (this.formRegister.valid) {
       const formattedBirth = this.datePipe.transform(this.formRegister.value.birth, 'dd/MM/yyyy');
 
@@ -85,6 +96,7 @@ export class LoginComponent implements OnInit {
 
       this.serviceUser.addUser(user).subscribe(response => {
         // this.getUser();
+          window.location.reload()
         this.formRegister.reset(); // Réinitialisez le formulaire d'inscription
         console.log(user);
       });

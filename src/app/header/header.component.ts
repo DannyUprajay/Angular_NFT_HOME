@@ -12,18 +12,30 @@ export class HeaderComponent implements OnInit {
 
     isLogin: boolean = false;
     user: any;
+    userData: UserInterface | undefined;
 
     constructor(
       private auth: AuthService,
-      private userSerivce: UserService
+      private userService: UserService
       ) {}
 
     ngOnInit() {
-      if(this.isLogin = this.auth.isLogged()){
-          this.userSerivce.onSubmit();
-      }
-
-
+        if (this.auth.isLogged()) {
+            this.userService.onSubmit().subscribe(
+                (userData) => {
+                    if (userData) {
+                        console.log('Données de l\'utilisateur connecté :', userData);
+                        this.userData = userData;
+                        console.log(this.userData.profilPicture);
+                    } else {
+                        console.log('Aucun utilisateur trouvé.');
+                    }
+                },
+                (error) => {
+                    console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+                }
+            );
+        }
     }
 
     logout() {

@@ -33,9 +33,9 @@
               <img class="rounded-circle" style="width: 50px;"
                    src="  https://i.pinimg.com/564x/ef/66/8d/ef668d9b195722020e22366c94141a24.jpg" alt="">
             </div>
-            <div *ngIf="isLogin && user" class="nav-item mx-2">
+            <div *ngIf="checkIsLogged()" class="nav-item mx-2">
               <img class="rounded-circle" style="width: 50px;"
-                   src="{{user?.profilPicture}}" alt="">
+                   src="{{userData?.profilPicture}}" alt="">
             </div>
           </a>
         </li>
