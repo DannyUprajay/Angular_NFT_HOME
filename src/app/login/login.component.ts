@@ -15,7 +15,8 @@ declare function login(): any;
 })
 export class LoginComponent implements OnInit {
 
-
+    userData: any;
+    isLoginFormActive: boolean = true;
 
   constructor(
     private service: LoginService,
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
   ) {
   }
   ngOnInit() {
+    this.serviceUser.onSubmit()
   login();
   }
 
@@ -49,18 +51,16 @@ export class LoginComponent implements OnInit {
   });
 
   handleSubmit(){
-    // console.log(this.formLogin.value);
-    this.service.login(this.formLogin.value).subscribe(
-      (data:IToken)=>{
-        // console.log(data.token);
-        this.auth.saveToken(data.token)
-        console.log(data);
-      },
-      err => console.log(err),
-
-    )
-
+      this.service.login(this.formLogin.value).subscribe(
+          (data: IToken) => {
+              this.auth.saveToken(data.token);
+              console.log(data);
+              this.serviceUser.onSubmit(); // Appel à onSubmit() lorsque l'utilisateur est connecté avec succès.
+          },
+          (err) => console.log(err)
+      );
   }
+
 
   register() {
     if (this.formRegister.valid) {
@@ -91,8 +91,25 @@ export class LoginComponent implements OnInit {
     } else {
       console.log('Formulaire invalide');
     }
+
   }
 
+
+    // onSubmit() {
+    //     this.serviceUser.getUserData().subscribe(
+    //         (userData) => {
+    //             if (userData) {
+    //                 console.log('Données de l\'utilisateur connecté :', userData);
+    //                 this.userData = userData;
+    //             } else {
+    //                 console.log('Aucun utilisateur trouvé.');
+    //             }
+    //         },
+    //         (error) => {
+    //             console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+    //         }
+    //     );
+    // }
 
 
 

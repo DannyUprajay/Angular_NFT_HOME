@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {result, UserInterface} from "../user.interface";
+import { map } from 'rxjs/operators';
+import {AuthService} from "../auth.service";
 
 
 @Injectable({
@@ -9,7 +11,12 @@ import {result, UserInterface} from "../user.interface";
 })
 export class UserService {
 
-  constructor(private http: HttpClient) { }
+    userData: any;
+  constructor(
+    private http: HttpClient,
+    private auth: AuthService
+              )
+  { }
 
 
   getAllUser(): Observable<UserInterface[]>{
@@ -30,6 +37,33 @@ export class UserService {
   deleteUser(id: number): Observable<result>{
     return this.http.delete<result>('https://127.0.0.1:8000/user/' + id);
   }
+
+  getUserData(): Observable<UserInterface | undefined> {
+    const loggedInUsername = this.auth.getLoggedInUsername();
+    console.log('E-mail extrait du token :', loggedInUsername);
+    return this.getAllUser().pipe(
+      map((users: UserInterface[]) => {
+        console.log('Tous les utilisateurs :', users);
+        return users.find(user => user.username === loggedInUsername);
+      })
+    );
+  }
+
+    onSubmit() {
+        this.getUserData().subscribe(
+            (userData) => {
+                if (userData) {
+                    console.log('Données de l\'utilisateur connecté :', userData);
+                    this.userData = userData;
+                } else {
+                    console.log('Aucun utilisateur trouvé.');
+                }
+            },
+            (error) => {
+                console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+            }
+        );
+    }
 
 
 }

@@ -29,4 +29,19 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
+  getLoggedInUsername(): string | null {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const tokenParts = token.split('.');
+      if (tokenParts.length === 3) {
+        const payload = JSON.parse(atob(tokenParts[1]));
+        const username = payload.username; // Utilisez 'username' car c'est le champ dans votre payload
+        return username;
+      }
+    }
+    return null;
+  }
+
+
+
 }

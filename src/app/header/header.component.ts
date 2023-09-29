@@ -10,31 +10,28 @@ import {UserService} from "../services/user.service";
 })
 export class HeaderComponent implements OnInit {
 
-  isLogin: boolean = false;
+    isLogin: boolean = false;
+    user: any;
 
-  user: UserInterface | undefined;
+    constructor(
+      private auth: AuthService,
+      private userSerivce: UserService
+      ) {}
 
-  constructor(
-    private auth: AuthService,
-    private userService: UserService
-    ) {
-  }
+    ngOnInit() {
+      if(this.isLogin = this.auth.isLogged()){
+          this.userSerivce.onSubmit();
+      }
 
-  ngOnInit() {
-
-
-  }
-
-  logout(){
-    this.auth.clearToken();
-  }
-
-
-    checkIsLogged(): boolean {
-        return this.auth.isLogged();
 
     }
 
+    logout() {
+        this.auth.clearToken();
+    }
 
+    checkIsLogged(): boolean {
+        return this.auth.isLogged();
+    }
 
 }
