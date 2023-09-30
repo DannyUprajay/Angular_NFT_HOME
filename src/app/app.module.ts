@@ -13,6 +13,7 @@ import { EthComponent } from './eth/eth.component';
 import { LoginComponent } from './login/login.component';
 import { NftDetailComponent } from './nft-detail/nft-detail.component';
 import { NftEditComponent } from './nft-edit/nft-edit.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NftEditComponent } from './nft-edit/nft-edit.component';
     EthComponent,
     LoginComponent,
     NftDetailComponent,
-    NftEditComponent
+    NftEditComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
