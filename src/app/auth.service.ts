@@ -12,7 +12,7 @@ export class AuthService {
 
   saveToken(token: string) {
     localStorage.setItem('token', token);
-    // this.route.navigate(['/']);
+    this.route.navigate(['/']);
   }
 
   isLogged(): boolean {
