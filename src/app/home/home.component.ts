@@ -11,7 +11,7 @@ import {AuthService} from "../auth.service";
 export class HomeComponent implements OnInit{
 
   nfts: NftInterface[]= [];
-
+  carouselImages: string[] = [];
   constructor(
     private serviceNft: NftService,
     private authService: AuthService,
@@ -27,9 +27,24 @@ export class HomeComponent implements OnInit{
   getNft(){
     this.serviceNft.getAllNft().subscribe(Nfts => {
       this.nfts = Nfts;
+      this.setCarouselImages();
     });
   }
 
+
+  setCarouselImages() {
+    // Générer 3 index aléatoires
+    let randomIndexes: any [] = [];
+    while (randomIndexes.length < 3) {
+      let randomIndex = Math.floor(Math.random() * this.nfts.length);
+      if (!randomIndexes.includes(randomIndex)) {
+        randomIndexes.push(randomIndex);
+      }
+    }
+
+    // Récupérer les chemins d'image pour les index aléatoires
+    this.carouselImages = randomIndexes.map(index => this.nfts[index].pathImage);
+  }
   checkIsLogged(): boolean {
     return this.authService.isLogged();
 

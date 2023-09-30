@@ -58,3 +58,12 @@
   margin-top: 20px;
 }
 
+.carousel-item {
+  height: 600px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
