@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@500&display=swap');
 
+body{
+  background-color: red;
+}
+
 .row {
   height: 90vh;
 }
@@ -16,7 +20,7 @@
   text-align: justify;
   text-justify: inter-word;
   margin-left: 10%;
-  color: white;
+  color: black;
 }
 
 .home_content p {
@@ -26,7 +30,7 @@
 }
 .home_content button{
   background-color: dimgrey;
-  color: white;
+  color: black;
   font-family: 'Rubik', sans-serif;
   width: 30rem;
   height: 7rem;
@@ -67,4 +71,5 @@
   object-fit: cover;
   height: 100%;
 }
+
 
