@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {NftInterface} from "../nft.interface";
 import {NftService} from "../services/nft.service";
 import {AuthService} from "../auth.service";
+import {UserInterface} from "../user.interface";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-home',
@@ -11,16 +13,19 @@ import {AuthService} from "../auth.service";
 export class HomeComponent implements OnInit{
 
   nfts: NftInterface[]= [];
+  listUsers: UserInterface[]= [];
   carouselImages: string[] = [];
   constructor(
     private serviceNft: NftService,
     private authService: AuthService,
+    private service: UserService
 
   ) {
   }
 
   ngOnInit() {
     this.getNft();
+    // this.getUser();
 
   }
 
@@ -30,6 +35,12 @@ export class HomeComponent implements OnInit{
       this.setCarouselImages();
     });
   }
+
+  // getUser(){
+  //   this.service.getAllUser().subscribe(Users => {
+  //     this.listUsers = Users;
+  //   });
+  // }
 
 
   setCarouselImages() {

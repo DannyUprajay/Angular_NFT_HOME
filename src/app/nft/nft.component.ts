@@ -73,7 +73,8 @@ export class NftComponent implements OnInit{
             id: 0,
             name: this.form.value.name,
             user: {
-              username :''
+              username :'',
+              profilPicture: ''
             },
             pathImage: this.form.value.pathImage,
             price: this.form.value.price,

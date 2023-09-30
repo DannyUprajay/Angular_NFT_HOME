@@ -8,6 +8,7 @@ export interface NftInterface {
 }
 
 export interface NftUser {
-  username: string,
+  username: string;
+  profilPicture: string;
 }
 
