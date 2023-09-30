@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+/*body{*/
+/*  background-color: #3c97bf;*/
+/*  box-sizing: border-box;*/
+/*  min-height: 10%;*/
+/*}*/
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-height: 350rem;
+}

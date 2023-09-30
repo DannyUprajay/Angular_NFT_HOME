@@ -30,12 +30,12 @@ export class AuthService {
   }
 
   getLoggedInUsername(): string | null {
-    const token = localStorage.getItem('token');
+    let token = localStorage.getItem('token');
     if (token) {
-      const tokenParts = token.split('.');
+      let tokenParts = token.split('.');
       if (tokenParts.length === 3) {
-        const payload = JSON.parse(atob(tokenParts[1]));
-        const username = payload.username; // Utilisez 'username' car c'est le champ dans votre payload
+        let payload = JSON.parse(atob(tokenParts[1]));
+        let username = payload.username;
         return username;
       }
     }

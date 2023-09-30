@@ -1,58 +1,58 @@
+<div class="home-back ">
 
-
-<div class="container mt-5 ">
-  <div class="row">
-    <div class="col-8">
-      <div class="home_content">
-        <h1>Découvrez et <br> <span style="color: #54b068">collectionnez</span> des <br> NFT extraordinaires</h1>
-        <p>collectionnez et échangez les nft des meilleurs artistes !</p>
-        <button type="button" class="btn">Collectionnez maintenant !</button>
+  <div class="container mt-5 ">
+    <div class="row">
+      <div class="col-8">
+        <div class="home_content">
+          <h1>Découvrez et <br> <span style="color: #54b068">collectionnez</span> des <br> NFT extraordinaires</h1>
+          <p>collectionnez et échangez les nft des meilleurs artistes !</p>
+          <button type="button" class="btn">Collectionnez maintenant !</button>
+        </div>
+      </div>
+      <div class="col-4">
+        <img class="img_home" src="https://i.pinimg.com/564x/66/cc/1c/66cc1ca6c5f9e8c17bcaaf4c04d95cbb.jpg" alt="">
       </div>
     </div>
-    <div class="col-4">
-      <img class="img_home" src="https://i.pinimg.com/564x/66/cc/1c/66cc1ca6c5f9e8c17bcaaf4c04d95cbb.jpg" alt="">
-    </div>
   </div>
-</div>
 
-<div class="container">
+  <div class="container test">
 
-<h2 style="color: #54b068; margin-bottom: 55px;">Populaire cette semaine</h2>
-
+    <h2 style="color: #54b068; margin-bottom: 55px;">Populaire cette semaine</h2>
 
 
-
-
-  <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let image of carouselImages; let i = index" [ngClass]="{'active': i === 0}">
-        <img [src]="image" class="d-block mx-auto" style="max-width: 100%; height: auto;" alt="NFT Image">
+    <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let image of carouselImages; let i = index" [ngClass]="{'active': i === 0}">
+          <img [src]="image" class="d-block mx-auto" style="max-width: 100%; height: auto;" alt="NFT Image">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
-  <div class="container">
+
     <div class="row">
       <div *ngFor="let nft of nfts; let index = index;" class="col-4">
         <div class="card mb-3 p-2 h-70">
           <h5 class="card-title text-center">By {{nft.user.username}}</h5>
-          <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect" alt="NFT Image">
+          <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+               alt="NFT Image">
           <div class="text-center">
             <div class="card-body">
               <p class="card-text p-0 m-0"><small class="text-muted">{{nft.price}} ETH</small></p>
@@ -68,9 +68,7 @@
                     <button type="button" class="btn btn-dark">Voir le NFT</button>
                   </a>
                 </div>
-
               </div>
-
             </div>
           </div>
         </div>
@@ -80,5 +78,3 @@
 
 
 </div>
-
-

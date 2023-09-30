@@ -39,7 +39,7 @@ export class UserService {
   }
 
   getUserData(): Observable<UserInterface | undefined> {
-    const loggedInUsername = this.auth.getLoggedInUsername();
+    let loggedInUsername = this.auth.getLoggedInUsername();
     console.log('E-mail extrait du token :', loggedInUsername);
     return this.getAllUser().pipe(
       map((users: UserInterface[]) => {
@@ -53,7 +53,7 @@ export class UserService {
         return this.getUserData().pipe(
             catchError((error) => {
                 console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
-                return EMPTY; // Retourne un observable vide en cas d'erreur
+                return EMPTY;
             })
         );
     }

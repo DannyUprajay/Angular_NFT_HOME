@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@500&display=swap');
 
-body{
-  background-color: red;
-}
 
-.row {
-  height: 90vh;
-}
+
+/* Reste de votre CSS ici... */
+
+/*.home-back{*/
+/*  background-color: red;*/
+/*}*/
+/*.test {*/
+/*  height: 125rem;*/
+/*}*/
+
+/*.row {*/
+/*  height: 90vh;*/
+/*}*/
 
 .home_content {
   text-align: center;
@@ -29,7 +36,7 @@ body{
   color: white;
 }
 .home_content button{
-  background-color: dimgrey;
+  background-color: gainsboro;
   color: black;
   font-family: 'Rubik', sans-serif;
   width: 30rem;
