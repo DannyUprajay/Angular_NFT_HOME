@@ -4,9 +4,13 @@
 
 /* Reste de votre CSS ici... */
 
-/*.home-back{*/
-/*  background-color: red;*/
-/*}*/
+.home-back {
+  background-image: url("https://img1.wallspic.com/crops/6/4/7/4/7/174746/174746-gojo_satoru-satoru_gojo-jujutsu_kaisen-lanime-manche-3840x2160.jpg");
+ background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+
 /*.test {*/
 /*  height: 125rem;*/
 /*}*/
@@ -82,7 +86,7 @@
 
 .card {
   clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);
- background-color: #091425;
+ background-color: #0A1C37;
 }
 
 .btn-show {
