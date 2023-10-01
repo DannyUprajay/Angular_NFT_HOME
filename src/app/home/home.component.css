@@ -20,23 +20,26 @@
 /*}*/
 
 .home_content {
-  text-align: center;
-  position: relative;
-  top: 15%;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Si vous voulez également centrer le texte horizontalement */
+  height: 100vh; /* Ceci assure que la div occupe au moins la hauteur de la fenêtre visible */
+  justify-content: center; /* Cette propriété assure le centrage vertical */
 }
+
 .home_content h1{
   font-family: 'Rubik', sans-serif;
   font-size: 3rem;
   text-align: justify;
   text-justify: inter-word;
-  margin-left: 10%;
+  margin-right: 10%;
   color: black;
 }
 
 .home_content p {
   text-align: justify;
-  margin-left: 11%;
+  margin-right: 11%;
   color: white;
 }
 .home_content button{
