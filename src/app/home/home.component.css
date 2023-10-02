@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@500&display=swap');
 
+.logo{
+  font-size: 1.5rem;
+}
 
+nav a{
+  color: black;
+  font-family: 'Rubik', sans-serif;
+}
+
+nav ul a:hover{
+  color: white;
+  transition: 0.5s;
+  text-decoration: underline white;
+}
+.active{
+  color: white;
+  text-decoration: underline white;
+}
 
 /* Reste de votre CSS ici... */
 
@@ -23,14 +40,15 @@
 /*  height: 90vh;*/
 /*}*/
 
-.home_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; /* Si vous voulez également centrer le texte horizontalement */
-  height: 100vh; /* Ceci assure que la div occupe au moins la hauteur de la fenêtre visible */
-  justify-content: center; /* Cette propriété assure le centrage vertical */
-}
+/*.home_content {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  text-align: center; !* Si vous voulez également centrer le texte horizontalement *!*/
+/*  height: 20vh; !* Ceci assure que la div occupe au moins la hauteur de la fenêtre visible *!*/
+/*  justify-content: center; !* Cette propriété assure le centrage vertical *!*/
+/*}*/
+
 
 .home_content h1{
   font-family: 'Rubik', sans-serif;
@@ -47,7 +65,7 @@
   color: white;
 }
 .home_content button{
-  background-color: gainsboro;
+  background-color: white;
   color: black;
   font-family: 'Rubik', sans-serif;
   width: 30rem;
@@ -55,23 +73,23 @@
   font-size: 1.2rem;
   margin-top: 30px;
   margin-right: 80px;
-  box-shadow: 5px 11px 5px 0px #54b068;
-  -webkit-box-shadow: 5px 11px 5px 0px #54b068;
-  -moz-box-shadow: 5px 11px 5px 0px #54b068;
+  /*box-shadow: 5px 11px 5px 0px #f1aca9;*/
+  /*-webkit-box-shadow: 5px 11px 5px 0px #f1aca9;*/
+  /*-moz-box-shadow: 5px 11px 5px 0px #f1aca9;*/
 }
 
 .home_content button:hover {
-  background-color: gainsboro;
-  color: black;
+  background-color: #485662;
+  color: #dde1ce;
   transition: 1s;
   font-family: 'Rubik', sans-serif;
   width: 30rem;
   height: 7rem;
   font-size: 1.2rem;
   margin-top: 30px;
-  box-shadow: 5px 11px 5px 0px #54b068;
-  -webkit-box-shadow: 5px 11px 5px 0px #54b068;
-  -moz-box-shadow: 5px 11px 5px 0px #54b068;
+  /*box-shadow: 5px 11px 5px 0px #54b068;*/
+  /*-webkit-box-shadow: 5px 11px 5px 0px #54b068;*/
+  /*-moz-box-shadow: 5px 11px 5px 0px #54b068;*/
 }
 
 .img_home {
@@ -128,4 +146,35 @@
   border-bottom: 10px solid transparent;
   opacity: .5;
   transition: opacity .6s ease;
+}
+
+
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: .5;
+  transition: opacity .15s ease;
+}
+.carousel-control-prev{
+  left: 15%;
+}
+.home-back {
+  background-image: url("https://images5.alphacoders.com/131/1316393.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right top; /* Alignez l'image à droite et au centre verticalement */
+  height: 80vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 74%, 0 100%);
 }

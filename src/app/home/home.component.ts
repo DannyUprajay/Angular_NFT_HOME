@@ -15,17 +15,35 @@ export class HomeComponent implements OnInit{
   nfts: NftInterface[]= [];
   listUsers: UserInterface[]= [];
   carouselImages: string[] = [];
+
+  userData: UserInterface | undefined;
   constructor(
     private serviceNft: NftService,
-    private authService: AuthService,
-    private service: UserService
+    private auth: AuthService,
+    private userService: UserService,
+
 
   ) {
   }
 
   ngOnInit() {
     this.getNft();
-    // this.getUser();
+    if (this.auth.isLogged()) {
+      this.userService.onSubmit().subscribe(
+        (userData) => {
+          if (userData) {
+            console.log('Données de l\'utilisateur connecté :', userData);
+            this.userData = userData;
+            console.log(this.userData.profilPicture);
+          } else {
+            console.log('Aucun utilisateur trouvé.');
+          }
+        },
+        (error) => {
+          console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+        }
+      );
+    }
 
   }
 
@@ -56,10 +74,7 @@ export class HomeComponent implements OnInit{
     // Récupérer les chemins d'image pour les index aléatoires
     this.carouselImages = randomIndexes.map(index => this.nfts[index].pathImage);
   }
-  checkIsLogged(): boolean {
-    return this.authService.isLogged();
 
-  }
 
   likesState: { [key: number]: boolean } = {};
 
@@ -73,4 +88,13 @@ export class HomeComponent implements OnInit{
     }
   }
 
+
+
+  logout() {
+    this.auth.clearToken();
+  }
+
+  checkIsLogged(): boolean {
+    return this.auth.isLogged();
+  }
 }
