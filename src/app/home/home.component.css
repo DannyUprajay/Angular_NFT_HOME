@@ -185,3 +185,6 @@ nav ul a:hover{
 /*.color-home{*/
 /*  background: #b07876;*/
 /*}*/
+.populaire img{
+  max-width: 400px;
+}

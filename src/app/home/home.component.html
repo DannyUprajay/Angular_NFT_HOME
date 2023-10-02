@@ -69,60 +69,126 @@
 
   </nav>
 
-<div class="home-content">
+  <div class="home-content">
 
 
-  <div class="container mt-5 ">
-    <div class="row">
-      <div class="col-8">
-        <div class="home_content">
-          <h1>Découvrez et <br> <span style="color: white">collectionnez</span> des <br> NFT extraordinaires</h1>
-          <p>collectionnez et échangez les nft des meilleurs artistes !</p>
-          <button type="button" class="btn">Collectionnez maintenant !</button>
+    <div class="container mt-5 ">
+      <div class="row">
+        <div class="col-8">
+          <div class="home_content">
+            <h1>Découvrez et <br> <span style="color: white">collectionnez</span> des <br> NFT extraordinaires</h1>
+            <p>collectionnez et échangez les nft des meilleurs artistes !</p>
+            <button type="button" class="btn">Collectionnez maintenant !</button>
+          </div>
         </div>
+        <!--      <div class="col-4">-->
+        <!--        <img class="img_home" src="https://i.pinimg.com/564x/66/cc/1c/66cc1ca6c5f9e8c17bcaaf4c04d95cbb.jpg" alt="">-->
+        <!--      </div>-->
       </div>
-      <!--      <div class="col-4">-->
-      <!--        <img class="img_home" src="https://i.pinimg.com/564x/66/cc/1c/66cc1ca6c5f9e8c17bcaaf4c04d95cbb.jpg" alt="">-->
-      <!--      </div>-->
     </div>
   </div>
 </div>
+
+
+<div class="container border ">
+  <div class="d-flex justify-content-between p-5 text-center align-items-center">
+
+    <div class="col-3">
+      <p style="font-size: 2rem; margin: 0; font-weight: bold">60K</p>
+      <p class="m-0 text-center">Utilisateurs</p>
+    </div>
+
+    <div class="d-flex " style="height: 100px;">
+      <div class="vr"></div>
+    </div>
+
+    <div class="col-3 ">
+      <p style="font-size: 2rem; margin: 0; font-weight: bold">12K</p>
+      <p class="m-0 text-center">Nft</p>
+    </div>
+
+    <div class="d-flex " style="height: 100px;">
+      <div class="vr"></div>
+    </div>
+
+    <div class="col-3">
+      <p style="font-size: 2rem; margin: 0; font-weight: bold">80K</p>
+      <p class="m-0 text-center">Nft vendu</p>
+    </div>
+
+    <div class="d-flex" style="height: 100px;">
+      <div class="vr"></div>
+    </div>
+
+    <div class="col-3">
+      <p style="font-size: 2rem; margin: 0; font-weight: bold">6K</p>
+      <p class="m-0 text-center">Utilisateurs connectés</p>
+    </div>
+
+  </div>
 </div>
 
 
 <h2 style="color: black; margin-bottom: 55px;" class="text-center">Populaire cette semaine</h2>
 
 
-<div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item" *ngFor="let image of carouselImages; let i = index" [ngClass]="{'active': i === 0}">
-      <img [src]="image" class="d-block mx-auto" style="max-width: 100%; height: auto;" alt="NFT Image">
+<div class="container populaire">
+
+  <div class="row text-center">
+
+    <div class="col-4">
+      <div>
+        <img src="https://i.pinimg.com/564x/99/bf/91/99bf91a42ca1fe873dbdb2a1d29c6161.jpg" alt="">
+      </div>
     </div>
+
+    <div class="col-4 mt-5">
+      <div>
+        <img src="https://i.pinimg.com/564x/9e/cd/f0/9ecdf01b4638c7d7517fbc03ca6f9f26.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div style="max-height: 100px; max-width: 100px;">
+        <img src="https://i.pinimg.com/736x/4a/db/d0/4adbd0e50629b5c0b8acb8b6267ed47a.jpg" alt="">
+      </div>
+    </div>
+
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+
+
 </div>
+
+
+<!--<div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">-->
+<!--  <div class="carousel-indicators">-->
+<!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"-->
+<!--            aria-current="true" aria-label="Slide 1"></button>-->
+<!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"-->
+<!--            aria-label="Slide 2"></button>-->
+<!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"-->
+<!--            aria-label="Slide 3"></button>-->
+<!--  </div>-->
+<!--  <div class="carousel-inner">-->
+<!--    <div class="carousel-item" *ngFor="let image of carouselImages; let i = index" [ngClass]="{'active': i === 0}">-->
+<!--      <img [src]="image" class="d-block mx-auto" style="max-width: 100%; height: auto;" alt="NFT Image">-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"-->
+<!--          data-bs-slide="prev">-->
+<!--    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--    <span class="visually-hidden">Previous</span>-->
+<!--  </button>-->
+<!--  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"-->
+<!--          data-bs-slide="next">-->
+<!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--    <span class="visually-hidden">Next</span>-->
+<!--  </button>-->
+<!--</div>-->
+
 
 <div class="color-home">
   <div class="container p-5">
-
-
     <div class="row">
       <div *ngFor="let nft of nfts; let index = index;" class="col-4">
         <div class="card mb-3 p-4 h-70">
