@@ -28,9 +28,6 @@ nav ul a:hover{
 /*  height: 80vh;*/
 /*}*/
 
-/*.color-home{*/
-/*  background: #b07876;*/
-/*}*/
 
 /*.test {*/
 /*  height: 125rem;*/
@@ -135,8 +132,8 @@ nav ul a:hover{
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: right top;
-  height: 80vh;
-  clip-path: polygon(0 0, 100% 0%, 100% 74%, 0 100%);
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
 }
 .home-back h1{
   font-family: 'Rubik', sans-serif;
@@ -181,5 +178,10 @@ nav ul a:hover{
 }
 
 .home-content{
-  margin-top: 5%;
+  margin-top: 8%;
 }
+
+
+/*.color-home{*/
+/*  background: #b07876;*/
+/*}*/
