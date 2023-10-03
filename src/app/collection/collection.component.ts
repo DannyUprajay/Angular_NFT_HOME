@@ -106,11 +106,9 @@ export class CollectionComponent  implements OnInit{
   dysplayNftOfUserLoggin() {
     if (this.auth.isLogged()) {
       let loggedInUsername = this.auth.getLoggedInUsername();
-
       if (loggedInUsername) {
         this.serviceNft.getAllNft().subscribe(
             (nfts: NftInterface[]) => {
-
               this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
               console.log('NFTs de l\'utilisateur connecté :', this.nfts);
             },
