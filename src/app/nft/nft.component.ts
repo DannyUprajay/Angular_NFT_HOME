@@ -16,11 +16,6 @@ export class NftComponent implements OnInit{
   nfts: NftInterface[]= [];
   nftDetail: NftInterface | undefined;
 
-  public form: FormGroup = new FormGroup({
-    name: new FormControl(''),
-    pathImage: new FormControl(''),
-    price: new FormControl(''),
-  });
   constructor(
     private serviceNft: NftService,
     private auth: AuthService,
@@ -61,39 +56,6 @@ export class NftComponent implements OnInit{
     } else {
       this.likesState[nftId] = false;
 
-    }
-  }
-
-
-  onSubmit() {
-    if (this.form.valid) {
-      // window.location.reload();
-      if (this.auth.isLogged()) {
-        const token = this.auth.getToken();
-        if (token !== null) {
-          const nft: NftInterface = {
-            id: 0,
-            name: this.form.value.name,
-            user: {
-              username :'',
-              profilPicture: ''
-            },
-            pathImage: this.form.value.pathImage,
-            price: this.form.value.price,
-          };
-          this.serviceNft.addNft(nft, token).subscribe(response => {
-
-          });
-        } else {
-          console.log('User token is null');
-        }
-      } else {
-        console.log('User not authenticated');
-      }
-      this.getNft();
-      this.form.reset();
-    } else {
-      console.log('Form is invalid');
     }
   }
 

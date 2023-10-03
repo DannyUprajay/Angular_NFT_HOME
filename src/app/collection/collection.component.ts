@@ -34,7 +34,6 @@ export class CollectionComponent  implements OnInit{
   }
 
   ngOnInit() {
-    // this.getNft();
     this.dysplayNftOfUserLoggin();
   }
 
@@ -111,7 +110,7 @@ export class CollectionComponent  implements OnInit{
       if (loggedInUsername) {
         this.serviceNft.getAllNft().subscribe(
             (nfts: NftInterface[]) => {
-              // Filtrer les NFTs pour l'utilisateur connecté
+
               this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
               console.log('NFTs de l\'utilisateur connecté :', this.nfts);
             },
