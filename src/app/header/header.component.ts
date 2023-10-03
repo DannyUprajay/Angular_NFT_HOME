@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
                     if (userData) {
                         console.log('Données de l\'utilisateur connecté :', userData);
                         this.userData = userData;
-                        console.log(this.userData.profilPicture);
+                        console.log(this.userData.username);
                     } else {
                         console.log('Aucun utilisateur trouvé.');
                     }

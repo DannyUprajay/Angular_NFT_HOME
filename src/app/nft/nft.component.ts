@@ -4,6 +4,7 @@ import {NftInterface} from "../nft.interface";
 import {FormControl, FormGroup} from "@angular/forms";
 import {UserInterface} from "../user.interface";
 import {AuthService} from "../auth.service";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-nft',
@@ -12,6 +13,7 @@ import {AuthService} from "../auth.service";
 })
 export class NftComponent implements OnInit{
 
+  userData: UserInterface | undefined;
   nfts: NftInterface[]= [];
   nftDetail: NftInterface | undefined;
 
@@ -22,19 +24,20 @@ export class NftComponent implements OnInit{
   });
   constructor(
     private serviceNft: NftService,
-    private authService: AuthService,
+    private auth: AuthService,
+    private userService: UserService
 
     ) {
   }
 
   checkIsLogged(): boolean {
-    return this.authService.isLogged();
+    return this.auth.isLogged();
 
   }
 
   ngOnInit() {
-    this.getNft();
-
+    // this.getNft();
+      this.dysplayNftOfUserLoggin();
   }
 
   getNft(){
@@ -66,8 +69,8 @@ export class NftComponent implements OnInit{
   onSubmit() {
     if (this.form.valid) {
       // window.location.reload();
-      if (this.authService.isLogged()) {
-        const token = this.authService.getToken();
+      if (this.auth.isLogged()) {
+        const token = this.auth.getToken();
         if (token !== null) {
           const nft: NftInterface = {
             id: 0,
@@ -102,6 +105,26 @@ export class NftComponent implements OnInit{
     });
 
   }
+
+    dysplayNftOfUserLoggin() {
+        if (this.auth.isLogged()) {
+            let loggedInUsername = this.auth.getLoggedInUsername();
+
+            if (loggedInUsername) {
+                this.serviceNft.getAllNft().subscribe(
+                    (nfts: NftInterface[]) => {
+                        // Filtrer les NFTs pour l'utilisateur connecté
+                        this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
+                        console.log('NFTs de l\'utilisateur connecté :', this.nfts);
+                    },
+                    (error) => {
+                        console.error('Erreur lors de la récupération des NFTs :', error);
+                    }
+                );
+            }
+        }
+    }
+
 
 
 
