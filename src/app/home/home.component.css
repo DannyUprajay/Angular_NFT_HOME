@@ -188,3 +188,27 @@ nav ul a:hover{
 .populaire img{
   max-width: 400px;
 }
+
+.bordertest{
+  border: 1px solid #dde1ce ;
+
+}
+.vr{
+  color: #485662;
+}
+.populaire h2{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.populaire button{
+  color: white;
+  background-color: #3c97bf;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 50px;
+  position: relative;
+  left: 25%;
+
+
+}
