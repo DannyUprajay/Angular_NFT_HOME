@@ -19,12 +19,16 @@
           <a class="nav-link mx-2" routerLink="nft">NFT</a>
 
         </li>
+        <li class="nav-item" *ngIf="checkIsLogged()">
+          <a class="nav-link" routerLink="ma collection">Collection</a>
+        </li>
         <li class="nav-item" [routerLinkActive]="'active'">
           <a class="nav-link mx-2" routerLink="eth">ETH</a>
         </li>
         <li class="nav-item" [routerLinkActive]="'active'" *ngIf="!checkIsLogged()">
           <a class="nav-link mx-2" routerLink="login">login</a>
         </li>
+
         <li class="nav-item" *ngIf="checkIsLogged()">
           <a class="nav-link" (click)="logout()">se déconnecter</a>
         </li>

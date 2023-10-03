@@ -1,17 +1,16 @@
 import {Component, OnInit} from '@angular/core';
-import {NftService} from "../services/nft.service";
 import {NftInterface} from "../nft.interface";
 import {FormControl, FormGroup} from "@angular/forms";
-import {UserInterface} from "../user.interface";
+import {NftService} from "../services/nft.service";
 import {AuthService} from "../auth.service";
 import {UserService} from "../services/user.service";
 
 @Component({
-  selector: 'app-nft',
-  templateUrl: './nft.component.html',
-  styleUrls: ['./nft.component.css']
+  selector: 'app-collection',
+  templateUrl: './collection.component.html',
+  styleUrls: ['./collection.component.css']
 })
-export class NftComponent implements OnInit{
+export class CollectionComponent  implements OnInit{
 
   nfts: NftInterface[]= [];
   nftDetail: NftInterface | undefined;
@@ -22,11 +21,11 @@ export class NftComponent implements OnInit{
     price: new FormControl(''),
   });
   constructor(
-    private serviceNft: NftService,
-    private auth: AuthService,
-    private userService: UserService
+      private serviceNft: NftService,
+      private auth: AuthService,
+      private userService: UserService
 
-    ) {
+  ) {
   }
 
   checkIsLogged(): boolean {
@@ -35,8 +34,8 @@ export class NftComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.getNft();
-
+    // this.getNft();
+    this.dysplayNftOfUserLoggin();
   }
 
   getNft(){
@@ -105,7 +104,24 @@ export class NftComponent implements OnInit{
 
   }
 
+  dysplayNftOfUserLoggin() {
+    if (this.auth.isLogged()) {
+      let loggedInUsername = this.auth.getLoggedInUsername();
 
+      if (loggedInUsername) {
+        this.serviceNft.getAllNft().subscribe(
+            (nfts: NftInterface[]) => {
+              // Filtrer les NFTs pour l'utilisateur connecté
+              this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
+              console.log('NFTs de l\'utilisateur connecté :', this.nfts);
+            },
+            (error) => {
+              console.error('Erreur lors de la récupération des NFTs :', error);
+            }
+        );
+      }
+    }
+  }
 
 
 
