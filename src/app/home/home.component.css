@@ -202,13 +202,13 @@ nav ul a:hover{
   text-align: center;
 }
 .populaire button{
-  color: white;
-  background-color: #3c97bf;
+  background: #dde1ce ;
+  color: black;
+  font-weight: bold;
   border-radius: 10px;
   border: none;
   padding: 10px 50px;
   position: relative;
-  left: 25%;
 
 
 }

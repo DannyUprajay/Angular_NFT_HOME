@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit{
   nfts: NftInterface[]= [];
   listUsers: UserInterface[]= [];
   carouselImages: string[] = [];
+  randomImage: NftInterface | undefined;
+  randomImage1: NftInterface | undefined;
+  randomImage2: NftInterface | undefined;
 
   userData: UserInterface | undefined;
   constructor(
@@ -51,6 +54,7 @@ export class HomeComponent implements OnInit{
     this.serviceNft.getAllNft().subscribe(Nfts => {
       this.nfts = Nfts;
       this.setCarouselImages();
+      this.setPopulaireImage();
     });
   }
 
@@ -60,6 +64,16 @@ export class HomeComponent implements OnInit{
   //   });
   // }
 
+  setPopulaireImage() {
+    this.serviceNft.getAllNft().subscribe(nfts => {
+      let randomIndex = Math.floor(Math.random() * nfts.length);
+      this.randomImage = nfts[randomIndex];
+       randomIndex = Math.floor(Math.random() * nfts.length);
+      this.randomImage1 = nfts[randomIndex];
+      randomIndex = Math.floor(Math.random() * nfts.length);
+      this.randomImage2 = nfts[randomIndex];
+    });
+  }
 
   setCarouselImages() {
     // Générer 3 index aléatoires
