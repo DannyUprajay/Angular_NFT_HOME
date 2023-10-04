@@ -3,6 +3,7 @@ import {UserInterface} from "../user.interface";
 import {FormControl, FormGroup} from "@angular/forms";
 import {DatePipe} from "@angular/common";
 import {UserService} from "../services/user.service";
+import {AuthService} from "../auth.service";
 
 
 @Component({
@@ -11,6 +12,8 @@ import {UserService} from "../services/user.service";
   styleUrls: ['./user.component.css']
 })
 export class UserComponent {
+
+  userData: UserInterface | undefined;
 
   listUsers: UserInterface[] = [];
   userDetail: UserInterface | undefined;
@@ -29,22 +32,43 @@ export class UserComponent {
     username: new FormControl(''),
     profilPicture: new FormControl('')
   });
-  constructor(private service: UserService, private datePipe: DatePipe) {
+  constructor(
+    private userService: UserService,
+    private datePipe: DatePipe,
+    private auth: AuthService
+
+  ) {
   }
   ngOnInit() {
-    this.getUser();
+    this.userService.onSubmit().subscribe(
+      (userData) => {
+        if (userData) {
+          console.log('Données de l\'utilisateur connecté :', userData);
+          this.userData = userData;
+          console.log(this.userData.id);
+        } else {
+          console.log('Aucun utilisateur trouvé.');
+        }
+      },
+      (error) => {
+        console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+      }
+    );
   }
 
   getUser(){
-    this.service.getAllUser().subscribe(Users => {
+    this.userService.getAllUser().subscribe(Users => {
       this.listUsers = Users;
     });
   }
-  viewOneUser(id: number){
-    this.service.getUserById(id).subscribe(userResult =>{
-      this.userDetail = userResult;
-    })
+  viewOneUser(id: number | undefined) {
+    if (id !== undefined) {
+      this.userService.getUserById(id).subscribe(userResult => {
+        this.userDetail = userResult;
+      });
+    }
   }
+
 
   // onSubmit() {
   //   // window.location.reload();
@@ -80,12 +104,13 @@ export class UserComponent {
   // }
 
 
-  delete(id: number, index: number) {
-    this.service.deleteUser(id).subscribe(resultatDelete => {
-      this.listUsers.splice(index,1);
-      console.log(this.listUsers);
-    });
-
+  delete(id: number | undefined) {
+    if (id !== undefined) {
+      this.userService.deleteUser(id).subscribe(resultatDelete => {
+        console.log('Utilisateur supprimé avec succès.');
+      });
+    }
   }
+
 
 }

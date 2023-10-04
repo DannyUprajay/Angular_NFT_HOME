@@ -1,21 +1,21 @@
-<h1 class="text-center mb-5">user !</h1>
+<h1 class="text-center mb-5">Profil</h1>
 
 
 
 
-<div class="container">
-  <div class="row">
-    <div *ngFor="let user of listUsers; let index = index;" class="col-4">
-      <div class="card mb-3 p-2 h-100">
-        <h5 class="card-title text-center">By {{user.username}}</h5>
-        <img src="{{user.profilPicture}}" class="nft-image img-fluid rounded-circle w-25 mx-auto image-3d-effect" alt="NFT Image">
+<div class="container ">
+  <div class="row ">
+    <div class="col-4 ">
+      <div class="card mb-3 p-2 h-100 ">
+        <h5 class="card-title text-center">By {{userData?.username}}</h5>
+        <img src="{{userData?.profilPicture}}" class="nft-image img-fluid rounded-circle w-25 mx-auto image-3d-effect" alt="NFT Image">
         <div class="text-center">
           <div class="card-body">
-            <p class="card-text p-0 m-0"><small class="text-muted">{{user.firstName}} ETH</small></p>
-            <button (click)="viewOneUser(user.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <p class="card-text p-0 m-0"><small class="text-muted">{{userData?.firstName}} ETH</small></p>
+            <button *ngIf="userData?.id !== undefined" (click)="viewOneUser(userData?.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Detail
             </button>
-            <button (click)="delete(user.id, index)" type="button" class="btn btn-primary m-5">
+            <button *ngIf="userData?.id !== undefined" (click)="delete(userData?.id)" type="button" class="btn btn-primary m-5">
               Delete
             </button>
           </div>
