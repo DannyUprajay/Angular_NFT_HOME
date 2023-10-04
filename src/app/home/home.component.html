@@ -19,6 +19,9 @@
 
 
 <!--<div class="container test">-->
+<div class="homeFull">
+
+
 
 <div class="home-back ">
 
@@ -93,6 +96,7 @@
 </div>
 
 
+
 <div class="container bordertest " style="margin-top: 150px">
   <div class="d-flex justify-content-between p-5 text-center align-items-center">
 
@@ -129,9 +133,9 @@
     </div>
 
   </div>
+
+
 </div>
-
-
 <h2 style="color: black; margin-bottom: 55px; margin-top: 200px" class="text-center ">Populaire cette semaine</h2>
 
 <div style="background-color: #b07876; padding: 50px">
@@ -144,8 +148,7 @@
       <div class="border justify-content-center align-items-center mb-3" style="height: 500px;">
         <img class="mt-2" [src]="randomImage?.pathImage" alt="">
         <div class="d-flex justify-content-around">
-          <h2>{{ randomImage?.name }}</h2>
-          <small>{{ randomImage?.price }}</small>
+          <h2>{{ randomImage?.name }} <span> {{ randomImage?.price }} ETH </span></h2>
           <div class="d-flex align-items-center justify-content-center">
             <button >Détail</button>
           </div>
@@ -157,8 +160,7 @@
       <div class=" border  justify-content-center align-items-center mb-3" style="height: 500px;">
         <img class="mt-2" [src]="randomImage1?.pathImage" alt="">
         <div class="d-flex justify-content-around">
-          <h2>{{ randomImage1?.name }}</h2>
-          <small>{{ randomImage?.price }}</small>
+          <h2>{{ randomImage1?.name }} <span> {{ randomImage1?.price }} ETH </span></h2>
           <div class=" d-flex align-items-center justify-content-center">
           <button> Détail </button>
           </div>
@@ -170,8 +172,7 @@
       <div class=" border  justify-content-center align-items-center mb-3" style="height: 500px;">
         <img class="mt-2" [src]="randomImage2?.pathImage" alt="">
         <div class="d-flex justify-content-around">
-          <h2>{{ randomImage2?.name }}</h2>
-          <small>{{ randomImage?.price }}</small>
+          <h2>{{ randomImage2?.name }} <span>{{ randomImage2?.price }} ETH </span></h2>
           <div class=" d-flex align-items-center justify-content-center">
             <button> Détail </button>
           </div>
@@ -272,3 +273,4 @@
 </div>
 <!--</div>-->
 
+</div>

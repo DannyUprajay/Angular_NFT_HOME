@@ -192,6 +192,7 @@ nav ul a:hover{
 .bordertest{
   border: 1px solid #dde1ce ;
 
+
 }
 .vr{
   color: #485662;
@@ -200,7 +201,13 @@ nav ul a:hover{
   height: 100px;
   line-height: 100px;
   text-align: center;
+  font-size: 1.5rem;
 }
+
+.populaire span {
+  color: white;
+}
+
 .populaire button{
   background: #dde1ce ;
   color: black;
@@ -209,6 +216,9 @@ nav ul a:hover{
   border: none;
   padding: 10px 50px;
   position: relative;
+}
 
 
+.homeFull{
+  background-color: #b07876;
 }
