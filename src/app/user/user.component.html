@@ -12,10 +12,10 @@
         <div class="text-center">
           <div class="card-body">
             <p class="card-text p-0 m-0"><small class="text-muted">{{userData?.firstName}} ETH</small></p>
-            <button *ngIf="userData?.id !== undefined" (click)="viewOneUser(userData?.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button *ngIf="userData?.id " (click)="viewOneUser(userData?.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
            Edit
             </button>
-            <button *ngIf="userData?.id !== undefined" (click)="delete(userData?.id)" type="button" class="btn btn-primary m-5">
+            <button *ngIf="userData?.id " (click)="delete(userData?.id)" type="button" class="btn btn-primary m-5">
               Delete
             </button>
           </div>
