@@ -40,6 +40,7 @@ export class CollectionComponent  implements OnInit{
   getNft(){
     this.serviceNft.getAllNft().subscribe(Nfts => {
       this.nfts = Nfts;
+      console.log(this.nfts)
     });
   }
 
@@ -75,6 +76,9 @@ export class CollectionComponent  implements OnInit{
             user: {
               username :'',
               profilPicture: ''
+            },
+            category:{
+              label:''
             },
             pathImage: this.form.value.pathImage,
             price: this.form.value.price,

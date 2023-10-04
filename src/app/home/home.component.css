@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@500&display=swap');
 
+
 .logo{
   font-size: 1.5rem;
 }
@@ -47,6 +48,9 @@ nav ul a:hover{
 /*}*/
 
 
+.homeFull{
+  /*background-color: #b07876;*/
+}
 
 
 .img_home {
@@ -221,6 +225,3 @@ nav ul a:hover{
 }
 
 
-.homeFull{
-  background-color: #b07876;
-}
