@@ -105,7 +105,7 @@ export class UserComponent {
 
 
   delete(id: number | undefined) {
-    if (id !== undefined) {
+    if (id) {
       this.userService.deleteUser(id).subscribe(resultatDelete => {
         console.log('Utilisateur supprimé avec succès.');
       });
