@@ -46,38 +46,38 @@ export class UserComponent {
     })
   }
 
-  onSubmit() {
-    // window.location.reload();
-    if (this.form.valid) {
-      // window.location.reload();
-      const formattedBirth = this.datePipe.transform(this.form.value.birth, 'dd/MM/yyyy');
-
-      const user: UserInterface = {
-        id: 0,
-        firstName: this.form.value.firstName,
-        lastName: this.form.value.lastName,
-        email: this.form.value.email,
-        gender: this.form.value.gender,
-        username: this.form.value.username,
-        profilPicture: this.form.value.profilPicture,
-        adress: {
-          label: this.form.value.label,
-          contry: this.form.value.contry,
-          postalCode: this.form.value.postalCode
-        },
-        password: this.form.value.password,
-        birth: formattedBirth
-      };
-
-      this.service.addUser(user).subscribe(response => {
-        this.getUser();
-        this.form.reset();
-        console.log(user);
-      });
-    } else {
-      console.log('Formulaire invalide');
-    }
-  }
+  // onSubmit() {
+  //   // window.location.reload();
+  //   if (this.form.valid) {
+  //     // window.location.reload();
+  //     const formattedBirth = this.datePipe.transform(this.form.value.birth, 'dd/MM/yyyy');
+  //
+  //     const user: UserInterface = {
+  //       id: 0,
+  //       firstName: this.form.value.firstName,
+  //       lastName: this.form.value.lastName,
+  //       email: this.form.value.email,
+  //       gender: this.form.value.gender,
+  //       username: this.form.value.username,
+  //       profilPicture: this.form.value.profilPicture,
+  //       adress: {
+  //         label: this.form.value.label,
+  //         contry: this.form.value.contry,
+  //         postalCode: this.form.value.postalCode
+  //       },
+  //       password: this.form.value.password,
+  //       birth: formattedBirth
+  //     };
+  //
+  //     this.service.addUser(user).subscribe(response => {
+  //       this.getUser();
+  //       this.form.reset();
+  //       console.log(user);
+  //     });
+  //   } else {
+  //     console.log('Formulaire invalide');
+  //   }
+  // }
 
 
   delete(id: number, index: number) {

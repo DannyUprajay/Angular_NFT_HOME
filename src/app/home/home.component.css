@@ -133,7 +133,7 @@ nav ul a:hover{
   background-repeat: no-repeat;
   background-position: right top;
   height: 100vh;
-  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
+  /*clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);*/
 }
 .home-back h1{
   font-family: 'Rubik', sans-serif;
@@ -191,6 +191,8 @@ nav ul a:hover{
 
 .bordertest{
   border: 1px solid #dde1ce ;
+  background-color: white;
+  color: #485662;
 
 
 }
