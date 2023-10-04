@@ -7,13 +7,13 @@
 
     <div class="col-4  ">
       <div class="card   ">
-        <h5 class="card-title text-center">By {{userData?.username}}</h5>
+        <h5 class="card-title text-center">{{userData?.username}}</h5>
         <img src="{{userData?.profilPicture}}" class="nft-image img-fluid rounded-circle w-25 mx-auto image-3d-effect" alt="NFT Image">
         <div class="text-center">
           <div class="card-body">
             <p class="card-text p-0 m-0"><small class="text-muted">{{userData?.firstName}} ETH</small></p>
             <button *ngIf="userData?.id !== undefined" (click)="viewOneUser(userData?.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Detail
+           Edit
             </button>
             <button *ngIf="userData?.id !== undefined" (click)="delete(userData?.id)" type="button" class="btn btn-primary m-5">
               Delete
