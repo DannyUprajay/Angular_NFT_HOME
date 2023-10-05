@@ -15,6 +15,7 @@ import { NftDetailComponent } from './nft-detail/nft-detail.component';
 import { NftEditComponent } from './nft-edit/nft-edit.component';
 import { FooterComponent } from './footer/footer.component';
 import { CollectionComponent } from './collection/collection.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CollectionComponent } from './collection/collection.component';
     NftDetailComponent,
     NftEditComponent,
     FooterComponent,
-    CollectionComponent
+    CollectionComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

@@ -11,12 +11,14 @@
         <h5 class="card-title text-center mt-3">{{userData?.username}}</h5>
         <div class="text-center">
           <div class="card-body">
-            <button *ngIf="userData?.id " (click)="viewOneUser(userData?.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-           Edit
+            <a routerLink="/user/{{userData?.id}}">
+            <button type="button" class="btn btn-primary m-5"  >
+           Modifier le profil
             </button>
-            <button *ngIf="userData?.id " (click)="delete(userData?.id)" type="button" class="btn btn-primary m-5">
-              Delete
-            </button>
+            </a>
+<!--            <button *ngIf="userData?.id " (click)="delete(userData?.id)" type="button" class="btn btn-primary m-5">-->
+<!--              Delete-->
+<!--            </button>-->
           </div>
 
       </div>
@@ -25,22 +27,6 @@
 </div>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content text-center">
-      <div class="modal-header">
-        <h1 class="modal-title text-center fs-5" id="exampleModalLabel">{{userDetail?.email}}</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-
-      <div class="mb-3">
-        <p>{{userDetail?.firstName}}</p>
-      </div>
-
-    </div>
-  </div>
-</div>
 
 
 <!--<div class="container text-light">-->

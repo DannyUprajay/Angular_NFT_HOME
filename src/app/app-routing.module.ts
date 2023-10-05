@@ -9,11 +9,13 @@ import {LoginComponent} from "./login/login.component";
 import {NftDetailComponent} from "./nft-detail/nft-detail.component";
 import {NftEditComponent} from "./nft-edit/nft-edit.component";
 import {CollectionComponent} from "./collection/collection.component";
+import {UserEditComponent} from "./user-edit/user-edit.component";
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'user', component: UserComponent},
+  {path: 'user/:id', component: UserEditComponent},
   {path: 'nft', component: NftComponent},
   {path: 'eth', component: EthComponent},
   {path: 'login', component: LoginComponent},

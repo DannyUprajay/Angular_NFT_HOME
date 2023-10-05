@@ -14,12 +14,12 @@ nav a{
 }
 
 nav ul a:hover{
-  color: white;
+  color: #344b8b;
   transition: 0.5s;
   text-decoration: underline white;
 }
 .active{
-  color: white;
+  color: #344b8b;
   text-decoration: underline white;
 }
 

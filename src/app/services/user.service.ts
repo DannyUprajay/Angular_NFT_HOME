@@ -58,5 +58,10 @@ export class UserService {
         );
     }
 
+  updateUser(id :number, data :any){
+    const body = JSON.stringify(data);
+    const header = { 'content-type': 'application/x-www-form-urlencoded'};
+    return this.http.post<result>(`https://127.0.0.1:8000/user/${id}/edit`, body,  {'headers': header});
+  }
 
 }

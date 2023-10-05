@@ -34,15 +34,15 @@ export class NftService {
     return this.http.delete<result>('https://127.0.0.1:8000/nft/' + id);
   }
 
-  editNft(id: number, token: string, nft: NftInterface): Observable<result> {
-    const body = JSON.stringify(nft);
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
-    });
-
-    return this.http.post<result>(`https://127.0.0.1:8000/nft/${id}/edit`, body, { headers });
-  }
+  // editNft(id: number, token: string, nft: NftInterface): Observable<result> {
+  //   const body = JSON.stringify(nft);
+  //   const headers = new HttpHeaders({
+  //     'Content-Type': 'application/json',
+  //     'Authorization': `Bearer ${token}`
+  //   });
+  //
+  //   return this.http.post<result>(`https://127.0.0.1:8000/nft/${id}/edit`, body, { headers });
+  // }
 
   updateNft(id :number, data :any){
     const body = JSON.stringify(data);

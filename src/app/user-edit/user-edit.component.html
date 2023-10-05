@@ -1,0 +1,32 @@
+<h2 class="text-center">Modifier le profil</h2>
+
+
+<div class="container text-light">
+  <form [formGroup]="editUser" (ngSubmit)="update()">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <div class="col-md-6">
+        <input type="text" id="username" formControlName="username" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="profilPicture" class="form-label">Photo de profil</label>
+      <div class="col-md-6">
+        <input type="text" id="profilPicture" formControlName="profilPicture" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="firstName" class="form-label">Price</label>
+      <div class="col-md-6">
+        <input type="text" id="firstName" formControlName="firstName" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Price</label>
+      <div class="col-md-6">
+        <input type="text" id="lastName" formControlName="lastName" class="form-control" required>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!editUser.valid" class="btn btn-primary">Save modification</button>
+  </form>
+</div>

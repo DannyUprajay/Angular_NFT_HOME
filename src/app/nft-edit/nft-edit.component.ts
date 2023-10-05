@@ -19,11 +19,16 @@ export class NftEditComponent implements OnInit{
   ) {
   }
 
+  public editNft: FormGroup = new FormGroup({
+    name: new FormControl(''),
+    pathImage: new FormControl(''),
+    price: new FormControl(''),
+  });
 
   ngOnInit() {
     console.log(this.route.snapshot.params['id'])
     this.nftService.getNftById(this.route.snapshot.params['id']).subscribe((result)  =>{
-      console.log(result);
+      console.log(result)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
       this.editNft = new FormGroup({
         name: new FormControl(result['name']),
         pathImage: new FormControl(result['pathImage']),
@@ -32,11 +37,7 @@ export class NftEditComponent implements OnInit{
     });
   }
 
-  public editNft: FormGroup = new FormGroup({
-    name: new FormControl(''),
-    pathImage: new FormControl(''),
-    price: new FormControl(''),
-  });
+
 
   update(){
   this.nftService.updateNft(this.route.snapshot.params['id'], this.editNft.value).subscribe((result)  => {

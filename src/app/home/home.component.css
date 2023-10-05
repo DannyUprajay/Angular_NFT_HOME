@@ -11,45 +11,19 @@ nav a{
 }
 
 nav ul a:hover{
-  color: white;
+  color: #344b8b;
   transition: 0.5s;
   text-decoration: underline white;
 }
 .active{
-  color: white;
+  color: #344b8b;
   text-decoration: underline white;
 }
 
-/* Reste de votre CSS ici... */
-
-/*.home-back {*/
-/*  background-image: url("https://img1.wallspic.com/crops/6/4/7/4/7/174746/174746-gojo_satoru-satoru_gojo-jujutsu_kaisen-lanime-manche-3840x2160.jpg");*/
-/* background-size: cover;*/
-/*  background-repeat: no-repeat;*/
-/*  height: 80vh;*/
-/*}*/
-
-
-/*.test {*/
-/*  height: 125rem;*/
-/*}*/
-
-/*.row {*/
-/*  height: 90vh;*/
-/*}*/
-
-/*.home_content {*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  align-items: center;*/
-/*  text-align: center; !* Si vous voulez également centrer le texte horizontalement *!*/
-/*  height: 20vh; !* Ceci assure que la div occupe au moins la hauteur de la fenêtre visible *!*/
-/*  justify-content: center; !* Cette propriété assure le centrage vertical *!*/
-/*}*/
 
 
 .homeFull{
-  /*background-color: #b07876;*/
+  background-color: #e9edef;
 }
 
 
@@ -196,9 +170,9 @@ nav ul a:hover{
 }
 
 .bordertest{
-  border: 1px solid #e9edef ;
-  background-color: white;
-  color: #485662;
+  border: 1px solid #344b8b ;
+  /*background-color: #dde1ce;*/
+  color: black;
 
 
 }
