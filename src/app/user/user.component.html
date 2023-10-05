@@ -6,12 +6,11 @@
 <div class="container d-flex justify-content-center ">
 
     <div class="col-4  ">
-      <div class="card    ">
-        <h5 class="card-title text-center">{{userData?.username}}</h5>
+      <div class="card  p-4  ">
         <img src="{{userData?.profilPicture}}" class="nft-image img-fluid rounded-circle w-25 mx-auto image-3d-effect" alt="NFT Image">
+        <h5 class="card-title text-center mt-3">{{userData?.username}}</h5>
         <div class="text-center">
           <div class="card-body">
-            <p class="card-text p-0 m-0"><small class="text-muted">{{userData?.firstName}} ETH</small></p>
             <button *ngIf="userData?.id " (click)="viewOneUser(userData?.id)" type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
            Edit
             </button>
