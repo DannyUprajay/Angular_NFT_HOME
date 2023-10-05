@@ -1,10 +1,11 @@
 <h2 class="text-center">Modifier le profil</h2>
 
+<div class="text-center">
+<img src="{{user?.profilPicture}}" alt="">
 
+</div>
 
-<h2>{{user?.username}} salut</h2>
-
-<div class="container text-light">
+<div class="container text-dark">
   <form [formGroup]="editUser" (ngSubmit)="update()">
     <div class="mb-3">
       <label for="username" class="form-label">Username</label>
