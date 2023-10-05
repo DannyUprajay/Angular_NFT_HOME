@@ -104,10 +104,10 @@ nav ul a:hover{
 }
 
 
-/*Card /////////////////////////////////////////////////////////////////////////////*/
 
+/*Card populaire /////////////////////////////////////////////////////////////////////////////*/
 .card{
-transition: .3s;
+  transition: .3s;
 }
 
 /*.card button:hover{*/
@@ -115,6 +115,22 @@ transition: .3s;
 /*}*/
 
 .card:hover {
+  /*clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);*/
+  box-shadow: 9px 10px 10px #cdc43c;
+  background: rgb(212,201,163);
+  background: linear-gradient(0deg, rgba(212,201,163,1) 4%, rgba(180,155,89,1) 69%, rgba(182,167,105,1) 98%);
+}
+/*Card /////////////////////////////////////////////////////////////////////////////*/
+
+.allCard{
+transition: .3s;
+}
+
+/*.card button:hover{*/
+/*  background-color: red;*/
+/*}*/
+
+.allCard:hover {
   /*clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);*/
   box-shadow: 9px 10px 10px #242424;
   background: rgb(210,212,213);
@@ -126,7 +142,7 @@ transition: .3s;
   border: none;
 }
 
-.card:hover .buttonCard{
+.allCard:hover .buttonCard{
   background: #242424;
   color: white;
 }
