@@ -132,11 +132,12 @@ nav ul a:hover{
   left: 15%;
 }
 .home-back {
-  background-image: url("https://images5.alphacoders.com/131/1316393.png");
-  background-size: 100%;
+  background-image: url("https://i.pinimg.com/564x/7e/2a/b0/7e2ab028c8802659b0bbe469f6512564.jpg");
+  background-color: #e9edef;
+  /*background-size: 100%;*/
   background-repeat: no-repeat;
-  background-position: right top;
-  height: 100vh;
+  background-position: right 250px top 160px;
+  height: 90vh;
   /*clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);*/
 }
 .home-back h1{
@@ -151,7 +152,8 @@ nav ul a:hover{
 .home-back p {
   text-align: justify;
   margin-right: 11%;
-  color: white;
+  color: #344b8b;
+  font-weight: bold;
 }
 .home-back button{
   background-color: white;
@@ -168,7 +170,7 @@ nav ul a:hover{
 }
 
 .home-back button:hover {
-  background-color: #485662;
+  background-color: #344b8b;
   color: #dde1ce;
   transition: 1s;
   font-family: 'Rubik', sans-serif;
@@ -194,7 +196,7 @@ nav ul a:hover{
 }
 
 .bordertest{
-  border: 1px solid #dde1ce ;
+  border: 1px solid #e9edef ;
   background-color: white;
   color: #485662;
 
