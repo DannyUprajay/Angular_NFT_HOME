@@ -44,7 +44,7 @@ nav ul a:hover{
 }
 
 .card{
-transition: .5s;
+transition: .3s;
 }
 
 /*.card button:hover{*/
@@ -56,8 +56,21 @@ transition: .5s;
   box-shadow: 9px 10px 10px #242424;
   background: rgb(210,212,213);
   background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
+}
+.ted{
+  background: #ccbfaf;
+  color: black;
+  border: none;
+}
+.card:hover .ted{
+  background: #242424;
+  color: white;
+}
 
-
+.test:hover {
+  box-shadow: 9px 10px 10px #cdc43c;
+  background: rgb(212,201,163);
+  background: linear-gradient(0deg, rgba(212,201,163,1) 4%, rgba(180,155,89,1) 69%, rgba(182,167,105,1) 98%);
 }
 
 .btn-show {
@@ -183,7 +196,7 @@ transition: .5s;
 .test{
   background-color: white;
 }
-.test:hover{
+.test:hover .ted{
   box-shadow: 9px 10px 10px goldenrod;
   background: rgb(210,212,213);
   background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
