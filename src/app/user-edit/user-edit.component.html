@@ -5,7 +5,7 @@
 
 </div>
 
-<div class="container text-dark">
+<div class="text-dark ">
   <form [formGroup]="editUser" (ngSubmit)="update()">
     <div class="mb-3">
       <label for="username" class="form-label">Username</label>
@@ -19,14 +19,15 @@
         <input type="text" id="profilPicture" formControlName="profilPicture" class="form-control" required>
       </div>
     </div>
+
     <div class="mb-3">
-      <label for="firstName" class="form-label">Price</label>
+      <label for="firstName" class="form-label">Nom</label>
       <div class="col-md-6">
         <input type="text" id="firstName" formControlName="firstName" class="form-control" required>
       </div>
     </div>
     <div class="mb-3">
-      <label for="lastName" class="form-label">Price</label>
+      <label for="lastName" class="form-label">Prenom</label>
       <div class="col-md-6">
         <input type="text" id="lastName" formControlName="lastName" class="form-control" required>
       </div>

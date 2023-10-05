@@ -97,7 +97,9 @@
 
 
 
+
 <div class="container bordertest " style="margin-top: 150px">
+  <hr>
   <div class="d-flex justify-content-between p-5 text-center align-items-center">
 
     <div class="col-3">
@@ -133,9 +135,10 @@
     </div>
 
   </div>
-
+  <hr>
 
 </div>
+
 <h2 style="color: black; margin-bottom: 55px; margin-top: 200px" class="text-center ">Populaire cette semaine</h2>
 
 <div style="background-color: #e9edef; padding: 50px">
@@ -144,9 +147,9 @@
 <div class="container populaire w-100 h-100 "  >
   <div class="row text-center d-flex">
 
-    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-      <div class="border justify-content-center align-items-center mb-3" style="height: 500px;">
-        <img class="mt-2" [src]="randomImage?.pathImage" alt="">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 test">
+      <div class=" justify-content-center align-items-center mb-3" style="height: 500px;">
+        <img class="mt-2 nft-image" [src]="randomImage?.pathImage" alt="">
         <div class="d-flex justify-content-around">
           <h2>{{ randomImage?.name }} <span> {{ randomImage?.price }} ETH </span></h2>
           <div class="d-flex align-items-center justify-content-center">
@@ -156,9 +159,9 @@
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mt-5 ">
-      <div class=" border  justify-content-center align-items-center mb-3" style="height: 500px;">
-        <img class="mt-2" [src]="randomImage1?.pathImage" alt="">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mt-5  ">
+      <div class="   justify-content-center align-items-center mb-3 test" style="height: 500px;">
+        <img class="mt-2 nft-image " [src]="randomImage1?.pathImage" alt="">
         <div class="d-flex justify-content-around">
           <h2>{{ randomImage1?.name }} <span> {{ randomImage1?.price }} ETH </span></h2>
           <div class=" d-flex align-items-center justify-content-center">
@@ -168,15 +171,14 @@
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-      <div class=" border  justify-content-center align-items-center mb-3" style="height: 500px;">
-        <img class="mt-2" [src]="randomImage2?.pathImage" alt="">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 test">
+      <div class=" justify-content-center align-items-center mb-3" style="height: 500px;">
+        <img class="mt-2 nft-image" [src]="randomImage2?.pathImage" alt="">
         <div class="d-flex justify-content-around">
-          <h2>{{ randomImage2?.name }} <span>{{ randomImage2?.price }} ETH </span></h2>
-          <div class=" d-flex align-items-center justify-content-center">
-            <button> Détail </button>
+          <h2>{{ randomImage2?.name }} <span> {{ randomImage2?.price }} ETH </span></h2>
+          <div class="d-flex align-items-center justify-content-center">
+            <button >Détail</button>
           </div>
-        </div>
         </div>
       </div>
     </div>

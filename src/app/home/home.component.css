@@ -43,10 +43,21 @@ nav ul a:hover{
   height: 100%;
 }
 
+.card{
+transition: .5s;
+}
 
-.card {
-  clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);
- background-color: white;
+.card button:hover{
+  background-color: red;
+}
+
+.card:hover {
+  /*clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);*/
+  box-shadow: 9px 10px 10px dimgrey;
+  background: rgb(210,212,213);
+  background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
+
+
 }
 
 .btn-show {
@@ -169,13 +180,26 @@ nav ul a:hover{
   max-width: 400px;
 }
 
-.bordertest{
-  border: 1px solid #344b8b ;
-  /*background-color: #dde1ce;*/
-  color: black;
-
-
+.test{
+  background-color: white;
 }
+.test:hover{
+  box-shadow: 9px 10px 10px goldenrod;
+  background: rgb(255,217,16);
+  background: linear-gradient(0deg, rgba(255,217,16,1) 4%, rgba(222,205,43,1) 69%, rgba(68,60,23,1) 98%);
+}
+
+.bordertest{
+  /*border: 1px solid #344b8b ;*/
+  /*!*background-color: #dde1ce;*!*/
+  /*color: black;*/
+}
+
+/*hr{*/
+/*  height: 2px;*/
+/*  background: darkblue;*/
+/*  margin-bottom: 5px;*/
+/*}*/
 .vr{
   color: #485662;
 }

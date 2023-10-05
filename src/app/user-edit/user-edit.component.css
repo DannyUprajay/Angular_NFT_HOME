@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+
+.container form {
+  width: 100%;
+  display: inline-block;
+}
