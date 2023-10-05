@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../services/user.service";
 import {FormControl, FormGroup} from "@angular/forms";
 import {AuthService} from "../auth.service";
+import {UserInterface} from "../user.interface";
 
 @Component({
   selector: 'app-user-edit',
@@ -10,6 +11,8 @@ import {AuthService} from "../auth.service";
   styleUrls: ['./user-edit.component.css']
 })
 export class UserEditComponent implements OnInit {
+
+  user: UserInterface | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,7 +30,13 @@ export class UserEditComponent implements OnInit {
   });
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['id'])
+
+    this.route.params.subscribe(params => {
+      let nftId = +params['id'];
+      this.getUserId(nftId);
+    });
+
+
     this.userService.getUserById(this.route.snapshot.params['id']).subscribe((result) => {
       console.log(result);
       this.editUser = new FormGroup({
@@ -50,6 +59,14 @@ export class UserEditComponent implements OnInit {
       this.router.navigate(['/user/' + this.route.snapshot.params['id']]);
     })
   }
+
+  getUserId(id: number) {
+    this.userService.getUserById(id).subscribe(nftResult => {
+      this.user = nftResult;
+      // console.log(this.nft);
+    });
+  }
+
 
 
 }

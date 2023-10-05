@@ -25,7 +25,7 @@ export class NftDetailComponent implements OnInit{
 
     ngOnInit() {
         this.route.params.subscribe(params => {
-            const nftId = +params['id'];
+            let nftId = +params['id'];
             this.getNftId(nftId);
         });
     }
