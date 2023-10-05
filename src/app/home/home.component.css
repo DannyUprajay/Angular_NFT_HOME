@@ -47,13 +47,13 @@ nav ul a:hover{
 transition: .5s;
 }
 
-.card button:hover{
-  background-color: red;
-}
+/*.card button:hover{*/
+/*  background-color: red;*/
+/*}*/
 
 .card:hover {
   /*clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);*/
-  box-shadow: 9px 10px 10px dimgrey;
+  box-shadow: 9px 10px 10px #242424;
   background: rgb(210,212,213);
   background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
 
@@ -185,8 +185,8 @@ transition: .5s;
 }
 .test:hover{
   box-shadow: 9px 10px 10px goldenrod;
-  background: rgb(255,217,16);
-  background: linear-gradient(0deg, rgba(255,217,16,1) 4%, rgba(222,205,43,1) 69%, rgba(68,60,23,1) 98%);
+  background: rgb(210,212,213);
+  background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
 }
 
 .bordertest{
