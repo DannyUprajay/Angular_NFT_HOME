@@ -34,7 +34,7 @@ nav ul a:hover{
   /*background-size: 100%;*/
   background-repeat: no-repeat;
   background-position: right 250px top 160px;
-  height: 90vh;
+  height: 100vh;
   /*clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);*/
 }
 .home-back h1{
