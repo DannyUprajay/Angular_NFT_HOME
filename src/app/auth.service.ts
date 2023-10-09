@@ -35,7 +35,10 @@ export class AuthService {
       let tokenParts = token.split('.');
       if (tokenParts.length === 3) {
         let payload = JSON.parse(atob(tokenParts[1]));
+        console.log(payload.roles)
         let username = payload.username;
+
+        console.log(username);
         return username;
       }
     }
