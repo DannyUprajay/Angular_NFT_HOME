@@ -51,8 +51,16 @@ export class HeaderComponent implements OnInit {
 
     checkIsAdmin(): boolean {
         let checkRole = this.auth.getRole();
-        this.isAdmin = checkRole === 'ROLE_ADMIN';
+        if(checkRole === 'ROLE_ADMIN'){
+            this.isAdmin = true;
+        }
         return this.isAdmin;
     }
+
+    // checkIsAdmin(): boolean {
+    //     let checkRole = this.auth.getRole();
+    //     this.isAdmin = checkRole === 'ROLE_ADMIN';
+    //     return this.isAdmin;
+    // }
 
 }
