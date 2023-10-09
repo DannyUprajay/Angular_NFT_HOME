@@ -20,7 +20,7 @@
 
         </li>
         <li class="nav-item" *ngIf="checkIsLogged()">
-          <a class="nav-link" routerLink="ma collection">Collection</a>
+          <a class="nav-link" routerLink="collection">Collection</a>
         </li>
         <li class="nav-item" [routerLinkActive]="'active'">
           <a class="nav-link mx-2" routerLink="eth">ETH</a>
@@ -42,7 +42,7 @@
                    src="  https://i.pinimg.com/564x/ef/66/8d/ef668d9b195722020e22366c94141a24.jpg" alt="">
             </div>
             <div *ngIf="checkIsLogged()" class="nav-item mx-2">
-              <img class="rounded-circle" style="width: 50px;"
+              <img class="rounded-circle" style="width: 60px; height: 60px;"
                    src="{{userData?.profilPicture}}" alt="">
             </div>
           </a>

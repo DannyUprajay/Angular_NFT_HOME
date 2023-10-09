@@ -10,6 +10,7 @@ import {NftDetailComponent} from "./nft-detail/nft-detail.component";
 import {NftEditComponent} from "./nft-edit/nft-edit.component";
 import {CollectionComponent} from "./collection/collection.component";
 import {UserEditComponent} from "./user-edit/user-edit.component";
+import {AdminComponent} from "./admin/admin.component";
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'nft/:id', component: NftDetailComponent},
   {path: 'nft/:id/edit/:id', component: NftEditComponent},
-  {path: 'ma collection', component: CollectionComponent},
+  {path: 'collection', component: CollectionComponent},
+  {path: 'admin', component: AdminComponent},
 ];
 
 @NgModule({
