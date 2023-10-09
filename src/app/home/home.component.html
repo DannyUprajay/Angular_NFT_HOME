@@ -22,351 +22,478 @@
 <div class="homeFull">
 
 
+  <div class="home-back ">
 
-<div class="home-back ">
+    <nav class="navbar navbar-expand-lg navbar-light p-3">
+      <div class="container-fluid">
+        <a class="logo navbar-brand text-dark" href="#">Lové <span style="color:  white"> NFT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <nav  class="navbar navbar-expand-lg navbar-light p-3">
-    <div class="container-fluid">
-      <a class="logo navbar-brand text-dark" href="#">Lové <span style="color:  white"> NFT</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+              <a class="nav-link mx-2" aria-current="page" routerLink="">Home</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="'active'">
+              <a class="nav-link mx-2" routerLink="nft">NFT</a>
 
-      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto ">
-          <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
-            <a class="nav-link mx-2" aria-current="page" routerLink="">Home</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="'active'">
-            <a class="nav-link mx-2" routerLink="nft">NFT</a>
+            </li>
+            <li class="nav-item" *ngIf="checkIsLogged()">
+              <a class="nav-link" routerLink="ma collection">Collection</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="'active'">
+              <a class="nav-link mx-2" routerLink="eth">ETH</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="'active'" *ngIf="!checkIsLogged()">
+              <a class="nav-link mx-2" routerLink="login">login</a>
+            </li>
+            <li class="nav-item" *ngIf="checkIsLogged()">
+              <a class="nav-link" (click)="logout()">se déconnecter</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+            <li class="nav-item mx-2">
 
-          </li>
-          <li class="nav-item" *ngIf="checkIsLogged()">
-            <a class="nav-link" routerLink="ma collection">Collection</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="'active'">
-            <a class="nav-link mx-2" routerLink="eth">ETH</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="'active'" *ngIf="!checkIsLogged()">
-            <a class="nav-link mx-2" routerLink="login">login</a>
-          </li>
-          <li class="nav-item" *ngIf="checkIsLogged()">
-            <a class="nav-link" (click)="logout()">se déconnecter</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-          <li class="nav-item mx-2">
-
-            <a routerLink="user">
-              <div *ngIf="!checkIsLogged()">
-                <img class="rounded-circle" style="width: 50px;"
-                     src="  https://i.pinimg.com/564x/ef/66/8d/ef668d9b195722020e22366c94141a24.jpg" alt="">
-              </div>
-              <div *ngIf="checkIsLogged()" class="nav-item mx-2">
-                <img class="rounded-circle" style="width: 50px;"
-                     src="{{userData?.profilPicture}}" alt="">
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </nav>
-
-  <div class="home-content">
-
-
-    <div class="container mt-5 ">
-      <div class="row">
-        <div class="col-8">
-          <div class="home_content">
-            <h1>Découvrez et <br> <span style="color: #344b8b">collectionnez</span> des <br> NFT extraordinaires</h1>
-            <p>collectionnez et échangez les nft des meilleurs artistes !</p>
-            <button type="button" class="btn">Collectionnez maintenant !</button>
-          </div>
-        </div>
-<!--              <div class="col-4">-->
-<!--                <img class="img_home" src="https://i.pinimg.com/564x/7e/2a/b0/7e2ab028c8802659b0bbe469f6512564.jpg" alt="">-->
-<!--              </div>-->
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<div class="container bordertest " style="margin-top: 150px">
-  <hr>
-  <div class="d-flex justify-content-between p-5 text-center align-items-center">
-
-    <div class="col-3">
-      <p style="font-size: 2rem; margin: 0; font-weight: bold">60K</p>
-      <p class="m-0 text-center">Utilisateurs</p>
-    </div>
-
-    <div class="d-flex " style="height: 100px;">
-      <div class="vr"></div>
-    </div>
-
-    <div class="col-3 ">
-      <p style="font-size: 2rem; margin: 0; font-weight: bold">40K</p>
-      <p class="m-0 text-center">Nft</p>
-    </div>
-
-    <div class="d-flex " style="height: 100px;">
-      <div class="vr"></div>
-    </div>
-
-    <div class="col-3">
-      <p style="font-size: 2rem; margin: 0; font-weight: bold">12K</p>
-      <p class="m-0 text-center">Nft vendus</p>
-    </div>
-
-    <div class="d-flex" style="height: 100px;">
-      <div class="vr"></div>
-    </div>
-
-    <div class="col-3">
-      <p style="font-size: 2rem; margin: 0; font-weight: bold">6K</p>
-      <p class="m-0 text-center">Utilisateurs connectés</p>
-    </div>
-
-  </div>
-  <hr>
-
-</div>
-
-<h2 style="color: black; margin-bottom: 55px; margin-top: 200px" class="text-center ">Populaire cette semaine</h2>
-
-<div style="background-color: #e9edef; padding: 50px">
-
-
-<div class="container populaire w-100 h-100 "  >
-  <div class="row text-center d-flex">
-
-    <div  class="col-4">
-      <div class="card mb-3 p-4 h-70">
-
-        <img src="{{randomImage?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
-             alt="NFT Image">
-        <div>
-          <div class="card-body">
-
-            <div class="d-flex justify-content-between">
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
-                <small>Le prix à augmenter de 0.24 ETH</small>
-              </div>
-              <div>
-                <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
-                <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
-              </div>
-            </div>
-            <h5 class="card-title fw-bold">{{randomImage?.name }}</h5>
-            <div class="d-flex align-items-center justify-content-between">
-<!--              <div class="d-flex">-->
-<!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
-<!--                     style="width: 35px;" alt="NFT Image">-->
-<!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
-<!--              </div>-->
-              <div>
-                <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage?.price }} ETH </span> </small>
-              </div>
-            </div>
-            <div class="d-flex mt-5">
-              <div>
-                <a routerLink="/nft/{{randomImage?.id}}">
-                  <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div  class="col-4">
-      <div class="card mb-3 p-4 h-70">
-
-        <img src="{{randomImage1?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
-             alt="NFT Image">
-        <div>
-          <div class="card-body">
-
-            <div class="d-flex justify-content-between">
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
-                <small>Le prix à augmenter de 0.24 ETH</small>
-              </div>
-              <div>
-                <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
-                <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
-              </div>
-            </div>
-            <h5 class="card-title fw-bold">{{randomImage1?.name }}</h5>
-            <div class="d-flex align-items-center justify-content-between">
-              <!--              <div class="d-flex">-->
-              <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
-              <!--                     style="width: 35px;" alt="NFT Image">-->
-              <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
-              <!--              </div>-->
-              <div>
-                <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage1?.price }} ETH </span> </small>
-              </div>
-            </div>
-            <div class="d-flex mt-5">
-              <div>
-                <a routerLink="/nft/{{randomImage1?.id}}">
-                  <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div  class="col-4">
-      <div class="card mb-3 p-4 h-70">
-
-        <img src="{{randomImage2?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
-             alt="NFT Image">
-        <div>
-          <div class="card-body">
-
-            <div class="d-flex justify-content-between">
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
-                <small>Le prix à augmenter de 0.24 ETH</small>
-              </div>
-              <div>
-                <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
-                <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
-              </div>
-            </div>
-            <h5 class="card-title fw-bold">{{randomImage2?.name }}</h5>
-            <div class="d-flex align-items-center justify-content-between">
-              <!--              <div class="d-flex">-->
-              <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
-              <!--                     style="width: 35px;" alt="NFT Image">-->
-              <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
-              <!--              </div>-->
-              <div>
-                <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage2?.price }} ETH </span> </small>
-              </div>
-            </div>
-
-
-            <!--            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>-->
-            <!--              <div class="likes">-->
-            <!--                <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>-->
-            <!--                <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span>-->
-            <!--              </div>-->
-            <div class="d-flex mt-5">
-              <div>
-                <a routerLink="/nft/{{randomImage2?.id}}">
-                  <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
-
-
-<!--<div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">-->
-<!--  <div class="carousel-indicators">-->
-<!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"-->
-<!--            aria-current="true" aria-label="Slide 1"></button>-->
-<!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"-->
-<!--            aria-label="Slide 2"></button>-->
-<!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"-->
-<!--            aria-label="Slide 3"></button>-->
-<!--  </div>-->
-<!--  <div class="carousel-inner">-->
-<!--    <div class="carousel-item" *ngFor="let image of carouselImages; let i = index" [ngClass]="{'active': i === 0}">-->
-<!--      <img [src]="image" class="d-block mx-auto" style="max-width: 100%; height: auto;" alt="NFT Image">-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"-->
-<!--          data-bs-slide="prev">-->
-<!--    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--    <span class="visually-hidden">Previous</span>-->
-<!--  </button>-->
-<!--  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"-->
-<!--          data-bs-slide="next">-->
-<!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--    <span class="visually-hidden">Next</span>-->
-<!--  </button>-->
-<!--</div>-->
-
-
-<div class="color-home">
-  <div class="container p-5">
-    <div class="row">
-      <div *ngFor="let nft of nfts; let index = index;" class="col-4">
-        <div class="card allCard mb-3 p-4 h-70">
-
-          <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
-               alt="NFT Image">
-          <div>
-            <div class="card-body">
-
-              <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                  <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
-                  <small>Le prix à augmenter de 0.24 ETH</small>
+              <a routerLink="user">
+                <div *ngIf="!checkIsLogged()">
+                  <img class="rounded-circle" style="width: 50px;"
+                       src="  https://i.pinimg.com/564x/ef/66/8d/ef668d9b195722020e22366c94141a24.jpg" alt="">
                 </div>
+                <div *ngIf="checkIsLogged()" class="nav-item mx-2">
+                  <img class="rounded-circle" style="width: 50px;"
+                       src="{{userData?.profilPicture}}" alt="">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+    <div class="home-content">
+
+
+      <div class="container mt-5 ">
+        <div class="row">
+          <div class="col-8">
+            <div class="home_content">
+              <h1>Découvrez et <br> <span style="color: #344b8b">collectionnez</span> des <br> NFT extraordinaires</h1>
+              <p>collectionnez et échangez les nft des meilleurs artistes !</p>
+              <button type="button" class="btn">Collectionnez maintenant !</button>
+            </div>
+          </div>
+          <!--              <div class="col-4">-->
+          <!--                <img class="img_home" src="https://i.pinimg.com/564x/7e/2a/b0/7e2ab028c8802659b0bbe469f6512564.jpg" alt="">-->
+          <!--              </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container bordertest " style="margin-top: 150px">
+    <hr>
+    <div class="d-flex justify-content-between p-5 text-center align-items-center">
+
+      <div class="col-3">
+        <p style="font-size: 2rem; margin: 0; font-weight: bold">60K</p>
+        <p class="m-0 text-center">Utilisateurs</p>
+      </div>
+
+      <div class="d-flex " style="height: 100px;">
+        <div class="vr"></div>
+      </div>
+
+      <div class="col-3 ">
+        <p style="font-size: 2rem; margin: 0; font-weight: bold">40K</p>
+        <p class="m-0 text-center">Nft</p>
+      </div>
+
+      <div class="d-flex " style="height: 100px;">
+        <div class="vr"></div>
+      </div>
+
+      <div class="col-3">
+        <p style="font-size: 2rem; margin: 0; font-weight: bold">12K</p>
+        <p class="m-0 text-center">Nft vendus</p>
+      </div>
+
+      <div class="d-flex" style="height: 100px;">
+        <div class="vr"></div>
+      </div>
+
+      <div class="col-3">
+        <p style="font-size: 2rem; margin: 0; font-weight: bold">6K</p>
+        <p class="m-0 text-center">Utilisateurs connectés</p>
+      </div>
+
+    </div>
+    <hr>
+
+  </div>
+
+  <h2 style="color: black; margin-bottom: 55px; margin-top: 200px" class="text-center ">Populaire cette semaine</h2>
+
+  <div style="background-color: #e9edef; padding: 50px">
+
+
+    <div class="container populaire w-100 h-100 ">
+      <div class="row text-center d-flex">
+
+        <div class="col-4">
+          <div class="card mb-3 p-4 h-70">
+
+            <img src="{{randomImage?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+                 alt="NFT Image">
+            <div>
+              <div class="card-body">
+
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
+                    <small>Le prix à augmenter de 0.24 ETH</small>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
+                    <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                  </div>
+                </div>
+                <h5 class="card-title fw-bold">{{randomImage?.name }}</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <!--              <div class="d-flex">-->
+                  <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
+                  <!--                     style="width: 35px;" alt="NFT Image">-->
+                  <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
+                  <!--              </div>-->
+                  <div>
+                    <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage?.price }} ETH </span> </small>
+                  </div>
+                </div>
+                <div class="d-flex mt-5">
+                  <div>
+                    <a routerLink="/nft/{{randomImage?.id}}">
+                      <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card mb-3 p-4 h-70">
+
+            <img src="{{randomImage1?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+                 alt="NFT Image">
+            <div>
+              <div class="card-body">
+
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
+                    <small>Le prix à augmenter de 0.24 ETH</small>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
+                    <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                  </div>
+                </div>
+                <h5 class="card-title fw-bold">{{randomImage1?.name }}</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <!--              <div class="d-flex">-->
+                  <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
+                  <!--                     style="width: 35px;" alt="NFT Image">-->
+                  <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
+                  <!--              </div>-->
+                  <div>
+                    <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage1?.price }} ETH </span> </small>
+                  </div>
+                </div>
+                <div class="d-flex mt-5">
+                  <div>
+                    <a routerLink="/nft/{{randomImage1?.id}}">
+                      <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card mb-3 p-4 h-70">
+
+            <img src="{{randomImage2?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+                 alt="NFT Image">
+            <div>
+              <div class="card-body">
+
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
+                    <small>Le prix à augmenter de 0.24 ETH</small>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
+                    <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                  </div>
+                </div>
+                <h5 class="card-title fw-bold">{{randomImage2?.name }}</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                  <!--              <div class="d-flex">-->
+                  <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
+                  <!--                     style="width: 35px;" alt="NFT Image">-->
+                  <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
+                  <!--              </div>-->
+                  <div>
+                    <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage2?.price }} ETH </span> </small>
+                  </div>
+                </div>
+
+
+                <!--            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>-->
+                <!--              <div class="likes">-->
+                <!--                <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>-->
+                <!--                <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span>-->
+                <!--              </div>-->
+                <div class="d-flex mt-5">
+                  <div>
+                    <a routerLink="/nft/{{randomImage2?.id}}">
+                      <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <h2 style="color: black; margin-bottom: 55px; margin-top: 200px" class="text-center ">Les top acheteurs</h2>
+
+    <div style="background-color: #e9edef; padding: 50px">
+
+
+      <div class="container populaire w-100 h-100 ">
+        <div class="row text-center d-flex">
+
+          <div class="col-4">
+            <div class="card mb-3 p-4 h-70">
+
+              <img src="{{randomImage?.user.profilPicture}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+                   alt="NFT Image">
+              <div>
+                <div class="card-body">
+
+                  <h5 class="card-title fw-bold">{{randomImage?.user.username }}</h5>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <!--              <div class="d-flex">-->
+                    <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
+                    <!--                     style="width: 35px;" alt="NFT Image">-->
+                    <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
+                    <!--              </div>-->
+                    <div>
+                      <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage?.price }} ETH </span> </small>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-5">
+                    <div>
+                      <a routerLink="/nft/{{randomImage?.id}}">
+                        <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="card mb-3 p-4 h-70">
+
+              <img src="{{randomImage1?.user.profilPicture}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+                   alt="NFT Image">
+              <div>
+                <div class="card-body">
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
+                      <small>Le prix à augmenter de 0.24 ETH</small>
+                    </div>
+                    <div>
+                      <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
+                      <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                    </div>
+                  </div>
+                  <h5 class="card-title fw-bold">{{randomImage1?.user.username }}</h5>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <!--              <div class="d-flex">-->
+                    <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
+                    <!--                     style="width: 35px;" alt="NFT Image">-->
+                    <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
+                    <!--              </div>-->
+                    <div>
+                      <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage1?.price }} ETH </span> </small>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-5">
+                    <div>
+                      <a routerLink="/nft/{{randomImage1?.id}}">
+                        <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="card mb-3 p-4 h-70">
+
+              <img src="{{randomImage2?.user.profilPicture}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+                   alt="NFT Image">
+              <div>
+                <div class="card-body">
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
+                      <small>Le prix à augmenter de 0.24 ETH</small>
+                    </div>
+                    <div>
+                      <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
+                      <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                    </div>
+                  </div>
+                  <h5 class="card-title fw-bold">{{randomImage2?.user.username  }}</h5>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <!--              <div class="d-flex">-->
+                    <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
+                    <!--                     style="width: 35px;" alt="NFT Image">-->
+                    <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
+                    <!--              </div>-->
+                    <div>
+                      <small>Prix du Nft <span class=" fw-bold fs-6">{{randomImage2?.price }} ETH </span> </small>
+                    </div>
+                  </div>
+
+
+                  <!--            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>-->
+                  <!--              <div class="likes">-->
+                  <!--                <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>-->
+                  <!--                <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span>-->
+                  <!--              </div>-->
+                  <div class="d-flex mt-5">
+                    <div>
+                      <a routerLink="/nft/{{randomImage2?.id}}">
+                        <button type="button" class="btn buttonPopulaire btn-dark btn-show">Voir le NFT</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+
+      <!--<div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">-->
+      <!--  <div class="carousel-indicators">-->
+      <!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"-->
+      <!--            aria-current="true" aria-label="Slide 1"></button>-->
+      <!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"-->
+      <!--            aria-label="Slide 2"></button>-->
+      <!--    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"-->
+      <!--            aria-label="Slide 3"></button>-->
+      <!--  </div>-->
+      <!--  <div class="carousel-inner">-->
+      <!--    <div class="carousel-item" *ngFor="let image of carouselImages; let i = index" [ngClass]="{'active': i === 0}">-->
+      <!--      <img [src]="image" class="d-block mx-auto" style="max-width: 100%; height: auto;" alt="NFT Image">-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"-->
+      <!--          data-bs-slide="prev">-->
+      <!--    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+      <!--    <span class="visually-hidden">Previous</span>-->
+      <!--  </button>-->
+      <!--  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"-->
+      <!--          data-bs-slide="next">-->
+      <!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+      <!--    <span class="visually-hidden">Next</span>-->
+      <!--  </button>-->
+      <!--</div>-->
+
+
+      <div class="color-home">
+        <div class="container p-5">
+          <div class="row">
+            <div *ngFor="let nft of nfts; let index = index;" class="col-4">
+              <div class="card allCard mb-3 p-4 h-70">
+
+                <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+                     alt="NFT Image">
                 <div>
+                  <div class="card-body">
+
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
+                        <small>Le prix à augmenter de 0.24 ETH</small>
+                      </div>
+                      <div>
 
 
-                  <!--              <p class="card-text p-0 m-0"><small class="text-muted">{{nft.price}} ETH</small></p>-->
-                  <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
-                  <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
-                </div>
-              </div>
-              <h5 class="card-title fw-bold">{{nft.name}}</h5>
-              <div class="d-flex align-items-center justify-content-between">
-                <div class="d-flex">
-                  <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"
-                       style="width: 35px;" alt="NFT Image">
-                  <small class="m-0 fw-bold ">{{nft.user.username}}</small>
-                </div>
-                <div>
-                  <small>Prix du Nft <span class=" fw-bold fs-6">{{nft.price}} ETH </span> </small>
-                </div>
-              </div>
+                        <!--              <p class="card-text p-0 m-0"><small class="text-muted">{{nft.price}} ETH</small></p>-->
+                        <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
+                        <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                      </div>
+                    </div>
+                    <h5 class="card-title fw-bold">{{nft.name}}</h5>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex">
+                        <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"
+                             style="width: 35px;" alt="NFT Image">
+                        <small class="m-0 fw-bold ">{{nft.user.username}}</small>
+                      </div>
+                      <div>
+                        <small>Prix du Nft <span class=" fw-bold fs-6">{{nft.price}} ETH </span> </small>
+                      </div>
+                    </div>
 
 
-              <!--            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>-->
-              <!--              <div class="likes">-->
-              <!--                <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>-->
-              <!--                <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span>-->
-              <!--              </div>-->
-              <div class="d-flex mt-5">
-                <div>
-                  <a routerLink="/nft/{{nft.id}}">
-                    <button type="button" class="btn buttonCard btn-dark btn-show">Voir le NFT</button>
-                  </a>
+                    <!--            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>-->
+                    <!--              <div class="likes">-->
+                    <!--                <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>-->
+                    <!--                <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span>-->
+                    <!--              </div>-->
+                    <div class="d-flex mt-5">
+                      <div>
+                        <a routerLink="/nft/{{nft.id}}">
+                          <button type="button" class="btn buttonCard btn-dark btn-show">Voir le NFT</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!--</div>-->
     </div>
   </div>
-</div>
-<!--</div>-->
-</div>
-</div>

@@ -15,9 +15,10 @@ export class HomeComponent implements OnInit{
   nfts: NftInterface[]= [];
   listUsers: UserInterface[]= [];
   carouselImages: string[] = [];
-  randomImage: NftInterface | undefined;
-  randomImage1: NftInterface | undefined;
-  randomImage2: NftInterface | undefined;
+  threeRandomUser: any;
+  randomImage: any ;
+  randomImage1: any;
+  randomImage2: any;
 
   userData: UserInterface | undefined;
   constructor(
@@ -68,15 +69,18 @@ export class HomeComponent implements OnInit{
     this.serviceNft.getAllNft().subscribe(nfts => {
       let randomIndex = Math.floor(Math.random() * nfts.length);
       this.randomImage = nfts[randomIndex];
+      console.log(this.randomImage.user.username + 'salut');
        randomIndex = Math.floor(Math.random() * nfts.length);
       this.randomImage1 = nfts[randomIndex];
+      console.log(this.randomImage1.user.username + 'salut');
       randomIndex = Math.floor(Math.random() * nfts.length);
       this.randomImage2 = nfts[randomIndex];
+      console.log(this.randomImage2.user.username + 'salut');
     });
   }
 
   setCarouselImages() {
-    // Générer 3 index aléatoires
+
     let randomIndexes: any [] = [];
     while (randomIndexes.length < 3) {
       let randomIndex = Math.floor(Math.random() * this.nfts.length);
@@ -85,8 +89,21 @@ export class HomeComponent implements OnInit{
       }
     }
 
-    // Récupérer les chemins d'image pour les index aléatoires
     this.carouselImages = randomIndexes.map(index => this.nfts[index].pathImage);
+    console.log(this.carouselImages)
+  }
+
+  setThreeRandomUser() {
+    let randomUser: any;
+    while (randomUser.length < 3) {
+      let randomIndex = Math.floor(Math.random() * this.nfts.length);
+      if (!randomUser.includes(randomIndex)) {
+        randomUser.push(randomIndex);
+      }
+    }
+
+    // this.threeRandomUser = randomUser.map(index => this.nfts[index].pathImage);
+    // console.log(this.threeRandomUser)
   }
 
 
