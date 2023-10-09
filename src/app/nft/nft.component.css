@@ -51,11 +51,48 @@
 .like-cursor {
   cursor: pointer;
 }
-.image-3d-effect {
-  transition: transform 0.3s ease-in-out;
+/*.image-3d-effect {*/
+/*  transition: transform 0.3s ease-in-out;*/
+/*}*/
+
+/*.image-3d-effect:hover {*/
+/*  transform: perspective(1000px) translateZ(20px); !* Ajustez les valeurs selon vos préférences *!*/
+/*}*/
+
+
+.allCard{
+  transition: .3s;
+  cursor:pointer;
 }
 
-.image-3d-effect:hover {
-  transform: perspective(1000px) translateZ(20px); /* Ajustez les valeurs selon vos préférences */
+/*.card button:hover{*/
+/*  background-color: red;*/
+/*}*/
+
+.allCard:hover {
+  /*clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);*/
+  box-shadow: 9px 10px 10px #242424;
+  background: rgb(210,212,213);
+  background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
+}
+.buttonCard{
+  background: #ccbfaf;
+  color: black;
+  border: none;
 }
 
+.allCard:hover .buttonCard{
+  background: #242424;
+  color: white;
+}
+
+.test:hover {
+  box-shadow: 9px 10px 10px #cdc43c;
+  background: rgb(212,201,163);
+  background: linear-gradient(0deg, rgba(212,201,163,1) 4%, rgba(180,155,89,1) 69%, rgba(182,167,105,1) 98%);
+}
+
+
+.nft-image{
+  clip-path: polygon(15% 0, 100% 0, 100% 30%, 100% 86%, 88% 100%, 0 100%, 0% 70%, 0 11%);
+}
