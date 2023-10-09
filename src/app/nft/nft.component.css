@@ -78,7 +78,11 @@
 .buttonCard{
   background: #ccbfaf;
   color: black;
+  font-weight: bold;
+  border-radius: 10px;
   border: none;
+  padding: 10px 50px;
+  position: relative;
 }
 
 .allCard:hover .buttonCard{
