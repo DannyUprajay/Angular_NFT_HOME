@@ -3,7 +3,7 @@ import {UserInterface} from "../user.interface";
 import {FormControl, FormGroup} from "@angular/forms";
 import {DatePipe} from "@angular/common";
 import {UserService} from "../services/user.service";
-import {AuthService} from "../auth.service";
+import {AuthService} from "../services/auth.service";
 
 
 @Component({

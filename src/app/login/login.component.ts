@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {LoginService} from "../login.service";
 import {FormControl, FormGroup} from "@angular/forms";
 import {IToken, UserInterface} from "../user.interface";
-import {AuthService} from "../auth.service";
+import {AuthService} from "../services/auth.service";
 import {UserService} from "../services/user.service";
 import {DatePipe} from "@angular/common";
 

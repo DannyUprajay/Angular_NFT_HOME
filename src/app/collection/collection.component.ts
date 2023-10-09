@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {NftInterface} from "../nft.interface";
 import {FormControl, FormGroup} from "@angular/forms";
 import {NftService} from "../services/nft.service";
-import {AuthService} from "../auth.service";
+import {AuthService} from "../services/auth.service";
 import {UserService} from "../services/user.service";
 
 @Component({
@@ -34,7 +34,7 @@ export class CollectionComponent  implements OnInit{
   }
 
   ngOnInit() {
-    this.dysplayNftOfUserLoggin();
+    this.displayNftOfUserLoggin();
   }
 
   getNft(){
@@ -107,7 +107,9 @@ export class CollectionComponent  implements OnInit{
 
   }
 
-  dysplayNftOfUserLoggin() {
+  displayNftOfUserLoggin() {
+
+
     if (this.auth.isLogged()) {
       let loggedInUsername = this.auth.getLoggedInUsername();
       if (loggedInUsername) {

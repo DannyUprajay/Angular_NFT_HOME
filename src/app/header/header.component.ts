@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from "../auth.service";
+import {AuthService} from "../services/auth.service";
 import {UserInterface} from "../user.interface";
 import {UserService} from "../services/user.service";
 
@@ -9,10 +9,11 @@ import {UserService} from "../services/user.service";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+    role: any;
     isLogin: boolean = false;
     user: any;
     userData: UserInterface | undefined;
+    isAdmin: boolean = false;
 
     constructor(
       private auth: AuthService,
@@ -20,6 +21,8 @@ export class HeaderComponent implements OnInit {
       ) {}
 
     ngOnInit() {
+        this.role = this.auth.getRole();
+        console.log(this.role);
         if (this.auth.isLogged()) {
             this.userService.onSubmit().subscribe(
                 (userData) => {
@@ -44,6 +47,12 @@ export class HeaderComponent implements OnInit {
 
     checkIsLogged(): boolean {
         return this.auth.isLogged();
+    }
+
+    checkIsAdmin(): boolean {
+        let checkRole = this.auth.getRole();
+        this.isAdmin = checkRole === 'ROLE_ADMIN';
+        return this.isAdmin;
     }
 
 }

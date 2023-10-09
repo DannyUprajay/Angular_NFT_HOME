@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-
+  roleAs: any;
   constructor(
     private route:Router
   ) { }
@@ -45,6 +45,19 @@ export class AuthService {
     return null;
   }
 
+    getRole() {
+        let token = localStorage.getItem('token');
+        if (token) {
+            let tokenParts = token.split('.');
+            if (tokenParts.length === 3) {
+                let payload = JSON.parse(atob(tokenParts[1]));
+                let role = payload.roles[0];
+                console.log(role + " salut");
+                return role;
+            }
+        }
+        return null;
+    }
 
 
 }

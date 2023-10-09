@@ -5,7 +5,7 @@ import {ActivatedRoute} from "@angular/router";
 import {Observable} from "rxjs";
 import {NftComponent} from "../nft/nft.component";
 import {FormControl, FormGroup} from "@angular/forms";
-import {AuthService} from "../auth.service";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-nft-detail',

@@ -3,7 +3,7 @@ import {NftService} from "../services/nft.service";
 import {NftInterface} from "../nft.interface";
 import {FormControl, FormGroup} from "@angular/forms";
 import {UserInterface} from "../user.interface";
-import {AuthService} from "../auth.service";
+import {AuthService} from "../services/auth.service";
 import {UserService} from "../services/user.service";
 
 @Component({

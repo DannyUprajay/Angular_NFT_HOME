@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {catchError, EMPTY, Observable} from "rxjs";
 import {result, UserInterface} from "../user.interface";
 import { map } from 'rxjs/operators';
-import {AuthService} from "../auth.service";
+import {AuthService} from "./auth.service";
 
 
 @Injectable({

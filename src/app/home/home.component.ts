@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NftInterface} from "../nft.interface";
 import {NftService} from "../services/nft.service";
-import {AuthService} from "../auth.service";
+import {AuthService} from "../services/auth.service";
 import {UserInterface} from "../user.interface";
 import {UserService} from "../services/user.service";
 
@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit{
   randomImage: any ;
   randomImage1: any;
   randomImage2: any;
+
+    isAdmin: boolean = false;
 
   userData: UserInterface | undefined;
   constructor(
@@ -128,4 +130,10 @@ export class HomeComponent implements OnInit{
   checkIsLogged(): boolean {
     return this.auth.isLogged();
   }
+
+    checkIsAdmin(): boolean {
+        let checkRole = this.auth.getRole();
+        this.isAdmin = checkRole === 'ROLE_ADMIN';
+        return this.isAdmin;
+    }
 }
