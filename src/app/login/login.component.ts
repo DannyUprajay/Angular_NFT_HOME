@@ -80,6 +80,7 @@ export class LoginComponent implements OnInit {
 
       const user: UserInterface = {
         id: 0,
+        roles:[],
         firstName: this.formRegister.value.firstName,
         lastName: this.formRegister.value.lastName,
         email: this.formRegister.value.email,

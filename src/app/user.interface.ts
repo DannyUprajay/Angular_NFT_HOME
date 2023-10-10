@@ -7,6 +7,7 @@ export interface UserInterface {
   gender: string,
   password: string,
   birth: any,
+  roles: string[],
   username: string,
   profilPicture: string
 }

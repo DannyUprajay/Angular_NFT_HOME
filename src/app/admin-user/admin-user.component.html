@@ -1,0 +1,73 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light p-3 bg-light">
+    <div class="container-fluid">
+      <a class="logo navbar-brand text-dark" href="#">Admin user</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link mx-2" aria-current="page" routerLink="/../admin">Admin</a>
+          </li>
+          <li class="nav-item" *ngIf="checkIsLogged()">
+            <a class="nav-link" style="cursor: pointer" (click)="logout()">se déconnecter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<h2 class="text-center">Gestion des utilisateurs</h2>
+
+
+<div *ngFor="let user of listUsers let index = index" class="container mt-5">
+
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+      <th>Genre</th>
+      <th>ROLE</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+      <th>Example</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{user.id}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.birth | date}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.roles}}</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -12,6 +12,8 @@ import {CollectionComponent} from "./collection/collection.component";
 import {UserEditComponent} from "./user-edit/user-edit.component";
 import {AdminComponent} from "./admin/admin.component";
 import {authGuard} from "./auth.guard";
+import {AdminUserComponent} from "./admin-user/admin-user.component";
+import {AdminNftComponent} from "./admin-nft/admin-nft.component";
 
 
 const routes: Routes = [
@@ -25,6 +27,8 @@ const routes: Routes = [
   {path: 'nft/:id/edit/:id', component: NftEditComponent},
   {path: 'collection', component: CollectionComponent},
   {path: 'admin', component: AdminComponent, canActivate:[authGuard] },
+  {path: 'admin/user', component: AdminUserComponent, canActivate:[authGuard] },
+  {path: 'admin/nft', component: AdminNftComponent, canActivate:[authGuard] },
 ];
 
 @NgModule({

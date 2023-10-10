@@ -14,10 +14,10 @@ export class AppComponent {
 
   shouldShowHeader(): boolean {
     let currentUrl = this.router.url;
-    return currentUrl !== '/' && currentUrl !== '/admin';
+    return currentUrl !== '/' && currentUrl !== '/admin' && currentUrl !== '/admin/user' && currentUrl !== '/admin/nft';
   }
   shouldShowFooter(): boolean {
     let currentUrl = this.router.url;
-    return currentUrl !== '/admin';
+    return currentUrl !== '/admin' && currentUrl !== '/admin/user' && currentUrl !== '/admin/nft';
   }
 }

@@ -10,7 +10,7 @@
       <div class=" collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto ">
           <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
-            <a class="nav-link mx-2" aria-current="page" routerLink="">Home</a>
+            <a class="nav-link mx-2" aria-current="page" routerLink="/../admin">Admin</a>
           </li>
           <li class="nav-item" *ngIf="checkIsLogged()">
             <a class="nav-link" style="cursor: pointer" (click)="logout()">se déconnecter</a>
@@ -21,12 +21,4 @@
   </nav>
 </div>
 
-
-<div class="container mt-5">
-
-  <ul class="w-25 mx-auto list-group">
-    <li class=" list-group-item text-center "><a routerLink="user">Gestion des utilisateurs</a></li>
-    <li class="list-group-item text-center"><a routerLink="nft">Gestion des NFTS</a></li>
-  </ul>
-
-</div>
+<h2 class="text-center">Gestion des nfts</h2>
