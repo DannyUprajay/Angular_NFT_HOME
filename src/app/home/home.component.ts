@@ -95,18 +95,6 @@ export class HomeComponent implements OnInit{
     console.log(this.carouselImages)
   }
 
-  setThreeRandomUser() {
-    let randomUser: any;
-    while (randomUser.length < 3) {
-      let randomIndex = Math.floor(Math.random() * this.nfts.length);
-      if (!randomUser.includes(randomIndex)) {
-        randomUser.push(randomIndex);
-      }
-    }
-
-    // this.threeRandomUser = randomUser.map(index => this.nfts[index].pathImage);
-    // console.log(this.threeRandomUser)
-  }
 
 
   likesState: { [key: number]: boolean } = {};

@@ -13,8 +13,11 @@ export class AppComponent {
   constructor(private router: Router) { }
 
   shouldShowHeader(): boolean {
-    const currentUrl = this.router.url;
-    return currentUrl !== '/';
+    let currentUrl = this.router.url;
+    return currentUrl !== '/' && currentUrl !== '/admin';
   }
-
+  shouldShowFooter(): boolean {
+    let currentUrl = this.router.url;
+    return currentUrl !== '/admin';
+  }
 }
