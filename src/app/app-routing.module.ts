@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'nft/:id', component: NftDetailComponent},
   {path: 'nft/:id/edit/:id', component: NftEditComponent},
   {path: 'collection', component: CollectionComponent},
-  {path: 'admin', component: AdminComponent, canActivate:[authGuard] },
+  {path: 'admin', canActivate:[authGuard], component: AdminComponent  },
   {path: 'admin/user', component: AdminUserComponent, canActivate:[authGuard] },
   {path: 'admin/nft', component: AdminNftComponent, canActivate:[authGuard] },
 ];
