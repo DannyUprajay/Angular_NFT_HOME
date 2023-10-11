@@ -20,11 +20,15 @@
 <!--              Delete-->
 <!--            </button>-->
           </div>
+          <div  *ngIf="checkIsLogged()">
+            <h3 class="text-center" style="cursor: pointer" (click)="logout()">se déconnecter</h3>
+          </div>
 
       </div>
     </div>
   </div>
 </div>
+
 
 
 

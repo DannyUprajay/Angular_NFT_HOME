@@ -56,6 +56,9 @@ export class UserComponent {
     );
   }
 
+  logout() {
+    this.auth.clearToken();
+  }
   getUser(){
     this.userService.getAllUser().subscribe(Users => {
       this.listUsers = Users;
@@ -112,5 +115,8 @@ export class UserComponent {
     }
   }
 
+  checkIsLogged(): boolean {
+    return this.auth.isLogged();
+  }
 
 }
