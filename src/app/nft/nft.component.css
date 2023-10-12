@@ -103,3 +103,7 @@
 .fav {
   all: unset;
 }
+.alert{
+  color: red;
+  background-color: red;
+}

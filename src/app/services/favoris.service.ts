@@ -25,10 +25,5 @@ export class FavorisService {
     return this.favorites;
   }
 
-  removeFavorite(id: number): void {
-    const index = this.favorites.findIndex(favorite => favorite.id === id);
-    if (index !== -1) {
-      this.favorites.splice(index, 1);
-    }
-  }
+
 }
