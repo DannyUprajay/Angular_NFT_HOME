@@ -15,6 +15,7 @@ export class NftComponent implements OnInit{
 
   nfts: NftInterface[]= [];
   nftDetail: NftInterface | undefined;
+  favList: NftInterface[] = [];
 
   constructor(
     private serviceNft: NftService,
@@ -68,6 +69,15 @@ export class NftComponent implements OnInit{
   }
 
 
+  addFav(id: number){
+    this.serviceNft.getNftById(id).subscribe( nft =>{
+      console.log(nft);
+        // @ts-ignore
+        this.favList.push(nft);
+        alert('Nft envoyé')
+        console.log(this.favList);
+    })
+  }
 
 
 
