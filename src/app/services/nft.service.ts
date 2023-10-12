@@ -21,8 +21,8 @@ export class NftService {
     }
 
   addNft(nft: NftInterface, token: string): Observable<result> {
-    const body = JSON.stringify(nft);
-    const headers = new HttpHeaders({
+    let body = JSON.stringify(nft);
+    let headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
@@ -34,19 +34,9 @@ export class NftService {
     return this.http.delete<result>('https://127.0.0.1:8000/nft/' + id);
   }
 
-  // editNft(id: number, token: string, nft: NftInterface): Observable<result> {
-  //   const body = JSON.stringify(nft);
-  //   const headers = new HttpHeaders({
-  //     'Content-Type': 'application/json',
-  //     'Authorization': `Bearer ${token}`
-  //   });
-  //
-  //   return this.http.post<result>(`https://127.0.0.1:8000/nft/${id}/edit`, body, { headers });
-  // }
-
   updateNft(id :number, data :any){
-    const body = JSON.stringify(data);
-    const header = { 'content-type': 'application/x-www-form-urlencoded'};
+    let body = JSON.stringify(data);
+    let header = { 'content-type': 'application/x-www-form-urlencoded'};
     return this.http.post<result>(`https://127.0.0.1:8000/nft/${id}/edit`, body,  {'headers': header});
   }
 

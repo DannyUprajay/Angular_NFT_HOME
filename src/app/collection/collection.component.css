@@ -4,6 +4,13 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.card-deck{
+  height: 200px;
+  width: 210px;
+  margin-bottom: 150px;
+  cursor: pointer;
+}
+
 .card-title {
   font-size: 18px;
   font-weight: bold;

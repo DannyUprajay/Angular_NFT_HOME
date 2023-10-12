@@ -16,6 +16,10 @@ export class GalleryService {
     return this.http.get<GalleryInterface[] >("https://127.0.0.1:8000/gallery/");
   }
 
+  getNftById(id: number): Observable<GalleryInterface> {
+    return this.http.get<GalleryInterface>('https://127.0.0.1:8000/gallery/' + id);
+  }
+
   addGallery(gallery: GalleryInterface, token: string): Observable<result> {
     const body = JSON.stringify(gallery);
     const headers = new HttpHeaders({

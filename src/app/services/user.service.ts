@@ -28,8 +28,8 @@ export class UserService {
   }
 
   addUser(user: UserInterface): Observable<result> {
-    const body = JSON.stringify(user);
-    const header = { 'content-type': 'application/x-www-form-urlencoded'};
+    let body = JSON.stringify(user);
+    let header = { 'content-type': 'application/x-www-form-urlencoded'};
     return this.http.post<result>("https://127.0.0.1:8000/user/new", body, {'headers': header})
 
   }
@@ -59,8 +59,8 @@ export class UserService {
     }
 
   updateUser(id :number, data :any){
-    const body = JSON.stringify(data);
-    const header = { 'content-type': 'application/x-www-form-urlencoded'};
+    let body = JSON.stringify(data);
+    let header = { 'content-type': 'application/x-www-form-urlencoded'};
     return this.http.post<result>(`https://127.0.0.1:8000/user/${id}/edit`, body,  {'headers': header});
   }
 

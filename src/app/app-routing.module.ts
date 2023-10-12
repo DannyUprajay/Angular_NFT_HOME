@@ -15,6 +15,7 @@ import {authGuard} from "./auth.guard";
 import {AdminUserComponent} from "./admin-user/admin-user.component";
 import {AdminNftComponent} from "./admin-nft/admin-nft.component";
 import {FavoriteComponent} from "./favorite/favorite.component";
+import {CollectionDetailComponent} from "./collection-detail/collection-detail.component";
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'nft/:id', component: NftDetailComponent},
   {path: 'nft/:id/edit/:id', component: NftEditComponent},
-  {path: 'collection', component: CollectionComponent},
+  {path: 'gallery', component: CollectionComponent},
+  {path: 'gallery/:id', component: CollectionDetailComponent},
   {path: 'admin', canActivate:[authGuard], component: AdminComponent  },
   {path: 'admin/user', component: AdminUserComponent, canActivate:[authGuard] },
   {path: 'admin/nft', component: AdminNftComponent, canActivate:[authGuard] },

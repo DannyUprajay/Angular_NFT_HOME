@@ -56,10 +56,11 @@
 
         <h2>Mes galleries</h2>
         <div class="row text-center">
-            <div *ngFor="let gallery of gallerie;" class="col-4">
+            <div *ngFor="let gallery of gallerie;" class="col-3" >
 
+                <a routerLink="/gallery/{{gallery.id}}">
                 <div class="card-deck">
-                    <div class="card">
+                    <div class="card galleryCard">
                         <img class="card-img-top"
                              src="https://i.pinimg.com/564x/5f/7e/c2/5f7ec255d7927e360af2a6e767c3dd74.jpg"
                              alt="Card image cap">
@@ -69,6 +70,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
 
