@@ -19,6 +19,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 import { AdminNftComponent } from './admin-nft/admin-nft.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AdminNftComponent } from './admin-nft/admin-nft.component';
     UserEditComponent,
     AdminComponent,
     AdminUserComponent,
-    AdminNftComponent
+    AdminNftComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,

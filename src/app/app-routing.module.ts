@@ -14,6 +14,7 @@ import {AdminComponent} from "./admin/admin.component";
 import {authGuard} from "./auth.guard";
 import {AdminUserComponent} from "./admin-user/admin-user.component";
 import {AdminNftComponent} from "./admin-nft/admin-nft.component";
+import {FavoriteComponent} from "./favorite/favorite.component";
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'admin', canActivate:[authGuard], component: AdminComponent  },
   {path: 'admin/user', component: AdminUserComponent, canActivate:[authGuard] },
   {path: 'admin/nft', component: AdminNftComponent, canActivate:[authGuard] },
+  {path: 'favoris', component: FavoriteComponent, },
 ];
 
 @NgModule({

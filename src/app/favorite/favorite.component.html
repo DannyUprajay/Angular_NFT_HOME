@@ -1,0 +1,60 @@
+
+<h2 class="text-center">Favoris</h2>
+
+
+
+<div class="color-home">
+  <div class="container p-5">
+    <div class="row">
+      <div *ngFor="let fav of favorites;"  class="col-4">
+        <div class="card allCard mb-3 p-4 h-70">
+
+          <img src="{{fav.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+               alt="NFT Image">
+          <div>
+            <div class="card-body">
+
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
+                  <small>Le prix à augmenter de 0.24 ETH</small>
+                </div>
+                <div>
+
+
+                  <!--              <p class="card-text p-0 m-0"><small class="text-muted">{{nft.price}} ETH</small></p>-->
+                  <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
+                </div>
+              </div>
+              <h5 class="card-title fw-bold">{{fav.name}}</h5>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex">
+                  <img src="{{fav.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"
+                       style="width: 35px; height: 35px;" alt="NFT Image">
+                  <small class="m-0 fw-bold ">{{fav.user.username}}</small>
+                </div>
+                <div>
+                  <small>Prix du Nft <span class=" fw-bold fs-6">{{fav.price}} ETH </span> </small>
+                </div>
+              </div>
+
+
+              <!--            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>-->
+              <!--              <div class="likes">-->
+              <!--                <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>-->
+              <!--                <span class="like-count">{{likesState[nft.id] ? 1 : 0}}</span>-->
+              <!--              </div>-->
+              <div class="d-flex mt-5">
+                <div>
+                  <a routerLink="/nft/{{fav.id}}">
+                    <button type="button" class="btn buttonCard btn-dark btn-show">Voir le NFT</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

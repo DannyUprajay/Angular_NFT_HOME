@@ -5,6 +5,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {UserInterface} from "../user.interface";
 import {AuthService} from "../services/auth.service";
 import {UserService} from "../services/user.service";
+import {FavorisService} from "../services/favoris.service";
 
 @Component({
   selector: 'app-nft',
@@ -20,9 +21,10 @@ export class NftComponent implements OnInit{
   constructor(
     private serviceNft: NftService,
     private auth: AuthService,
-    private userService: UserService
+    private userService: UserService,
+    private favoris: FavorisService
 
-    ) {
+  ) {
   }
 
   checkIsLogged(): boolean {
@@ -71,11 +73,13 @@ export class NftComponent implements OnInit{
 
   addFav(id: number){
     this.serviceNft.getNftById(id).subscribe( nft =>{
-      console.log(nft);
-        // @ts-ignore
-        this.favList.push(nft);
-        alert('Nft envoyé')
-        console.log(this.favList);
+      let add = this.favoris.addToFavorites(nft)
+      if(add){
+        this.favoris.addToFavorites(nft);
+        alert('Nft envoyé dans votre liste fovoris')
+      }else{
+        alert("Nft déjà dans votre liste favoris")
+      }
     })
   }
 
