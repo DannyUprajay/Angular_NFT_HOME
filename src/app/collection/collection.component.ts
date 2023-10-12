@@ -4,6 +4,8 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {NftService} from "../services/nft.service";
 import {AuthService} from "../services/auth.service";
 import {UserService} from "../services/user.service";
+import {GalleryInterface} from "../gallery.interface";
+import {GalleryService} from "../services/gallery.service";
 
 @Component({
   selector: 'app-collection',
@@ -13,7 +15,13 @@ import {UserService} from "../services/user.service";
 export class CollectionComponent  implements OnInit{
 
   nfts: NftInterface[]= [];
+  gallerie: GalleryInterface[] = [];
   nftDetail: NftInterface | undefined;
+
+  public formGallery: FormGroup = new FormGroup({
+    name: new FormControl(''),
+    description: new FormControl(''),
+  })
 
   public form: FormGroup = new FormGroup({
     name: new FormControl(''),
@@ -23,7 +31,8 @@ export class CollectionComponent  implements OnInit{
   constructor(
       private serviceNft: NftService,
       private auth: AuthService,
-      private userService: UserService
+      private userService: UserService,
+      private serviceGallery: GalleryService
 
   ) {
   }
@@ -35,12 +44,20 @@ export class CollectionComponent  implements OnInit{
 
   ngOnInit() {
     this.displayNftOfUserLoggin();
+    this.getGallery();
+  }
+
+  getGallery(){
+    this.serviceGallery.getAllGallery().subscribe(galleries => {
+      this.gallerie = galleries;
+
+    } )
   }
 
   getNft(){
     this.serviceNft.getAllNft().subscribe(Nfts => {
       this.nfts = Nfts;
-      console.log(this.nfts)
+
     });
   }
 
@@ -51,19 +68,32 @@ export class CollectionComponent  implements OnInit{
     })
   }
 
-  likesState: { [key: number]: boolean } = {};
 
-  toggleLike(nftId: number) {
+  submitGallery(){
+    if (this.formGallery.valid) {
+      if (this.auth.isLogged()) {
+        const token = this.auth.getToken();
+        if (token !== null) {
+          const gallery: GalleryInterface = {
+            id:0,
+            name: this.formGallery.value.name,
+            description: this.formGallery.value.description
+          };
+          this.serviceGallery.addGallery(gallery, token).subscribe(response => {
 
-    if (!this.likesState[nftId]) {
-      this.likesState[nftId] = true;
+          });
+        } else {
+          console.log('User token is null');
+        }
+      } else {
+        console.log('User not authenticated');
+      }
+      this.getGallery();
+      this.form.reset();
     } else {
-      this.likesState[nftId] = false;
-
+      console.log('Form is invalid');
     }
   }
-
-
   onSubmit() {
     if (this.form.valid) {
       // window.location.reload();
