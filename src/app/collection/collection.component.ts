@@ -124,6 +124,7 @@ export class CollectionComponent  implements OnInit{
       }
       this.getNft();
       this.form.reset();
+
     } else {
       console.log('Form is invalid');
     }
