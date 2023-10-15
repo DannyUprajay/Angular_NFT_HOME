@@ -4,12 +4,22 @@
 <div class="color-home">
     <div class="container p-5">
 
-        <!--      MODALE -->
-        <div class="text-center mb-4">
+
+        <div class="text-center mb-4 d-flex  gap-2">
+          <div>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Créer une gallery
             </button>
+          </div>
+          <div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNft">
+            Créer un NFT
+          </button>
         </div>
+        </div>
+
+      <!--      MODALE GALLERY -->
+
         <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
              aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -49,14 +59,61 @@
             </div>
         </div>
 
-        <!--   FIN MODALE -->
+        <!--   FIN MODALE GALLERY -->
 
+
+      <!--      MODALE NFT-->
+      <div class="modal fade " id="modalNft" tabindex="-1" role="dialog" aria-labelledby="modalNft"
+           aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title mx-auto" id="modaldNft">Créer une gallery</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <div class="col-md-6">
+                    <input type="text" id="name" formControlName="name" class="form-control" style="width: 450px;" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="pathImage" class="form-label">Image Path</label>
+                  <div class="col-md-6">
+                    <input type="text" id="pathImage" formControlName="pathImage" class="form-control" style="width: 450px;" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <div class="col-md-6">
+                    <input type="number" id="price" formControlName="price" class="form-control" style="width: 450px;" required>
+                  </div>
+                </div>
+                <div class="text-center">
+                <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Create NFT</button>
+                </div>
+              </form>
+            </div>
+            <!--          <div class="modal-footer">-->
+            <!--            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+            <!--            <button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--          </div>-->
+          </div>
+        </div>
+      </div>
+
+      <!--   FIN MODALE NFT -->
 
         <!--      Gallery -->
 
         <h2>Mes galleries</h2>
-        <div class="row text-center">
-            <div *ngFor="let gallery of gallerie;" class="col-3" >
+        <div class="row text-center gallery">
+            <div *ngFor="let gallery of gallerie; let index = index" class="col-3" >
+              <button type="button" style="background-color: white" (click)="deleteGallery(gallery.id, index)" ><i class="fa-solid fa-xmark" style="color: #f80d18;"></i></button>
 
                 <a routerLink="/gallery/{{gallery.id}}">
                 <div class="card-deck">
@@ -114,8 +171,6 @@
                                     <small>Prix du Nft <span class=" fw-bold fs-6">{{nft.price}} ETH </span> </small>
                                 </div>
                             </div>
-
-
                             <!--            <p class="card-text"><small class="text-muted">{{nft.date | date: 'd, MMM, y'}}</small></p>-->
                             <!--              <div class="likes">-->
                             <!--                <span class="heart like-cursor" (click)="toggleLike(nft.id)">&#x2665;</span>-->
@@ -126,6 +181,7 @@
                                     <a routerLink="/nft/{{nft.id}}">
                                         <button type="button" class="btn buttonCard btn-dark btn-show">Voir le NFT
                                         </button>
+                                      <button type="button" style="background-color: white" (click)="delete(nft.id, index)" ><i class="fa-solid fa-xmark" style="color: #f80d18;"></i></button>
                                     </a>
                                 </div>
                             </div>
@@ -138,27 +194,27 @@
 </div>
 
 
-<div class="container text-light" *ngIf="checkIsLogged()">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <div class="col-md-6">
-                <input type="text" id="name" formControlName="name" class="form-control" required>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="pathImage" class="form-label">Image Path</label>
-            <div class="col-md-6">
-                <input type="text" id="pathImage" formControlName="pathImage" class="form-control" required>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="price" class="form-label">Price</label>
-            <div class="col-md-6">
-                <input type="number" id="price" formControlName="price" class="form-control" required>
-            </div>
-        </div>
-        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Create NFT</button>
-    </form>
-</div>
+<!--<div class="container text-light" *ngIf="checkIsLogged()">-->
+<!--    <form [formGroup]="form" (ngSubmit)="onSubmit()">-->
+<!--        <div class="mb-3">-->
+<!--            <label for="name" class="form-label">Name</label>-->
+<!--            <div class="col-md-6">-->
+<!--                <input type="text" id="name" formControlName="name" class="form-control" required>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--            <label for="pathImage" class="form-label">Image Path</label>-->
+<!--            <div class="col-md-6">-->
+<!--                <input type="text" id="pathImage" formControlName="pathImage" class="form-control" required>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--            <label for="price" class="form-label">Price</label>-->
+<!--            <div class="col-md-6">-->
+<!--                <input type="number" id="price" formControlName="price" class="form-control" required>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Create NFT</button>-->
+<!--    </form>-->
+<!--</div>-->
 

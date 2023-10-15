@@ -90,6 +90,7 @@ export class CollectionComponent  implements OnInit{
       }
       this.getGallery();
       this.form.reset();
+
     } else {
       console.log('Form is invalid');
     }
@@ -122,7 +123,7 @@ export class CollectionComponent  implements OnInit{
       } else {
         console.log('User not authenticated');
       }
-      this.getNft();
+      this.displayNftOfUserLoggin();
       this.form.reset();
 
     } else {
@@ -134,6 +135,15 @@ export class CollectionComponent  implements OnInit{
     this.serviceNft.deleteNft(id).subscribe(resultatDelete => {
       this.nfts.splice(index,1);
       console.log(this.nfts);
+    });
+
+  }
+
+  deleteGallery(id: number, index: number) {
+    this.serviceGallery.deleteGallery(id).subscribe(resultatDelete => {
+      this.gallerie.splice(index,1);
+      console.log(resultatDelete);
+      console.log(this.gallerie);
     });
 
   }

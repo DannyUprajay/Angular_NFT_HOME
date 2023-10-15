@@ -81,7 +81,7 @@
   background: rgb(210,212,213);
   background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
 }
-.buttonCard{
+.buttonCard {
   background: #ccbfaf;
   color: black;
   font-weight: bold;
@@ -90,6 +90,17 @@
   padding: 10px 50px;
   position: relative;
 }
+
+.btn{
+  background: #ccbfaf;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 50px;
+  position: relative;
+}
+
 
 .allCard:hover .buttonCard{
   background: #242424;
@@ -109,4 +120,7 @@
 
 .fav {
   all: unset;
+}
+.gallery div a{
+  text-decoration: none;
 }
