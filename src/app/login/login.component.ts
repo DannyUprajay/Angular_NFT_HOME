@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
 
     userData: any;
     isLoginFormActive: boolean = true;
+    message: string | undefined;
 
   constructor(
     private service: LoginService,
@@ -100,10 +101,14 @@ export class LoginComponent implements OnInit {
       this.serviceUser.addUser(user).subscribe(response => {
           window.location.reload()
         this.formRegister.reset();
+
         console.log(user);
       });
+      this.formRegister.reset();
+      this.message = "Votre compte à bien été créé";
     } else {
       console.log('Formulaire invalide');
+      this.message = "veuillez remplir tous les champs";
     }
 
   }

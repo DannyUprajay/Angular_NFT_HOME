@@ -17,6 +17,8 @@ export class CollectionComponent  implements OnInit{
   nfts: NftInterface[]= [];
   gallerie: GalleryInterface[] = [];
   nftDetail: NftInterface | undefined;
+  messageNft: string | undefined;
+  messageGallery: string | undefined;
 
   public formGallery: FormGroup = new FormGroup({
     name: new FormControl(''),
@@ -89,12 +91,15 @@ export class CollectionComponent  implements OnInit{
       } else {
         console.log('User not authenticated');
       }
-      this.getGallery();
-      this.form.reset();
+
+      this.messageGallery = "Votre gallery à bien été créé";
 
     } else {
       console.log('Form is invalid');
     }
+    this.formGallery.reset();
+    this.getGallery();
+    // this.form.reset();
   }
   onSubmit() {
     if (this.form.valid) {
@@ -125,6 +130,7 @@ export class CollectionComponent  implements OnInit{
         console.log('User not authenticated');
       }
       this.displayNftOfUserLoggin();
+      this.messageNft = "Votre NFT à bien été créé";
       this.form.reset();
 
     } else {
@@ -132,13 +138,21 @@ export class CollectionComponent  implements OnInit{
     }
   }
 
-  delete(id: number, index: number) {
-    this.serviceNft.deleteNft(id).subscribe(resultatDelete => {
-      this.nfts.splice(index,1);
-      console.log(this.nfts);
-    });
+  // delete(id: number, index: number) {
+  //   // this.serviceNft.deleteNft(id).subscribe(resultatDelete => {
+  //   //   this.nfts.splice(index,1);
+  //   //   console.log(this.nfts);
+  //   // });
+  //
+  // }
 
+  pushToGallery(id: number, index: number) {
+    this.serviceNft.getNftById(id).subscribe(nftResult => {
+        this.gallerie[2].nft.push(nftResult);
+      console.log(this.gallerie);
+    });
   }
+
 
   deleteGallery(id: number, index: number) {
     this.serviceGallery.deleteGallery(id).subscribe(resultatDelete => {
