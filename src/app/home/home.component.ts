@@ -4,6 +4,7 @@ import {NftService} from "../services/nft.service";
 import {AuthService} from "../services/auth.service";
 import {UserInterface} from "../user.interface";
 import {UserService} from "../services/user.service";
+import {FavorisService} from "../services/favoris.service";
 
 @Component({
   selector: 'app-home',
@@ -27,6 +28,7 @@ export class HomeComponent implements OnInit{
     private serviceNft: NftService,
     private auth: AuthService,
     private userService: UserService,
+    private favoris: FavorisService
 
 
   ) {
@@ -124,4 +126,19 @@ export class HomeComponent implements OnInit{
         this.isAdmin = checkRole === 'ROLE_ADMIN';
         return this.isAdmin;
     }
+
+
+  addFav(id: number){
+    this.serviceNft.getNftById(id).subscribe( nft =>{
+      let add = this.favoris.addToFavorites(nft)
+      if(add){
+        this.favoris.addToFavorites(nft);
+        alert('Nft envoyé dans votre liste fovoris')
+      }else{
+        alert("Nft déjà dans votre liste favoris")
+      }
+    })
+  }
+
+
 }

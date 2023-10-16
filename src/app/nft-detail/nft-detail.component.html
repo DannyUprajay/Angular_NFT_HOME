@@ -1,15 +1,20 @@
 
 
 
-<div class="testy">
+<div class="row">
 
-<div class="container" [ngStyle]="{ 'background-image': 'url(' + (nft?.pathImage || 'default-image-url') + ')', 'width': '480px', 'height':'470px','opacity': '0.8' }">
-<p>salut</p>
+  <div class="col-6 mx-auto text-center">
+        <img [src]="nft?.pathImage" alt="image de nft" class="nft-image">
+  </div>
+  <div class="col-6 container">
+    <h2 class="text-center">{{nft?.name}}</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, itaque ullam? Aliquid deserunt est itaque quod suscipit vero? Adipisci assumenda atque commodi esse, ipsa laborum odio quis quisquam quo sapiente.</p>
+
+  </div>
+
 </div>
-</div>
 
 
-<!--    <img [src]="nft?.pathImage" alt="image de nft" class="nft-image">-->
 
 
 

@@ -145,7 +145,10 @@
                   </div>
                   <div>
                     <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
-                    <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                    <button (click)="addFav(randomImage.id)" class="fav">
+                      <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"> </i>
+                    </button>
+
                   </div>
                 </div>
                 <h5 class="card-title fw-bold">{{randomImage?.name }}</h5>
@@ -186,7 +189,9 @@
                   </div>
                   <div>
                     <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
-                    <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                    <button (click)="addFav(randomImage1.id)" class="fav">
+                      <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"> </i>
+                    </button>
                   </div>
                 </div>
                 <h5 class="card-title fw-bold">{{randomImage1?.name }}</h5>
@@ -227,7 +232,9 @@
                   </div>
                   <div>
                     <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
-                    <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"></i>
+                    <button (click)="addFav(randomImage2.id)" class="fav">
+                      <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"> </i>
+                    </button>
                   </div>
                 </div>
                 <h5 class="card-title fw-bold">{{randomImage2?.name }}</h5>
