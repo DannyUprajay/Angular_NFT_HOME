@@ -1,14 +1,21 @@
 
 
-<div class="bg-img d-flex">
-  <div class="text-center mx-auto">
-  <img [src]="nft?.pathImage" alt="image de nft" class="nft-image">
-  </div>
 
+<div class="testy">
 
-  <h2 class="">{{nft?.name}}</h2>
-
+<div class="container" [ngStyle]="{ 'background-image': 'url(' + (nft?.pathImage || 'default-image-url') + ')', 'width': '480px', 'height':'470px','opacity': '0.8' }">
+<p>salut</p>
 </div>
+</div>
+
+
+<!--    <img [src]="nft?.pathImage" alt="image de nft" class="nft-image">-->
+
+
+
+
+
+
 
 
 

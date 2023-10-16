@@ -6,11 +6,12 @@
 
 /*}*/
 
+.testy{
+  background-color: #cecfd2;
+}
 img {
   width: 100%;
-  height: 60vh;
-  object-fit: contain;
-  object-position: bottom;
+  height: 75vh;
 }
 
 .bg-img{
