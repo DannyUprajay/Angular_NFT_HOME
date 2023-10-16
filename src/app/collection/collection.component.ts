@@ -184,6 +184,7 @@ export class CollectionComponent  implements OnInit{
   displayNftOfUserLoggin() {
     if (this.auth.isLogged()) {
       let loggedInUsername = this.auth.getLoggedInUsername();
+      console.log(loggedInUsername + 'diajdoihadhoad');
       if (loggedInUsername) {
         this.serviceNft.getAllNft().subscribe(
           (nfts: NftInterface[]) => {

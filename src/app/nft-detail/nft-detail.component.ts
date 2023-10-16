@@ -16,10 +16,11 @@ export class NftDetailComponent implements OnInit{
 
     nft: NftInterface | undefined;
 
+
   constructor(
     private nftService: NftService,
     private route: ActivatedRoute,
-    private authService: AuthService
+    private auth: AuthService
   ) {}
 
 
@@ -37,6 +38,13 @@ export class NftDetailComponent implements OnInit{
         });
     }
 
+
+  showEdit(): boolean {
+    if (this.auth.getLoggedInUsername() === this.nft?.user.username) {
+      return true;
+    }
+    return false;
+  }
 
 
 }

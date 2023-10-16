@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NftInterface} from "../nft.interface";
 
 @Component({
   selector: 'app-collection-detail',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CollectionDetailComponent {
 
-
+  nft: NftInterface | undefined;
 
 
 }

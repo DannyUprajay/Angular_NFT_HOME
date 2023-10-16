@@ -50,17 +50,7 @@ export class NftComponent implements OnInit{
     })
   }
 
-  likesState: { [key: number]: boolean } = {};
 
-  toggleLike(nftId: number) {
-
-    if (!this.likesState[nftId]) {
-      this.likesState[nftId] = true;
-    } else {
-      this.likesState[nftId] = false;
-
-    }
-  }
 
   delete(id: number, index: number) {
     this.serviceNft.deleteNft(id).subscribe(resultatDelete => {
