@@ -5,6 +5,7 @@ import {IToken, UserInterface} from "../user.interface";
 import {AuthService} from "../services/auth.service";
 import {UserService} from "../services/user.service";
 import {DatePipe} from "@angular/common";
+import * as bcrypt from 'bcryptjs';
 
 declare function login(): any;
 
@@ -74,11 +75,11 @@ export class LoginComponent implements OnInit {
 
 
   register() {
-
     if (this.formRegister.valid) {
-      const formattedBirth = this.datePipe.transform(this.formRegister.value.birth, 'dd/MM/yyyy');
-
-      const user: UserInterface = {
+      let formattedBirth = this.datePipe.transform(this.formRegister.value.birth, 'dd/MM/yyyy');
+      let saltRounds = 10;
+      let hashedPassword = bcrypt.hashSync(this.formRegister.value.password, saltRounds);
+      let user: UserInterface = {
         id: 0,
         roles:[],
         firstName: this.formRegister.value.firstName,
@@ -92,14 +93,13 @@ export class LoginComponent implements OnInit {
           contry: this.formRegister.value.contry,
           postalCode: this.formRegister.value.postalCode
         },
-        password: this.formRegister.value.password,
+        password: hashedPassword,
         birth: formattedBirth
       };
 
       this.serviceUser.addUser(user).subscribe(response => {
-        // this.getUser();
           window.location.reload()
-        this.formRegister.reset(); // Réinitialisez le formulaire d'inscription
+        this.formRegister.reset();
         console.log(user);
       });
     } else {
@@ -107,24 +107,5 @@ export class LoginComponent implements OnInit {
     }
 
   }
-
-
-    // onSubmit() {
-    //     this.serviceUser.getUserData().subscribe(
-    //         (userData) => {
-    //             if (userData) {
-    //                 console.log('Données de l\'utilisateur connecté :', userData);
-    //                 this.userData = userData;
-    //             } else {
-    //                 console.log('Aucun utilisateur trouvé.');
-    //             }
-    //         },
-    //         (error) => {
-    //             console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
-    //         }
-    //     );
-    // }
-
-
 
 }

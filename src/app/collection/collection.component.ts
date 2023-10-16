@@ -77,7 +77,8 @@ export class CollectionComponent  implements OnInit{
           const gallery: GalleryInterface = {
             id:0,
             name: this.formGallery.value.name,
-            description: this.formGallery.value.description
+            description: this.formGallery.value.description,
+            nft: []
           };
           this.serviceGallery.addGallery(gallery, token).subscribe(response => {
 
@@ -148,25 +149,42 @@ export class CollectionComponent  implements OnInit{
 
   }
 
+  // displayNftOfUserLoggin() {
+  //   if (this.auth.isLogged()) {
+  //     let loggedInUsername = this.auth.getLoggedInUsername();
+  //     if (loggedInUsername) {
+  //       this.serviceNft.getAllNft().subscribe(
+  //           (nfts: NftInterface[]) => {
+  //             this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
+  //             console.log('NFTs de l\'utilisateur connecté :', this.nfts);
+  //           },
+  //           (error) => {
+  //             console.error('Erreur lors de la récupération des NFTs :', error);
+  //           }
+  //       );
+  //     }
+  //   }
+  // }
+
+
   displayNftOfUserLoggin() {
-
-
     if (this.auth.isLogged()) {
       let loggedInUsername = this.auth.getLoggedInUsername();
       if (loggedInUsername) {
         this.serviceNft.getAllNft().subscribe(
-            (nfts: NftInterface[]) => {
-              this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
-              console.log('NFTs de l\'utilisateur connecté :', this.nfts);
-            },
-            (error) => {
-              console.error('Erreur lors de la récupération des NFTs :', error);
-            }
+          (nfts: NftInterface[]) => {
+            this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
+            this.nfts.forEach(nft => {
+              console.log('NFT de l\'utilisateur connecté :', nft.user.username);
+            });
+          },
+          (error) => {
+            console.error('Erreur lors de la récupération des NFTs :', error);
+          }
         );
       }
     }
   }
-
 
 
 

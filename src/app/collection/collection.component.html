@@ -1,4 +1,9 @@
-<h2 class="text-center ">Mes Nfts</h2>
+<div *ngFor="let nft of nfts.slice(0,1); " class="text-center">
+  <img src="{{nft.user.profilPicture}}" alt="" style="width: 100px; border-radius: 50%; margin-top: 5px">
+  <h2 >{{ nft.user.username }}</h2>
+
+</div>
+
 
 
 <div class="color-home">
