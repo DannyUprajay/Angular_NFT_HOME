@@ -1,20 +1,35 @@
-<p>nft-detail works!</p>
 
-<div class="d-flex justify-content-center">
-  <div class="ms-5">
-    <div class="card" style="width: 18rem;">
-      <img src="{{nft?.pathImage}}" class="card-img-top" alt="...">
-      <div class="card-body text-center">
-        <h5 class="card-title ">{{nft?.name}}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item text-center">{{nft?.price}}ETH</li>
-      </ul>
-      <div class="card-body text-center">
-     <a  routerLink="edit/{{nft?.id}}" class="card-link">Edit</a>
-      </div>
-    </div>
+
+<div class="bg-img d-flex">
+  <div>
+  <img [src]="nft?.pathImage" alt="image de nft" class="nft-image">
+  </div>
+
+  <div class="try">
+  <h2 class="text-center">{{nft?.name}}</h2>
   </div>
 </div>
+
+
+
+
+
+
+<!--<div class="d-flex justify-content-center">-->
+<!--  <div class="ms-5">-->
+<!--    <div class="card" style="width: 18rem;">-->
+<!--      <img src="{{nft?.pathImage}}" class="card-img-top" alt="...">-->
+<!--      <div class="card-body text-center">-->
+<!--        <h5 class="card-title ">{{nft?.name}}</h5>-->
+<!--        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--      </div>-->
+<!--      <ul class="list-group list-group-flush">-->
+<!--        <li class="list-group-item text-center">{{nft?.price}}ETH</li>-->
+<!--      </ul>-->
+<!--      <div class="card-body text-center">-->
+<!--     <a  routerLink="edit/{{nft?.id}}" class="card-link">Edit</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
