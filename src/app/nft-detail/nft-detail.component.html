@@ -1,14 +1,18 @@
 
 
 
-<div class="row">
+<div class="row p-5">
 
-  <div class="col-6 mx-auto text-center">
+  <div class="col-6 mx-auto text-center ">
         <img [src]="nft?.pathImage" alt="image de nft" class="nft-image">
   </div>
   <div class="col-6 container">
-    <h2 class="text-center">{{nft?.name}}</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, itaque ullam? Aliquid deserunt est itaque quod suscipit vero? Adipisci assumenda atque commodi esse, ipsa laborum odio quis quisquam quo sapiente.</p>
+    <small>Propriétaire</small>
+    <h2>{{nft?.user?.username}}</h2>
+    <small>Nom</small>
+    <h2 class="">{{nft?.name}}</h2>
+    <small>Prix</small>
+    <h2 class="">{{nft?.price}} ETH</h2>
 
   </div>
 

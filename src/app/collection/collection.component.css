@@ -125,3 +125,15 @@
 .gallery div a{
   text-decoration: none;
 }
+
+.deletebutton{
+  all: unset;
+}
+
+.deletebutton i{
+  color: black;
+}
+
+.deletebutton:hover i{
+color: red;
+}
