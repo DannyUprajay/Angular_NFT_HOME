@@ -5,3 +5,20 @@ h2{
   font-size: 3rem;
   color: lightgray;
 }
+.edit{
+    background: #dde1ce ;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 50px;
+    position: relative;
+
+}
+.close{
+  all: unset;
+}
+
+.close i {
+  color: red;
+}

@@ -18,9 +18,66 @@
 
 </div>
 
-<div *ngIf="showEdit()">
-  <button>Modifer</button>
+<div  *ngIf="showEdit()">
+<div class="text-center">
+  <button type="button" class="edit" data-toggle="modal" data-target="#edit">
+    Modifier le nft
+  </button>
 </div>
+
+
+
+  <div class="modal fade " id="edit" tabindex="-1" role="dialog" aria-labelledby="edit"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title mx-auto" id="modaldNft">Créer une gallery</h5>
+          <button type="button"  style="background-color: transparent" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa-regular fa-circle-xmark" ></i>
+
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="editNft" (ngSubmit)="update()">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <div class="col-md-6">
+                <input type="text" id="name" formControlName="name" class="form-control" style="width: 480px;" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="pathImage" class="form-label">Image</label>
+              <div class="col-md-6">
+                <input type="text" id="pathImage" formControlName="pathImage" class="form-control"  style="width: 480px;" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="price" class="form-label">Prix</label>
+              <div class="col-md-6">
+                <input type="text" id="price" formControlName="price" class="form-control"  style="width: 480px;" required>
+              </div>
+            </div>
+            <div class="text-center">
+            <button type="submit" [disabled]="!editNft.valid" class="btn btn-primary edit">Save modification</button>
+
+            </div>
+          </form>
+        </div>
+        <!--          <div class="modal-footer">-->
+        <!--            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+        <!--            <button type="button" class="btn btn-primary">Save changes</button>-->
+        <!--          </div>-->
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
 
 
 
