@@ -12,6 +12,7 @@ import {UserInterface} from "../user.interface";
 })
 export class UserEditComponent implements OnInit {
 
+  message: string ='';
   user: UserInterface | undefined;
 
   constructor(
@@ -57,6 +58,7 @@ export class UserEditComponent implements OnInit {
     this.userService.updateUser(this.route.snapshot.params['id'], this.editUser.value).subscribe((result) => {
       console.log(result);
       this.router.navigate(['/user/' + this.route.snapshot.params['id']]);
+      this.message = "Les changement on été appliqués"
     })
   }
 

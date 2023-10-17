@@ -1,0 +1,19 @@
+button{
+    background: #dde1ce ;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 50px;
+    position: relative;
+  transition: 0.8s;
+}
+button:hover{
+  background: darkturquoise ;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 50px;
+  position: relative;
+}
