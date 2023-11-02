@@ -47,11 +47,27 @@ nav ul a:hover{
     height: 95vh;
   }
 
+  .textPopulaireUser{
+    font-size: 11px;
+  }
+  .card small{
+    font-size: 0.6em;
+  }
+  .iconPopulaire{
+    position: relative;
+    left: 20px;
+  }
 }
 
 
 /*////// responsive header */
 @media screen and (max-width: 1100px) {
+
+
+  .navbar-collapse{
+    text-align: center;
+  }
+
 
   .home-back{
     background-size: 50%;
@@ -61,8 +77,8 @@ nav ul a:hover{
 
 
   #homeText{
-    position: relative;
-    top: 50%;
+    position: fixed;
+    top: 20%;
   }
   #homeText h1{
     font-size: 2.5rem;
@@ -73,8 +89,10 @@ nav ul a:hover{
 
   }
   #homeText button{
-   width: 400px;
-    height: 100px;
+
+   width: 200px;
+    height: 50px;
+    font-size: 10px;
   }
 
 
