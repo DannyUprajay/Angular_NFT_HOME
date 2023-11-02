@@ -37,6 +37,52 @@ nav ul a:hover{
   height: 100vh;
   /*clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);*/
 }
+
+@media screen and (max-width: 1399px) {
+
+  .home-back{
+    /*background-color: red;*/
+    /*background-image: none;*/
+    background-position: right 0px top 160px;
+    height: 95vh;
+  }
+
+}
+
+
+/*////// responsive header */
+@media screen and (max-width: 1100px) {
+
+  .home-back{
+    background-size: 50%;
+    background-position: right  top 160px;
+    height: 60vh;
+  }
+
+
+  #homeText{
+    position: relative;
+    top: 50%;
+  }
+  #homeText h1{
+    font-size: 2.5rem;
+
+  }
+  #homeText h1 span{
+    color: #344b8b;
+
+  }
+  #homeText button{
+   width: 400px;
+    height: 100px;
+  }
+
+
+}
+
+
+/*////// fin responsive header */
+
 .home-back h1{
   font-family: 'Rubik', sans-serif;
   font-size: 3rem;
@@ -45,6 +91,12 @@ nav ul a:hover{
   margin-right: 10%;
   color: black;
 }
+
+.home-back h1 span{
+  color: #344b8b;
+
+}
+
 
 .home-back p {
   text-align: justify;
