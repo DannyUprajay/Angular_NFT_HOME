@@ -99,19 +99,6 @@ export class HomeComponent implements OnInit{
 
 
 
-  likesState: { [key: number]: boolean } = {};
-
-  toggleLike(nftId: number) {
-
-    if (!this.likesState[nftId]) {
-      this.likesState[nftId] = true;
-    } else {
-      this.likesState[nftId] = false;
-
-    }
-  }
-
-
 
   logout() {
     this.auth.clearToken();

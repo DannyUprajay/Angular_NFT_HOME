@@ -7,12 +7,12 @@
         <img [src]="nft?.pathImage" alt="image de nft" class="nft-image">
   </div>
   <div class="col-6 container">
-    <small>Propriétaire</small>
-    <h2>{{nft?.user?.username}}</h2>
-    <small>Nom</small>
-    <h2 class="">{{nft?.name}}</h2>
-    <small>Prix</small>
-    <h2 class="">{{nft?.price}} ETH</h2>
+    <h2>Propriétaire</h2>
+    <h3 class="fw-bold">{{nft?.user?.username}}</h3>
+    <h2>Nom</h2>
+    <h3 class="fw-bold">{{nft?.name}}</h3>
+    <h2>Prix</h2>
+    <h3 class="fw-bold">{{nft?.price}} ETH</h3>
 
   </div>
 
@@ -41,7 +41,7 @@
         <div class="modal-body">
           <form [formGroup]="editNft" (ngSubmit)="update()">
             <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
+              <label for="name" class="form-label">Nom</label>
               <div class="col-md-6">
                 <input type="text" id="name" formControlName="name" class="form-control" style="width: 480px;" required>
               </div>
