@@ -34,17 +34,6 @@
       <th>Age</th>
       <th>Genre</th>
       <th>ROLE</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
-      <th>Example</th>
     </tr>
     </thead>
     <tbody>
@@ -55,19 +44,15 @@
       <td>{{user.birth | date}}</td>
       <td>{{user.gender}}</td>
       <td>{{user.roles}}</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
+      <div *ngIf="checkIsLogged()">
+        <button (click)="delete(user.id, index)" type="button" class="btn btn-danger">
+          Delete
+        </button>
+      </div>
     </tr>
+
     </tbody>
+
   </table>
 
 </div>

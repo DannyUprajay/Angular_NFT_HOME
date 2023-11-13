@@ -77,7 +77,7 @@ nav ul a:hover{
 
 
   #homeText{
-    position: fixed;
+    position: relative; 
     top: 20%;
   }
   #homeText h1{

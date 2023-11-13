@@ -44,5 +44,12 @@ export class AdminUserComponent implements OnInit{
     });
   }
 
+  delete(id: number, index: number) {
+    this.user.deleteUser(id).subscribe(resultatDelete => {
+      location.reload();
+      alert('Utilisateur supprimé');
+    });
+
+  }
 
 }
