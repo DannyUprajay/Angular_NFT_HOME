@@ -38,6 +38,10 @@ nav ul a:hover{
   /*clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);*/
 }
 
+.profilResponsive{
+  display: none;
+}
+
 @media screen and (max-width: 1399px) {
 
   .home-back{
@@ -61,7 +65,7 @@ nav ul a:hover{
 
 
 /*////// responsive header */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1020px) {
 
 navbar{
   padding: 0;
@@ -110,6 +114,17 @@ navbar{
 
 }
 
+
+
+
+
+@media screen and (max-width: 988px){
+
+  .profilResponsive{
+    display: block;
+  }
+
+}
 
 /*////// fin responsive header */
 

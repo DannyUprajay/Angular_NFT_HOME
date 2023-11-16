@@ -33,9 +33,27 @@
 <!--            <li class="nav-item" *ngIf="checkIsLogged()">-->
 <!--              <a class="nav-link" (click)="logout()">se déconnecter</a>-->
 <!--            </li>-->
-            <li class="nav-item" *ngIf="checkIsAdmin()">
-              <a class="nav-link" routerLink="admin">admin</a>
+
+            <li class="nav-item" *ngIf="checkIsLogged()">
+              <a class="nav-link profilResponsive" routerLink="user"> <img class="rounded-circle" style="width: 60px;"
+                                                                           src="{{userData?.profilPicture}}" alt=""></a>
             </li>
+
+
+            <li class="nav-item" *ngIf="!checkIsLogged()">
+              <a class="nav-link mx-2 text-light" style=" background-color: #344b8b; text-decoration-line: none; border-radius: 30px " routerLink="login">Se connecter</a>
+            </li>
+
+
+            <li class="nav-item" *ngIf="checkIsAdmin()">
+              <a class="nav-link" routerLink="admin">Admin</a>
+            </li>
+
+            <li class="nav-item" *ngIf="checkIsLogged()">
+              <a routerLink="favoris"> <i class="fa-regular fa-heart "style="font-size: 30px;"></i></a>
+            </li>
+
+
           </ul>
           <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
 
