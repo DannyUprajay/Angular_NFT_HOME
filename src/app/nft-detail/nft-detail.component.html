@@ -1,29 +1,67 @@
 
 
 
-<div class="row p-5">
+<div class=" container mt-5 populaireSellTest">
+  <div class="card mb-3 p-4 h-70">
+    <h5 class="card-title fw-bold text-center">{{nft?.name }}</h5>
 
-  <div class="col-6 mx-auto text-center ">
-        <img [src]="nft?.pathImage" alt="image de nft" class="nft-image">
+    <div class="d-flex w-75">
+
+  <div>
+
+
+    <img src="{{nft?.pathImage}}"  class="nft-image img-fluid rounded-start w-100 image-3d-effect"
+         alt="NFT Image">
+
   </div>
-  <div class="col-6 container">
-    <h2>Propriétaire</h2>
-    <h3 class="fw-bold">{{nft?.user?.username}}</h3>
-    <h2>Nom</h2>
-    <h3 class="fw-bold">{{nft?.name}}</h3>
-    <h2>Prix</h2>
-    <h3 class="fw-bold">{{nft?.price}} ETH</h3>
 
+      <div class="mx-auto">
+      <h2>Propriétaire</h2>
+      <h3 class="fw-bold">{{nft?.user?.username}}</h3>
+        <img style="width: 120px" src="{{nft?.user?.profilPicture}}" alt="">
+
+    </div>
+    </div>
+    <div>
+      <div class="card-body">
+
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
+            <small>Le prix à augmenter de 0.24 ETH</small>
+          </div>
+<!--          <div>-->
+
+<!--            <img src="{{nft?.user?.profilPicture}}" alt="">-->
+
+
+<!--          </div>-->
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between">
+          <!--              <div class="d-flex">-->
+          <!--                <img src="{{nft.user.profilPicture}}" class="nft-image img-fluid rounded-circle me-2"-->
+          <!--                     style="width: 35px;" alt="NFT Image">-->
+          <!--                <small class="m-0 fw-bold ">{{nft.user.username}}</small>-->
+          <!--              </div>-->
+          <div>
+            <small>Prix du Nft <span class=" fw-bold fs-6">{{nft?.price }} ETH </span> </small>
+          </div>
+        </div>
+        <div class="d-flex mt-5">
+        </div>
+      </div>
+    </div>
   </div>
-
+  <div  *ngIf="showEdit()">
+    <div class="text-center">
+      <button type="button" class="edit" data-toggle="modal" data-target="#edit">
+        Modifier le nft
+      </button>
+    </div>
 </div>
 
-<div  *ngIf="showEdit()">
-<div class="text-center">
-  <button type="button" class="edit" data-toggle="modal" data-target="#edit">
-    Modifier le nft
-  </button>
-</div>
+
 
 
 

@@ -8,7 +8,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light p-3">
       <div class="container-fluid">
-        <a class="logo navbar-brand text-dark" href="#">Lové <span style="color:  white"> NFT</span></a>
+        <a class="logo navbar-brand text-dark" href="#">Lové <span style="color:  #344b8b"> NFT</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -101,12 +101,12 @@
   </div>
 
 
-  <div class="container bordertest " style="margin-top: 150px">
+  <div class="container statistique " style="margin-top: 150px">
     <hr>
-    <div class="d-flex justify-content-between p-5 text-center align-items-center">
+    <div class="d-flex justify-content-between p-5 text-center align-items-center numberpadding">
 
       <div class="col-3 ">
-        <p style="font-size: 2rem; margin: 0; font-weight: bold">60K</p>
+        <p class="number" >60K</p>
         <p class="m-0 text-center">Utilisateurs</p>
       </div>
 
@@ -115,7 +115,7 @@
       </div>
 
       <div class="col-3 ">
-        <p style="font-size: 2rem; margin: 0; font-weight: bold">40K</p>
+        <p class="number" >40K</p>
         <p class="m-0 text-center">Nft</p>
       </div>
 
@@ -124,7 +124,7 @@
       </div>
 
       <div class="col-3">
-        <p style="font-size: 2rem; margin: 0; font-weight: bold">12K</p>
+        <p class="number">12K</p>
         <p class="m-0 text-center">Nft vendus</p>
       </div>
 
@@ -133,7 +133,7 @@
       </div>
 
       <div class="col-3">
-        <p style="font-size: 2rem; margin: 0; font-weight: bold">6K</p>
+        <p class="number" >6K</p>
         <p class="m-0 text-center">Utilisateurs connectés</p>
       </div>
 
@@ -147,10 +147,13 @@
   <div style="background-color: #e9edef; padding: 50px">
 
 
-    <div class="container populaire w-100 h-100 ">
+    <div class="container populaire populaireSell w-100 h-100 ">
       <div class="row text-center d-flex">
 
-        <div class="col-6 col-md-6 col-lg-4">
+
+<!--        col-6 col-md-6 col-lg-4-->
+
+        <div class="  populaireSellTest">
           <div class="card mb-3 p-4 h-70">
             <h5 class="card-title fw-bold">{{randomImage?.name }}</h5>
 
@@ -196,7 +199,7 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-6 col-lg-4">
+        <div class="  populaireSellTest">
           <div class="card mb-3 p-4 h-70">
             <h5 class="card-title fw-bold">{{randomImage1?.name }}</h5>
             <img src="{{randomImage1?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
@@ -240,7 +243,7 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-6 col-lg-4">
+        <div class="  populaireSellTest">
           <div class="card mb-3 p-4 h-70">
             <h5 class="card-title fw-bold">{{randomImage2?.name }}</h5>
             <img src="{{randomImage2?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"

@@ -132,6 +132,51 @@ navbar{
 
 }
 
+@media screen and (max-width: 430px) {
+
+  .home-back{
+    height: 100vh;
+    background-position: center top 150px;
+  }
+  #homeText h1{
+    margin-top: 350px;
+  }
+  #homeText p{
+    font-size: 0.7rem;
+  }
+  .statistique p{
+    font-size: 0.8rem;
+  }
+  .numberpadding {
+    padding: 1rem!important;
+  }
+
+
+
+  .populaireSell .card{
+    background-color: red;
+    width: 220px;
+
+  }
+  .populaireSellTest{
+    /*width: 56%;*/
+  }
+
+  .populaireSellTest button{
+    height: 50px;
+    font-size: 0.6rem;
+  }
+
+
+}
+
+
+
+.number{
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
 /*////// fin responsive header */
 
 .home-back h1{
