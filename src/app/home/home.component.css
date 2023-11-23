@@ -166,11 +166,13 @@ navbar{
   display: none;
   }
 
-  .tto {
-    font-size: 0.8rem;
-    width: 150px;
-    margin-left: -30px;
-  }
+
+
+ .populaireSell small , .fa-arrow-up, .fa-share-nodes{
+   display: none;
+ }
+
+
 
 
 
