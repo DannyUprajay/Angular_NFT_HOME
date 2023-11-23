@@ -153,14 +153,23 @@ navbar{
 
 
 
+
+  .card{
+    width: 160px;
+    height: 300px;
+
+  }
+
+  .card-body{
+    margin-left: -30px;
+  }
+
   .populaireSell .card{
     width: 160px;
     height: 300px;
 
   }
-  .populaireSellTest{
-    /*width: 56%;*/
-  }
+
 
   .buttonPopulaire {
   display: none;
@@ -172,8 +181,11 @@ navbar{
    display: none;
  }
 
-
-
+.nft-image {
+  width: 700px;
+  height: 80%;
+  object-fit: cover;
+}
 
 
 
