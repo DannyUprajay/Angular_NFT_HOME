@@ -154,23 +154,34 @@ navbar{
 
 
   .populaireSell .card{
-    background-color: red;
-    width: 220px;
+    width: 160px;
+    height: 300px;
 
   }
   .populaireSellTest{
     /*width: 56%;*/
   }
 
-  .populaireSellTest button{
-    height: 50px;
-    font-size: 0.6rem;
+  .buttonPopulaire {
+  display: none;
   }
+
+  .tto {
+    font-size: 0.8rem;
+    width: 150px;
+    margin-left: -30px;
+  }
+
+
+
+
 
 
 }
 
-
+.responsiveLink{
+ text-decoration: none;
+}
 
 .number{
   font-size: 2rem;
@@ -232,24 +243,6 @@ navbar{
   margin-top: 8%;
 }
 
-/*.img_home {*/
-/*  border: solid dimgrey 10px;*/
-/*  height: 70%;*/
-/*  margin-top: 20px;*/
-/*}*/
-
-
-/*Carousel //////////////////////////////////////////////////////////////////////*/
-
-.carousel-item {
-  height: 600px;
-  overflow: hidden;
-}
-
-.carousel-item img {
-  object-fit: cover;
-  height: 100%;
-}
 
 
 

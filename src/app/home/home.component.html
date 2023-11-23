@@ -154,13 +154,14 @@
 <!--        col-6 col-md-6 col-lg-4-->
 
         <div class=" col-6 col-md-6 col-lg-4 populaireSellTest">
+          <a routerLink="/nft/{{randomImage?.id}}" class="responsiveLink">
           <div class="card mb-3 p-4 h-70">
             <h5 class="card-title fw-bold">{{randomImage?.name }}</h5>
 
             <img src="{{randomImage?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
                  alt="NFT Image">
             <div>
-              <div class="card-body">
+              <div class="card-body tto">
 
                 <div class="d-flex justify-content-between">
                   <div class="d-flex align-items-center">
@@ -197,6 +198,7 @@
               </div>
             </div>
           </div>
+          </a>
         </div>
 
         <div class="col-6 col-md-6 col-lg-4  populaireSellTest">
