@@ -107,3 +107,19 @@
   color: red;
   background-color: red;
 }
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 430px) {
+  button{
+    display: none;
+  }
+
+  .card{
+    width: 160px;
+    height: 300px;
+
+  }
+}
