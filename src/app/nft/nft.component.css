@@ -117,9 +117,76 @@ a {
     display: none;
   }
 
+  /*.card{*/
+  /*  width: 160px;*/
+  /*  height: 300px;*/
+
+  /*}*/
+
   .card{
     width: 160px;
     height: 300px;
 
   }
+
+  .card-body{
+    margin-left: -30px;
+  }
+
+
+  .buttonPopulaire {
+    display: none;
+  }
+
+
+  .populaireSell small {
+    font-size: .5rem;
+    width: 80px;
+  }
+
+  .card span{
+    font-size: 0.7rem;
+  }
+
+  .fa-share-nodes{
+    display: none;
+  }
+
+  .user-img {
+    position: relative;
+  right: -23%;
+    top: 23px;
+  }
+
+.price{
+  display: none;
+}
+
+  .priceMobile{
+    display: block !important;
+  }
+  .priceMobile span{
+    font-size: .5rem;
+  }
+
+
+.nft-imageMobile{
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: -15px;
+}
+
+
+}
+
+
+.user-img {
+  width: 35px;
+  height: 35px;
+}
+
+
+.priceMobile{
+  display: none;
 }
