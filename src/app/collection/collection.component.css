@@ -128,12 +128,71 @@
 
 .deletebutton{
   all: unset;
+  width: 25px;
+
 }
 
 .deletebutton i{
   color: black;
+
 }
 
 .deletebutton:hover i{
 color: red;
+}
+
+@media screen and (max-width: 430px) {
+  .buttonCard{
+    display: none;
+  }
+
+  .card{
+    width: 160px;
+    height: 300px;
+
+  }
+
+  .card-body{
+    margin-left: -30px;
+  }
+
+  .fa-share-nodes{
+    display: none;
+  }
+
+  .allCard small{
+    font-size: .5rem;
+    width: 80px;
+  }
+
+  .card span{
+    font-size: 0.7rem;
+  }
+
+  .price{
+    display: none;
+  }
+
+  .user-img {
+    position: relative;
+    right: -70%;
+    top: 10px;
+  }
+
+  .priceMobile{
+    display: block !important;
+  }
+  .priceMobile span{
+    font-size: .5rem;
+  }
+}
+
+
+.user-img {
+  width: 35px;
+  height: 35px;
+}
+
+.priceMobile{
+  display: none;
 }

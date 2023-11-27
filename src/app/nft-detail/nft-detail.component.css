@@ -36,13 +36,13 @@ h2{
 
 
 .card{
-  background: rgb(212,201,163);
+  /*box-shadow: 9px 10px 10px #242424;*/
+  background: rgb(210,212,213);
+  background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
 }
 .card:hover {
   /*clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);*/
-  box-shadow: 9px 10px 10px #cdc43c;
-  background: rgb(212,201,163);
-  background: linear-gradient(0deg, rgba(212,201,163,1) 4%, rgba(180,155,89,1) 69%, rgba(182,167,105,1) 98%);
+  box-shadow: 9px 10px 10px #242424;
 }
 /*Card /////////////////////////////////////////////////////////////////////////////*/
 
@@ -60,4 +60,8 @@ h2{
 
 img{
   max-width: 800px;
+}
+
+.userPic{
+  width: 40px;
 }
