@@ -141,6 +141,9 @@
 color: red;
 }
 
+
+
+
 @media screen and (max-width: 430px) {
   .buttonCard{
     display: none;
@@ -195,4 +198,8 @@ color: red;
 
 .priceMobile{
   display: none;
+}
+
+a {
+  text-decoration: none;
 }

@@ -65,3 +65,31 @@ img{
 .userPic{
   width: 40px;
 }
+
+
+@media screen and (max-width: 768px) {
+  h2{
+    font-size: 1.9rem;
+  }
+}
+
+
+@media screen and (max-width: 430px) {
+  h2{
+    font-size: .9rem;
+  }
+  .card{
+    height: 380px;
+  }
+  p{
+    font-size: .7rem;
+    width: 150px;
+  }
+
+  .card-body{
+    position: relative;
+    right: 30px;
+    width: 400px;
+    font-size: .7rem;
+  }
+}
