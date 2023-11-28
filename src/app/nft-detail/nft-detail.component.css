@@ -92,4 +92,28 @@ img{
     width: 400px;
     font-size: .7rem;
   }
+
+  .modal{
+    width:100%;
+  }
+
+  .form-control{
+    width: 380px !important;
+  }
+}
+
+
+@media screen and (max-width: 430px) {
+
+  .modal{
+    width:96%;
+  }
+  .form-control{
+    width: 340px !important;
+  }
+}
+
+
+.form-control{
+  width: 450px;
 }

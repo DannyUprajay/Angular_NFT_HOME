@@ -10,3 +10,17 @@
   width: 100%;
   display: inline-block;
 }
+
+
+
+
+@media screen and (max-width: 430px)  {
+  input{
+    width: 320px;
+  }
+
+
+  img{
+    width: 100%;
+  }
+}

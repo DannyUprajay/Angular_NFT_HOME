@@ -59,6 +59,9 @@
 /*  transform: perspective(1000px) translateZ(20px); !* Ajustez les valeurs selon vos préférences *!*/
 /*}*/
 
+.fa-heart{
+  z-index: 2100;
+}
 
 .allCard{
   transition: .3s;
@@ -185,16 +188,7 @@ a {
 }
 
 
-@media screen and (max-width: 390px) {
 
-
-
-  .row{
-
-
-  }
-
-}
 
 
 

@@ -1,0 +1,15 @@
+
+.adminResponsive ul{
+  width: 25%;
+
+}
+
+@media screen and (max-width: 430px){
+
+  .adminResponsive{
+    width: 1000px;
+    position: relative;
+    right: 290px;
+  }
+
+}
