@@ -22,20 +22,19 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {
         this.role = this.auth.getRole();
-        console.log(this.role);
         if (this.auth.isLogged()) {
             this.userService.onSubmit().subscribe(
                 (userData) => {
                     if (userData) {
-                        console.log('Données de l\'utilisateur connecté :', userData);
+
                         this.userData = userData;
-                        console.log(this.userData.username);
+
                     } else {
-                        console.log('Aucun utilisateur trouvé.');
+
                     }
                 },
                 (error) => {
-                    console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+
                 }
             );
         }
@@ -57,10 +56,5 @@ export class HeaderComponent implements OnInit {
         return this.isAdmin;
     }
 
-    // checkIsAdmin(): boolean {
-    //     let checkRole = this.auth.getRole();
-    //     this.isAdmin = checkRole === 'ROLE_ADMIN';
-    //     return this.isAdmin;
-    // }
 
 }

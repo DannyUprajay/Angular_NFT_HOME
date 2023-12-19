@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit{
   randomImage1: any;
   randomImage2: any;
 
-    isAdmin: boolean = false;
+  isAdmin: boolean = false;
 
   userData: UserInterface | undefined;
   constructor(
@@ -40,15 +40,15 @@ export class HomeComponent implements OnInit{
       this.userService.onSubmit().subscribe(
         (userData) => {
           if (userData) {
-            console.log('Données de l\'utilisateur connecté :', userData);
+
             this.userData = userData;
-            console.log(this.userData.profilPicture);
+
           } else {
-            console.log('Aucun utilisateur trouvé.');
+
           }
         },
         (error) => {
-          console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+
         }
       );
     }
@@ -63,23 +63,17 @@ export class HomeComponent implements OnInit{
     });
   }
 
-  // getUser(){
-  //   this.service.getAllUser().subscribe(Users => {
-  //     this.listUsers = Users;
-  //   });
-  // }
-
   setPopulaireImage() {
     this.serviceNft.getAllNft().subscribe(nfts => {
       let randomIndex = Math.floor(Math.random() * nfts.length);
       this.randomImage = nfts[randomIndex];
-      console.log(this.randomImage.user.username + 'salut');
+
        randomIndex = Math.floor(Math.random() * nfts.length);
       this.randomImage1 = nfts[randomIndex];
-      console.log(this.randomImage1.user.username + 'salut');
+
       randomIndex = Math.floor(Math.random() * nfts.length);
       this.randomImage2 = nfts[randomIndex];
-      console.log(this.randomImage2.user.username + 'salut');
+
     });
   }
 
@@ -94,7 +88,7 @@ export class HomeComponent implements OnInit{
     }
 
     this.carouselImages = randomIndexes.map(index => this.nfts[index].pathImage);
-    console.log(this.carouselImages)
+
   }
 
 
@@ -113,7 +107,6 @@ export class HomeComponent implements OnInit{
         this.isAdmin = checkRole === 'ROLE_ADMIN';
         return this.isAdmin;
     }
-
 
   addFav(id: number){
     this.serviceNft.getNftById(id).subscribe( nft =>{

@@ -78,8 +78,10 @@ export class LoginComponent implements OnInit {
   register() {
     if (this.formRegister.valid) {
       let formattedBirth = this.datePipe.transform(this.formRegister.value.birth, 'dd/MM/yyyy');
+
       let saltRounds = 10;
       let hashedPassword = bcrypt.hashSync(this.formRegister.value.password, saltRounds);
+
       let user: UserInterface = {
         id: 0,
         roles:[],
@@ -110,7 +112,7 @@ export class LoginComponent implements OnInit {
       console.log('Formulaire invalide');
       this.message = "veuillez remplir tous les champs";
     }
-
   }
+
 
 }

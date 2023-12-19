@@ -43,15 +43,14 @@ export class UserComponent {
     this.userService.onSubmit().subscribe(
       (userData) => {
         if (userData) {
-          console.log('Données de l\'utilisateur connecté :', userData);
           this.userData = userData;
-          console.log(this.userData.id);
+
         } else {
-          console.log('Aucun utilisateur trouvé.');
+
         }
       },
       (error) => {
-        console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+
       }
     );
   }
@@ -73,44 +72,12 @@ export class UserComponent {
   }
 
 
-  // onSubmit() {
-  //   // window.location.reload();
-  //   if (this.form.valid) {
-  //     // window.location.reload();
-  //     const formattedBirth = this.datePipe.transform(this.form.value.birth, 'dd/MM/yyyy');
-  //
-  //     const user: UserInterface = {
-  //       id: 0,
-  //       firstName: this.form.value.firstName,
-  //       lastName: this.form.value.lastName,
-  //       email: this.form.value.email,
-  //       gender: this.form.value.gender,
-  //       username: this.form.value.username,
-  //       profilPicture: this.form.value.profilPicture,
-  //       adress: {
-  //         label: this.form.value.label,
-  //         contry: this.form.value.contry,
-  //         postalCode: this.form.value.postalCode
-  //       },
-  //       password: this.form.value.password,
-  //       birth: formattedBirth
-  //     };
-  //
-  //     this.service.addUser(user).subscribe(response => {
-  //       this.getUser();
-  //       this.form.reset();
-  //       console.log(user);
-  //     });
-  //   } else {
-  //     console.log('Formulaire invalide');
-  //   }
-  // }
 
 
   delete(id: number | undefined) {
     if (id) {
       this.userService.deleteUser(id).subscribe(resultatDelete => {
-        console.log('Utilisateur supprimé avec succès.');
+
       });
     }
   }

@@ -40,10 +40,8 @@ export class UserService {
 
   getUserData(): Observable<UserInterface | undefined> {
     let loggedInUsername = this.auth.getLoggedInUsername();
-    console.log('E-mail extrait du token :', loggedInUsername);
     return this.getAllUser().pipe(
       map((users: UserInterface[]) => {
-        console.log('Tous les utilisateurs :', users);
         return users.find(user => user.username === loggedInUsername);
       })
     );
@@ -52,7 +50,7 @@ export class UserService {
     onSubmit() {
         return this.getUserData().pipe(
             catchError((error) => {
-                console.error('Erreur lors de la récupération des données de l\'utilisateur :', error);
+
                 return EMPTY;
             })
         );
