@@ -1,17 +1,17 @@
-<h2 class="text-center">Liste des NFTS</h2>
+<h2 class="text-center text-2xl ">Liste des NFTS</h2>
 
 
 
       <div class="color-home">
 
         <div class="container nftList p-5">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+          <div class="row ">
             <div *ngFor="let nft of nfts; let index = index;" class="col-6 col-md-6 col-lg-4 ">
               <a routerLink="/nft/{{nft.id}}">
 
-              <div class="card ms:gap-2 allCard mb-3 p-4 h-70">
+              <div class="card gap-2 allCard mb-3 p-4 h-70">
 
-                <h5 class="card-title fw-bold text-center">{{nft.name}}</h5>
+                <h5 class="card-title fw-bold  text-center">{{nft.name}}</h5>
 
                 <img src="{{nft.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
                      alt="NFT Image">
@@ -24,9 +24,6 @@
                         <small>Le prix à augmenter de 0.24 ETH</small>
                       </div>
                       <div>
-
-
-                        <!--              <p class="card-text p-0 m-0"><small class="text-muted">{{nft.price}} ETH</small></p>-->
                         <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
                         <button (click)="addFav(nft.id)" class="fav">
                         <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"> </i>

@@ -242,6 +242,7 @@ a {
     font-size: 1vh;
     width: 100px;
   }
+
   .fa-heart{
     margin-left: 0px;
     position: relative;
@@ -341,12 +342,20 @@ a {
 
 }
 
-/*@media screen and (max-width: 418px){*/
-/*  .nftList{*/
-/*    padding-left:  2px!important;*/
-
-/*  }*/
-/*}*/
+@media screen and (max-width: 430px){
+  .card{
+    width: 140px;
+    height: 280px;
+  }
+  .user-img{
+    position: relative;
+    top: -190px!important;
+    left: 10px;
+  }
+small{
+  font-size: .5rem!important;
+}
+}
 
 .user-img {
   width: 35px;

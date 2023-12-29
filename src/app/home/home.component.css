@@ -1,85 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@500&family=Ubuntu&display=swap');
-
 .logo {
   font-size: 1.5rem;
 }
-
 nav a {
   color: black;
   font-family: 'Rubik', sans-serif;
 }
-
 nav ul a:hover {
   color: #344b8b;
   transition: 0.5s;
-  text-decoration: underline white;
 }
-
-.active {
-  color: #344b8b;
-  text-decoration: underline white;
-}
-
 .home-back {
   background-image: url("https://i.pinimg.com/564x/7e/2a/b0/7e2ab028c8802659b0bbe469f6512564.jpg");
   background-color: #e9edef;
   background-repeat: no-repeat;
   background-position: right 250px top 160px;
   height: 100vh;
-}
+  font-family: 'Rubik', sans-serif;
 
+}
 .profilResponsive, .connecterResponsive {
   display: none;
 }
-
 @media screen and (max-width: 1399px) {
-
+.fa-share-nodes{
+  display: none;
+}
   .home-back {
-    background-position: right 0px top 160px;
+    background-position: right 0 top 160px;
     height: 95vh;
   }
-
   .textPopulaireUser {
     font-size: 11px;
   }
-
   .iconPopulaire {
     position: relative;
     left: 20px;
   }
 }
-
-@media screen and (max-width: 1195px) {
-  .cardNft {
-    width: 220px !important;
-    font-size: 1.5vh;
-  }
-}
-
 @media screen and (max-width: 598px) {
   .cardNft {
-    font-size: 1.5vh;
     position: relative !important;
     left: -30px!important;
     margin-bottom: 20px;
   }
-  .fa-share-nodes{
-    display: none;
-    position: relative !important;
-    right: -450px!important;
-  }
   .fa-heart{
     position: relative !important;
     left: -0px!important;
-
-  }
-  .cardPrice{
-    font-size: 1.3vh;
   }
 }
 @media screen and (max-width: 546px) {
-
   .textPopulaireUser{
     position: relative;
     left: -20px;
@@ -89,16 +59,11 @@ nav ul a:hover {
     position: relative !important;
     left: -20px!important;
   }
-
 }
-
 @media screen and (max-width: 514px) {
-
-
   .populaireSell small {
   font-size: .5rem;
   width: 80px;
-
   }
   .populaireSellTest .card {
     height: 300px;
@@ -107,24 +72,19 @@ nav ul a:hover {
     position: relative !important;
     left: -60px!important;
   }
-
 }
 @media screen and (max-width: 768px) {
   .cardNft {
     width: 180px !important;
-    font-size: 1.2vh;
     position: relative !important;
     right: 20px !important;
   }
 }
-
 @media screen and (max-width: 1020px) {
-
   navbar {
     padding: 0;
     margin: 0;
   }
-
   .navbar-collapse {
     text-align: center;
     font-weight: bold;
@@ -137,135 +97,100 @@ nav ul a:hover {
     width: 100%;
     z-index: 200;
   }
-
-
   .home-back {
     background-size: 50%;
     background-position: right top 160px;
     height: 60vh;
   }
-
-
   #homeText {
     position: absolute;
     top: 20%;
   }
-
   #homeText h1 {
     font-size: 2.5rem;
-
   }
-
   #homeText h1 span {
     color: #344b8b;
-
   }
-
   #homeText button {
-
     width: 200px;
     height: 50px;
     font-size: 10px;
   }
-
-
 }
-
 @media screen and (max-width: 988px) {
-
   .profilResponsive, .connecterResponsive {
     display: block;
   }
-
 }
-
 @media screen and (max-width: 767px) {
   .buttonPopulaire {
     display: none;
   }
-
+  .number {
+font-size: 2.5vh!important;
+  }
+  .numberpadding{
+    font-size: 1.4vh!important;
+  }
 }
-
 @media screen and (max-width: 430px) {
-
   .textPopulaireUser{
     position: relative;
     left: 10px;
     font-size: 1vh;
-
   }
-
   .home-back {
     height: 100vh;
     background-position: center top 150px;
   }
-
   #homeText h1 {
     margin-top: 350px;
   }
-
   #homeText p {
     font-size: 0.7rem;
   }
-
   .statistique p {
     font-size: 0.8rem;
   }
-
   .numberpadding {
     padding: 1rem !important;
   }
-
-
   .card1, .card3 {
     margin-left: -20px;
   }
-
   .card {
     width: 160px;
     height: 300px;
-
   }
-
   .card-body {
     margin-left: -30px;
-
   }
-
   .populaireSell .card {
     width: 160px;
     height: 300px;
   }
   .fa-heart{
     position: relative !important;
-    left: -30px!important;
+    left: -20px!important;
   }
   .fa-arrow-up{
     position: relative !important;
     left: 40px!important;
   }
-
   .buttonPopulaire {
     display: none;
   }
-
   .populaireSell small {
     font-size: .5rem;
     width: 80px;
     position: relative;
     left: 40px;
   }
-
   .card span {
     font-size: 0.7rem;
   }
-
-  .fa-share-nodes {
-    display: none;
-  }
-
 }
-
 @media screen and (max-width: 391px) {
   .home-back {
     height: 120vh;
@@ -275,140 +200,67 @@ nav ul a:hover {
     margin-left: -40px;
   }
 }
-
 @media screen and (max-width: 349px) {
   .card1, .card3 {
     margin-left: -55px;
   }
 }
-
 .responsiveLink {
   text-decoration: none;
 }
-
 .number {
   font-size: 2rem;
   margin: 0;
   font-weight: bold;
 }
-
 .home-back h1 {
-  font-family: 'Rubik', sans-serif;
   font-size: 3rem;
   text-align: justify;
   text-justify: inter-word;
   margin-right: 10%;
   color: black;
 }
-
 .home-back h1 span {
   color: #344b8b;
 
 }
-
 .home-back p {
   text-align: justify;
   margin-right: 11%;
   color: #344b8b;
   font-weight: bold;
 }
-
 .homebtn {
   background-color: white;
   color: black;
-  font-family: 'Rubik', sans-serif;
   width: 30rem;
   height: 7rem;
   font-size: 1.2rem;
   margin-top: 30px;
   margin-right: 80px;
+  transition: 1s;
 }
-
 .homebtn:hover {
   background-color: #344b8b;
   color: #dde1ce;
-  transition: 1s;
-  font-family: 'Rubik', sans-serif;
-  width: 30rem;
-  height: 7rem;
-  font-size: 1.2rem;
-  margin-top: 30px;
 }
-
 .home-content {
   margin-top: 8%;
 }
-
 .card {
   transition: .3s;
 }
-
 .card:hover {
-
   box-shadow: 9px 10px 10px #cdc43c;
   background: rgb(212, 201, 163);
   background: linear-gradient(0deg, rgba(212, 201, 163, 1) 4%, rgba(180, 155, 89, 1) 69%, rgba(182, 167, 105, 1) 98%);
 }
-
-
-.allCard {
-  transition: .3s;
-}
-
-.allCard:hover {
-
-  box-shadow: 9px 10px 10px #242424;
-  background: rgb(210, 212, 213);
-  background: linear-gradient(0deg, rgba(210, 212, 213, 1) 0%, rgba(184, 159, 132, 1) 54%, rgba(122, 122, 122, 0.4906337535014006) 90%);
-}
-
-.buttonCard {
-  background: #ccbfaf;
-  color: black;
-  border: none;
-}
-
-.allCard:hover .buttonCard {
-  background: #242424;
-  color: white;
-}
-
-.test:hover {
-  box-shadow: 9px 10px 10px #cdc43c;
-  background: rgb(212, 201, 163);
-  background: linear-gradient(0deg, rgba(212, 201, 163, 1) 4%, rgba(180, 155, 89, 1) 69%, rgba(182, 167, 105, 1) 98%);
-}
-
-
 .nft-image {
   clip-path: polygon(15% 0, 100% 0, 100% 30%, 100% 86%, 88% 100%, 0 100%, 0% 70%, 0 11%);
 }
-
-
 .populaire img {
   max-width: 400px;
 }
-
-.test {
-  background-color: white;
-}
-
-.test:hover .ted {
-  box-shadow: 9px 10px 10px goldenrod;
-  background: rgb(210, 212, 213);
-  background: linear-gradient(0deg, rgba(210, 212, 213, 1) 0%, rgba(184, 159, 132, 1) 54%, rgba(122, 122, 122, 0.4906337535014006) 90%);
-}
-
-
-.vr {
-  color: #485662;
-}
-
-
-.populaire span {
-  color: black;
-}
-
 .buttonPopulaire {
   background: #dde1ce;
   color: black;
@@ -418,15 +270,6 @@ nav ul a:hover {
   padding: 10px 50px;
   position: relative;
 }
-
 .fav {
   all: unset;
-}
-
-h5 {
-  font-family: 'Rubik', sans-serif;
-}
-
-p {
-  font-family: 'Rubik', sans-serif;
 }
