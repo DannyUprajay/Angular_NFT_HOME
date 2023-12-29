@@ -67,10 +67,48 @@ nav ul a:hover {
   .fa-share-nodes{
     display: none;
     position: relative !important;
-    left: -90px!important;
+    right: -450px!important;
+  }
+  .fa-heart{
+    position: relative !important;
+    left: -0px!important;
+
+  }
+  .cardPrice{
+    font-size: 1.3vh;
   }
 }
+@media screen and (max-width: 546px) {
 
+  .textPopulaireUser{
+    position: relative;
+    left: -20px;
+    font-size: 1vh;
+  }
+  .fa-heart{
+    position: relative !important;
+    left: -20px!important;
+  }
+
+}
+
+@media screen and (max-width: 514px) {
+
+
+  .populaireSell small {
+  font-size: .5rem;
+  width: 80px;
+
+  }
+  .populaireSellTest .card {
+    height: 300px;
+  }
+  .fa-heart{
+    position: relative !important;
+    left: -60px!important;
+  }
+
+}
 @media screen and (max-width: 768px) {
   .cardNft {
     width: 180px !important;
@@ -150,6 +188,13 @@ nav ul a:hover {
 
 @media screen and (max-width: 430px) {
 
+  .textPopulaireUser{
+    position: relative;
+    left: 10px;
+    font-size: 1vh;
+
+  }
+
   .home-back {
     height: 100vh;
     background-position: center top 150px;
@@ -191,6 +236,14 @@ nav ul a:hover {
     width: 160px;
     height: 300px;
   }
+  .fa-heart{
+    position: relative !important;
+    left: -30px!important;
+  }
+  .fa-arrow-up{
+    position: relative !important;
+    left: 40px!important;
+  }
 
   .buttonPopulaire {
     display: none;
@@ -199,6 +252,8 @@ nav ul a:hover {
   .populaireSell small {
     font-size: .5rem;
     width: 80px;
+    position: relative;
+    left: 40px;
   }
 
   .card span {

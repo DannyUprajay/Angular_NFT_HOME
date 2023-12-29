@@ -8,7 +8,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light p-3">
       <div class="container-fluid">
-        <a class="logo navbar-brand text-dark" href="#">Lové <span style="color:  #344b8b"> NFT</span></a>
+        <a class="logo navbar-brand text-dark" aria-label="lien pour ramener sur la page home" href="#">Lové <span style="color:  #344b8b"> NFT</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -17,33 +17,33 @@
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto ">
             <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
-              <a class="nav-link mx-2" aria-current="page" routerLink="">Home</a>
+              <a class="nav-link mx-2" aria-current="page" aria-label="lien pour ramener sur la page home" routerLink="">Home</a>
             </li>
             <li class="nav-item" [routerLinkActive]="'active'">
-              <a class="nav-link mx-2" routerLink="nft">NFT</a>
+              <a class="nav-link mx-2" aria-label="lien pour ramener sur la page nft" routerLink="nft">NFT</a>
 
             </li>
             <li class="nav-item" *ngIf="checkIsLogged()">
-              <a class="nav-link" routerLink="gallery">Collection</a>
+              <a class="nav-link" aria-label="lien pour ramener sur la page gallery" routerLink="gallery">Collection</a>
             </li>
 
             <li class="nav-item" *ngIf="checkIsLogged()">
-              <a class="nav-link profilResponsive" routerLink="user"> <img class="rounded-circle" style="width: 60px;"
+              <a class="nav-link profilResponsive" aria-label="lien pour ramener sur la page user" routerLink="user"> <img class="rounded-circle" style="width: 60px;"
                                                                            src="{{userData?.profilPicture}}" alt=""></a>
             </li>
 
 
             <li class="nav-item" *ngIf="!checkIsLogged()">
-              <a class="nav-link connecterResponsive mx-2"  routerLink="login">Se connecter</a>
+              <a class="nav-link connecterResponsive mx-2" aria-label="lien pour ramener sur la page login"  routerLink="login">Se connecter</a>
             </li>
 
 
             <li class="nav-item" *ngIf="checkIsAdmin()">
-              <a class="nav-link" routerLink="admin">Admin</a>
+              <a class="nav-link" aria-label="lien pour ramener sur la page admin" routerLink="admin">Admin</a>
             </li>
 
             <li class="nav-item" *ngIf="checkIsLogged()">
-              <a routerLink="favoris"> <i class="fa-regular fa-heart profilResponsive "style="font-size: 30px;"></i></a>
+              <a routerLink="favoris" aria-label="lien pour ramener sur la page favoris"> <i class="fa-regular fa-heart profilResponsive "style="font-size: 30px;"></i></a>
             </li>
 
 
@@ -51,16 +51,16 @@
           <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
 
             <li class="nav-item " [routerLinkActive]="'active'" *ngIf="!checkIsLogged()">
-              <a class="nav-link mx-2 text-light" style=" background-color: #344b8b; text-decoration-line: none; border-radius: 30px " routerLink="login">Se connecter</a>
+              <a class="nav-link mx-2 text-light" aria-label="lien pour ramener sur la page login" style=" background-color: #344b8b; text-decoration-line: none; border-radius: 30px " routerLink="login">Se connecter</a>
             </li>
             <li class="nav-item mx-2 d-flex">
               <div class="d-flex align-items-center justify-content-center">
                 <div *ngIf="checkIsLogged()" class="align-middle mr-2">
-                  <a routerLink="favoris"> <i class="fa-regular fa-heart "style="font-size: 30px;"></i></a>
+                  <a routerLink="favoris" aria-label="lien pour ramener sur la page favoris"> <i class="fa-regular fa-heart "style="font-size: 30px;"></i></a>
                 </div>
               </div>
 
-              <a routerLink="user">
+              <a routerLink="user" aria-label="lien pour ramener sur la page user">
                 <div *ngIf="checkIsLogged()" class="nav-item mx-2">
                   <img class="rounded-circle" style="width: 60px;"
                        src="{{userData?.profilPicture}}" alt="">
@@ -144,7 +144,7 @@
   <div style="background-color: #e9edef; padding: 50px">
 
 
-    <div class="container populaire populaireSell w-100 h-100 ">
+    <div class="container  populaireSell w-100 h-100 ">
       <div class="row text-center d-flex">
 
 

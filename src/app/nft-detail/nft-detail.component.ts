@@ -50,16 +50,22 @@ export class NftDetailComponent implements OnInit{
         // this.nftService.getUserData();
 
       });
+
     }
 
 
   update() {
     this.nftService.updateNft(this.route.snapshot.params['id'], this.editNft.value).subscribe((result) => {
-      console.log(result);
+      console.log(result);  // Check the console log for any errors or unexpected response
       this.router.navigate(['/nft/' + this.route.snapshot.params['id']]);
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+
     })
   }
-    getNftId(id: number) {
+
+  getNftId(id: number) {
         this.nftService.getNftById(id).subscribe(nftResult => {
             this.nft = nftResult;
             // console.log(this.nft);
