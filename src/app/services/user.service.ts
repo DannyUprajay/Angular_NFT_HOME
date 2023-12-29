@@ -20,22 +20,22 @@ export class UserService {
 
 
   getAllUser(): Observable<UserInterface[]>{
-    return this.http.get<UserInterface[] >("https://127.0.0.1:8000/user/");
+    return this.http.get<UserInterface[] >("https://danny-webdev.fr/user/");
   }
 
   getUserById(id: number): Observable<UserInterface>{
-    return this.http.get<UserInterface>('https://127.0.0.1:8000/user/' + id);
+    return this.http.get<UserInterface>('https://danny-webdev.fr/user/' + id);
   }
 
   addUser(user: UserInterface): Observable<result> {
     let body = JSON.stringify(user);
     let header = { 'content-type': 'application/x-www-form-urlencoded'};
-    return this.http.post<result>("https://127.0.0.1:8000/user/new", body, {'headers': header})
+    return this.http.post<result>("https://danny-webdev.fr/user/new", body, {'headers': header})
 
   }
 
   deleteUser(id: number): Observable<result>{
-    return this.http.delete<result>('https://127.0.0.1:8000/user/' + id);
+    return this.http.delete<result>('https://danny-webdev.fr/user/' + id);
   }
 
   getUserData(): Observable<UserInterface | undefined> {
@@ -59,7 +59,7 @@ export class UserService {
   updateUser(id :number, data :any){
     let body = JSON.stringify(data);
     let header = { 'content-type': 'application/x-www-form-urlencoded'};
-    return this.http.post<result>(`https://127.0.0.1:8000/user/${id}/edit`, body,  {'headers': header});
+    return this.http.post<result>(`https://danny-webdev.fr/user/${id}/edit`, body,  {'headers': header});
   }
 
 }

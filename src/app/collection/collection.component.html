@@ -10,132 +10,132 @@
     <div class="container p-5">
 
 
-        <div class="text-center mb-4 d-flex  gap-2">
-          <div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Créer une gallery
-            </button>
-          </div>
+<!--        <div class="text-center mb-4 d-flex  gap-2">-->
+<!--          <div>-->
+<!--            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+<!--                Créer une gallery-->
+<!--            </button>-->
+<!--          </div>-->
 
-        </div>
+<!--        </div>-->
 
-      <!--      MODALE GALLERY -->
+<!--      &lt;!&ndash;      MODALE GALLERY &ndash;&gt;-->
 
-        <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title mx-auto" id="exampleModalLabel">Créer une gallery</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form [formGroup]="formGallery" (ngSubmit)="submitGallery()">
-                            <div class="mb-3">
+<!--        <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"-->
+<!--             aria-hidden="true">-->
+<!--            <div class="modal-dialog" role="document">-->
+<!--                <div class="modal-content">-->
+<!--                    <div class="modal-header">-->
+<!--                        <h5 class="modal-title mx-auto" id="exampleModalLabel">Créer une gallery</h5>-->
+<!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                            <span aria-hidden="true">&times;</span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                    <div class="modal-body">-->
+<!--                        <form [formGroup]="formGallery" (ngSubmit)="submitGallery()">-->
+<!--                            <div class="mb-3">-->
 
-                                <label for="name" class="form-label"> <small>Nom</small></label>
-                                <div class="col-md-6">
-                                    <input type="text" formControlName="name" class="form-control" style="width: 450px;" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label"> <small>Description</small> </label>
-                                <div class="col-md-6">
-                                   <textarea id="story" name="story" rows="3" cols="33" formControlName="description" class="form-control" style="width: 450px;">
-                                    </textarea>
-                                </div>
-                              <small class="text-success">{{messageGallery}}</small>
-                            </div>
-                            <div class="text-center">
+<!--                                <label for="name" class="form-label"> <small>Nom</small></label>-->
+<!--                                <div class="col-md-6">-->
+<!--                                    <input type="text" formControlName="name" class="form-control" style="width: 450px;" required>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="mb-3">-->
+<!--                                <label class="form-label"> <small>Description</small> </label>-->
+<!--                                <div class="col-md-6">-->
+<!--                                   <textarea id="story" name="story" rows="3" cols="33" formControlName="description" class="form-control" style="width: 450px;">-->
+<!--                                    </textarea>-->
+<!--                                </div>-->
+<!--                              <small class="text-success">{{messageGallery}}</small>-->
+<!--                            </div>-->
+<!--                            <div class="text-center">-->
 
-                                <button type="submit" [disabled]="!formGallery.valid" class="btn btn-primary">Créer</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!--          <div class="modal-footer">-->
-                    <!--            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                    <!--            <button type="button" class="btn btn-primary">Save changes</button>-->
-                    <!--          </div>-->
-                </div>
-            </div>
-        </div>
+<!--                                <button type="submit" [disabled]="!formGallery.valid" class="btn btn-primary">Créer</button>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;          <div class="modal-footer">&ndash;&gt;-->
+<!--                    &lt;!&ndash;            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&ndash;&gt;-->
+<!--                    &lt;!&ndash;            <button type="button" class="btn btn-primary">Save changes</button>&ndash;&gt;-->
+<!--                    &lt;!&ndash;          </div>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <!--   FIN MODALE GALLERY -->
 
 
       <!--      MODALE NFT-->
-      <div class="modal fade " id="modalNft" tabindex="-1" role="dialog" aria-labelledby="modalNft"
-           aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title mx-auto" id="modaldNft">Créer une gallery</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <div class="col-md-6">
-                    <input type="text" id="name" formControlName="name" class="form-control" style="width: 450px;" required>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="pathImage" class="form-label">Image Path</label>
-                  <div class="col-md-6">
-                    <input type="text" id="pathImage" formControlName="pathImage" class="form-control" style="width: 450px;" required>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="price" class="form-label">Price</label>
-                  <div class="col-md-6">
-                    <input type="number" id="price" formControlName="price" class="form-control" style="width: 450px;" required>
-                  </div>
-                </div>
-                <small class="text-success">{{messageNft}}</small>
-                <div class="text-center">
-                <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Create NFT</button>
-                </div>
-              </form>
-            </div>
-            <!--          <div class="modal-footer">-->
-            <!--            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-            <!--            <button type="button" class="btn btn-primary">Save changes</button>-->
-            <!--          </div>-->
-          </div>
-        </div>
-      </div>
+<!--      <div class="modal fade " id="modalNft" tabindex="-1" role="dialog" aria-labelledby="modalNft"-->
+<!--           aria-hidden="true">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--          <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--              <h5 class="modal-title mx-auto" id="modaldNft">Créer une gallery</h5>-->
+<!--              <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                <span aria-hidden="true">&times;</span>-->
+<!--              </button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--              <form [formGroup]="form" (ngSubmit)="onSubmit()">-->
+<!--                <div class="mb-3">-->
+<!--                  <label for="name" class="form-label">Name</label>-->
+<!--                  <div class="col-md-6">-->
+<!--                    <input type="text" id="name" formControlName="name" class="form-control" style="width: 450px;" required>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                  <label for="pathImage" class="form-label">Image Path</label>-->
+<!--                  <div class="col-md-6">-->
+<!--                    <input type="text" id="pathImage" formControlName="pathImage" class="form-control" style="width: 450px;" required>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                  <label for="price" class="form-label">Price</label>-->
+<!--                  <div class="col-md-6">-->
+<!--                    <input type="number" id="price" formControlName="price" class="form-control" style="width: 450px;" required>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <small class="text-success">{{messageNft}}</small>-->
+<!--                <div class="text-center">-->
+<!--                <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Create NFT</button>-->
+<!--                </div>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--            &lt;!&ndash;          <div class="modal-footer">&ndash;&gt;-->
+<!--            &lt;!&ndash;            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <button type="button" class="btn btn-primary">Save changes</button>&ndash;&gt;-->
+<!--            &lt;!&ndash;          </div>&ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <!--   FIN MODALE NFT -->
+<!--      &lt;!&ndash;   FIN MODALE NFT &ndash;&gt;-->
 
-        <!--      Gallery -->
+<!--        &lt;!&ndash;      Gallery &ndash;&gt;-->
 
-        <h2>Mes galleries</h2>
-        <div class="row text-center gallery">
-            <div *ngFor="let gallery of gallerie; let index = index" class="col-6 col-md-6 col-lg-4" >
-              <button type="button" style="background-color: white" (click)="deleteGallery(gallery.id, index)" ><i class="fa-solid fa-xmark" style="color: #f80d18;"></i></button>
+<!--        <h2>Mes galleries</h2>-->
+<!--        <div class="row text-center gallery">-->
+<!--            <div *ngFor="let gallery of gallerie; let index = index" class="col-6 col-md-6 col-lg-4" >-->
+<!--              <button type="button" style="background-color: white" (click)="deleteGallery(gallery.id, index)" ><i class="fa-solid fa-xmark" style="color: #f80d18;"></i></button>-->
 
-                <a routerLink="/gallery/{{gallery.id}}">
-                <div class="card-deck">
-                    <div class="card galleryCard">
-                        <img class="card-img-top"
-                             src="https://i.pinimg.com/564x/84/a3/c4/84a3c460d1661b3ef577559cebc8d075.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">{{gallery.name}}</h5>
-                            <p class="card-text">{{gallery.description}}</p>
-                        </div>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
+<!--                <a routerLink="/gallery/{{gallery.id}}">-->
+<!--                <div class="card-deck">-->
+<!--                    <div class="card galleryCard">-->
+<!--                        <img class="card-img-top"-->
+<!--                             src="https://i.pinimg.com/564x/84/a3/c4/84a3c460d1661b3ef577559cebc8d075.jpg"-->
+<!--                             alt="Card image cap">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">{{gallery.name}}</h5>-->
+<!--                            <p class="card-text">{{gallery.description}}</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <hr>
+<!--        <hr>-->
         <!--      Fin Gallery -->
       <div class="mb-5">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNft">

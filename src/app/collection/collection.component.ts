@@ -141,7 +141,7 @@ export class CollectionComponent  implements OnInit{
   delete(id: number, index: number) {
     this.serviceNft.deleteNft(id).subscribe(resultatDelete => {
       this.nfts.splice(index,1);
-      console.log(this.nfts);
+
     });
 
   }
@@ -149,7 +149,7 @@ export class CollectionComponent  implements OnInit{
   pushToGallery(id: number, index: number) {
     this.serviceNft.getNftById(id).subscribe(nftResult => {
         this.gallerie[2].nft.push(nftResult);
-      console.log(this.gallerie);
+
     });
   }
 
@@ -157,34 +157,19 @@ export class CollectionComponent  implements OnInit{
   deleteGallery(id: number, index: number) {
     this.serviceGallery.deleteGallery(id).subscribe(resultatDelete => {
       this.gallerie.splice(index,1);
-      console.log(resultatDelete);
-      console.log(this.gallerie);
+
+
     });
 
   }
 
-  // displayNftOfUserLoggin() {
-  //   if (this.auth.isLogged()) {
-  //     let loggedInUsername = this.auth.getLoggedInUsername();
-  //     if (loggedInUsername) {
-  //       this.serviceNft.getAllNft().subscribe(
-  //           (nfts: NftInterface[]) => {
-  //             this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
-  //             console.log('NFTs de l\'utilisateur connecté :', this.nfts);
-  //           },
-  //           (error) => {
-  //             console.error('Erreur lors de la récupération des NFTs :', error);
-  //           }
-  //       );
-  //     }
-  //   }
-  // }
+
 
 
   displayNftOfUserLoggin() {
     if (this.auth.isLogged()) {
       let loggedInUsername = this.auth.getLoggedInUsername();
-      console.log(loggedInUsername + 'diajdoihadhoad');
+
       if (loggedInUsername) {
         this.serviceNft.getAllNft().subscribe(
           (nfts: NftInterface[]) => {

@@ -34,7 +34,16 @@ export class NftComponent implements OnInit{
 
   ngOnInit() {
     this.getNft();
-
+    this.serviceNft.fetchData().subscribe(
+      (data) => {
+        console.log('Data:', data);
+        // Process the response here
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+        // Handle the error here
+      }
+    );
   }
 
   getNft(){

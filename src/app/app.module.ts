@@ -21,6 +21,7 @@ import { AdminUserComponent } from './admin-user/admin-user.component';
 import { AdminNftComponent } from './admin-nft/admin-nft.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { CollectionDetailComponent } from './collection-detail/collection-detail.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { CollectionDetailComponent } from './collection-detail/collection-detail
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ DatePipe,],
+  providers: [ DatePipe,{provide:LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

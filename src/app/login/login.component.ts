@@ -34,8 +34,8 @@ export class LoginComponent implements OnInit {
   }
 
   public formLogin:FormGroup = new FormGroup({
-    username: new FormControl("vegeta@gmail.com"),
-    password: new FormControl("toto123")
+    username: new FormControl(""),
+    password: new FormControl("")
   })
 
   public formRegister: FormGroup = new FormGroup({
