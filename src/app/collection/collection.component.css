@@ -140,8 +140,49 @@
 .deletebutton:hover i{
 color: red;
 }
+.close {
+  padding: 2px;
+  border-radius: 50px;
+  background: red;
+}
+
+@media screen and (max-width: 763px){
+  .buttonCard{
+    display: none;
+  }
+  .allCard small{
+    font-size: .5rem;
+    width: 80px;
+  }
+
+  .price{
+    position: relative;
+    top: 20px;
+  }
+  .price span{
+    font-size: .7rem!important;
+
+  }
+  .user-img {
+  display: none!important;
+  }
+
+}
 
 
+@media screen and (max-width: 575px){
+  .modal {
+    width: 80%;
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+  .modal input {
+    width: 80% !important;
+  }
+
+}
 
 
 @media screen and (max-width: 430px) {

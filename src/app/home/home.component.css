@@ -1,80 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@500&family=Ubuntu&display=swap');
 
-/*.homeFull{*/
-/*  background-color: red;*/
-/*}*/
-
-/*NavBAr ///////////////////////////////////////////////////////////////////////////////*/
-
-
-.logo{
+.logo {
   font-size: 1.5rem;
 }
 
-nav a{
+nav a {
   color: black;
   font-family: 'Rubik', sans-serif;
 }
 
-nav ul a:hover{
+nav ul a:hover {
   color: #344b8b;
   transition: 0.5s;
   text-decoration: underline white;
 }
-.active{
+
+.active {
   color: #344b8b;
   text-decoration: underline white;
 }
 
-/*Image + Button de présentation  ////////////////////////////////////////////////////////////*/
-
 .home-back {
   background-image: url("https://i.pinimg.com/564x/7e/2a/b0/7e2ab028c8802659b0bbe469f6512564.jpg");
   background-color: #e9edef;
-  /*background-size: 100%;*/
   background-repeat: no-repeat;
   background-position: right 250px top 160px;
   height: 100vh;
-  /*clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);*/
 }
 
-.profilResponsive , .connecterResponsive {
+.profilResponsive, .connecterResponsive {
   display: none;
 }
 
-
-
 @media screen and (max-width: 1399px) {
 
-  .home-back{
-    /*background-color: red;*/
-    /*background-image: none;*/
+  .home-back {
     background-position: right 0px top 160px;
     height: 95vh;
   }
 
-  .textPopulaireUser{
+  .textPopulaireUser {
     font-size: 11px;
   }
-  .card small{
-    font-size: 0.6em;
-  }
-  .iconPopulaire{
+
+  .iconPopulaire {
     position: relative;
     left: 20px;
   }
 }
 
+@media screen and (max-width: 1195px) {
+  .cardNft {
+    width: 220px !important;
+    font-size: 1.5vh;
+  }
+}
 
-/*////// responsive header */
+@media screen and (max-width: 598px) {
+  .cardNft {
+    font-size: 1.5vh;
+    position: relative !important;
+    left: -30px!important;
+    margin-bottom: 20px;
+  }
+  .fa-share-nodes{
+    display: none;
+    position: relative !important;
+    left: -90px!important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardNft {
+    width: 180px !important;
+    font-size: 1.2vh;
+    position: relative !important;
+    right: 20px !important;
+  }
+}
+
 @media screen and (max-width: 1020px) {
 
-navbar{
-  padding: 0;
-  margin: 0;
-}
-  .navbar-collapse{
+  navbar {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-collapse {
     text-align: center;
     font-weight: bold;
     vertical-align: baseline;
@@ -88,28 +101,31 @@ navbar{
   }
 
 
-  .home-back{
+  .home-back {
     background-size: 50%;
-    background-position: right  top 160px;
+    background-position: right top 160px;
     height: 60vh;
   }
 
 
-  #homeText{
+  #homeText {
     position: absolute;
     top: 20%;
   }
-  #homeText h1{
+
+  #homeText h1 {
     font-size: 2.5rem;
 
   }
-  #homeText h1 span{
+
+  #homeText h1 span {
     color: #344b8b;
 
   }
-  #homeText button{
 
-   width: 200px;
+  #homeText button {
+
+    width: 200px;
     height: 50px;
     font-size: 10px;
   }
@@ -117,95 +133,111 @@ navbar{
 
 }
 
+@media screen and (max-width: 988px) {
 
-
-
-
-@media screen and (max-width: 988px){
-
-  .profilResponsive, .connecterResponsive{
+  .profilResponsive, .connecterResponsive {
     display: block;
   }
 
+}
 
-
+@media screen and (max-width: 767px) {
+  .buttonPopulaire {
+    display: none;
+  }
 
 }
 
 @media screen and (max-width: 430px) {
 
-  .home-back{
+  .home-back {
     height: 100vh;
     background-position: center top 150px;
   }
-  #homeText h1{
+
+  #homeText h1 {
     margin-top: 350px;
   }
-  #homeText p{
+
+  #homeText p {
     font-size: 0.7rem;
   }
-  .statistique p{
+
+  .statistique p {
     font-size: 0.8rem;
   }
+
   .numberpadding {
-    padding: 1rem!important;
+    padding: 1rem !important;
   }
 
 
+  .card1, .card3 {
+    margin-left: -20px;
+  }
 
-
-  .card{
+  .card {
     width: 160px;
     height: 300px;
 
   }
 
-  .card-body{
+  .card-body {
     margin-left: -30px;
+
   }
 
-  .populaireSell .card{
+  .populaireSell .card {
     width: 160px;
     height: 300px;
-
   }
-
 
   .buttonPopulaire {
-  display: none;
-  }
-
-
- .populaireSell small {
-   font-size: .5rem;
-   width: 80px;
- }
-
-.card span{
-  font-size: 0.7rem;
-}
-
-  .fa-share-nodes{
     display: none;
   }
 
+  .populaireSell small {
+    font-size: .5rem;
+    width: 80px;
+  }
 
+  .card span {
+    font-size: 0.7rem;
+  }
 
+  .fa-share-nodes {
+    display: none;
+  }
 
 }
 
-.responsiveLink{
- text-decoration: none;
+@media screen and (max-width: 391px) {
+  .home-back {
+    height: 120vh;
+  }
+
+  .card1, .card3 {
+    margin-left: -40px;
+  }
 }
 
-.number{
+@media screen and (max-width: 349px) {
+  .card1, .card3 {
+    margin-left: -55px;
+  }
+}
+
+.responsiveLink {
+  text-decoration: none;
+}
+
+.number {
   font-size: 2rem;
   margin: 0;
   font-weight: bold;
 }
-/*////// fin responsive header */
 
-.home-back h1{
+.home-back h1 {
   font-family: 'Rubik', sans-serif;
   font-size: 3rem;
   text-align: justify;
@@ -214,11 +246,10 @@ navbar{
   color: black;
 }
 
-.home-back h1 span{
+.home-back h1 span {
   color: #344b8b;
 
 }
-
 
 .home-back p {
   text-align: justify;
@@ -226,7 +257,8 @@ navbar{
   color: #344b8b;
   font-weight: bold;
 }
-.homebtn{
+
+.homebtn {
   background-color: white;
   color: black;
   font-family: 'Rubik', sans-serif;
@@ -248,86 +280,72 @@ navbar{
   margin-top: 30px;
 }
 
-.home-content{
+.home-content {
   margin-top: 8%;
 }
 
-
-
-
-/*Card populaire /////////////////////////////////////////////////////////////////////////////*/
-.card{
+.card {
   transition: .3s;
 }
 
-
 .card:hover {
-  /*clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);*/
+
   box-shadow: 9px 10px 10px #cdc43c;
-  background: rgb(212,201,163);
-  background: linear-gradient(0deg, rgba(212,201,163,1) 4%, rgba(180,155,89,1) 69%, rgba(182,167,105,1) 98%);
-}
-/*Card /////////////////////////////////////////////////////////////////////////////*/
-
-.allCard{
-transition: .3s;
+  background: rgb(212, 201, 163);
+  background: linear-gradient(0deg, rgba(212, 201, 163, 1) 4%, rgba(180, 155, 89, 1) 69%, rgba(182, 167, 105, 1) 98%);
 }
 
-/*.card button:hover{*/
-/*  background-color: red;*/
-/*}*/
+
+.allCard {
+  transition: .3s;
+}
 
 .allCard:hover {
-  /*clip-path: polygon(0 0, 100% 0, 100% 84%, 55% 100%, 0 100%, 0 95%);*/
+
   box-shadow: 9px 10px 10px #242424;
-  background: rgb(210,212,213);
-  background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
+  background: rgb(210, 212, 213);
+  background: linear-gradient(0deg, rgba(210, 212, 213, 1) 0%, rgba(184, 159, 132, 1) 54%, rgba(122, 122, 122, 0.4906337535014006) 90%);
 }
-.buttonCard{
+
+.buttonCard {
   background: #ccbfaf;
   color: black;
   border: none;
 }
 
-.allCard:hover .buttonCard{
+.allCard:hover .buttonCard {
   background: #242424;
   color: white;
 }
 
 .test:hover {
   box-shadow: 9px 10px 10px #cdc43c;
-  background: rgb(212,201,163);
-  background: linear-gradient(0deg, rgba(212,201,163,1) 4%, rgba(180,155,89,1) 69%, rgba(182,167,105,1) 98%);
+  background: rgb(212, 201, 163);
+  background: linear-gradient(0deg, rgba(212, 201, 163, 1) 4%, rgba(180, 155, 89, 1) 69%, rgba(182, 167, 105, 1) 98%);
 }
 
 
-.nft-image{
+.nft-image {
   clip-path: polygon(15% 0, 100% 0, 100% 30%, 100% 86%, 88% 100%, 0 100%, 0% 70%, 0 11%);
 }
 
 
-
-.populaire img{
+.populaire img {
   max-width: 400px;
 }
 
-.test{
+.test {
   background-color: white;
 }
-.test:hover .ted{
+
+.test:hover .ted {
   box-shadow: 9px 10px 10px goldenrod;
-  background: rgb(210,212,213);
-  background: linear-gradient(0deg, rgba(210,212,213,1) 0%, rgba(184,159,132,1) 54%, rgba(122,122,122,0.4906337535014006) 90%);
-}
-
-.bordertest{
-  /*border: 1px solid #344b8b ;*/
-  /*!*background-color: #dde1ce;*!*/
-  /*color: black;*/
+  background: rgb(210, 212, 213);
+  background: linear-gradient(0deg, rgba(210, 212, 213, 1) 0%, rgba(184, 159, 132, 1) 54%, rgba(122, 122, 122, 0.4906337535014006) 90%);
 }
 
 
-.vr{
+.vr {
   color: #485662;
 }
 
@@ -337,7 +355,7 @@ transition: .3s;
 }
 
 .buttonPopulaire {
-  background: #dde1ce ;
+  background: #dde1ce;
   color: black;
   font-weight: bold;
   border-radius: 10px;
@@ -350,9 +368,10 @@ transition: .3s;
   all: unset;
 }
 
-h5{
+h5 {
   font-family: 'Rubik', sans-serif;
 }
-p{
+
+p {
   font-family: 'Rubik', sans-serif;
 }

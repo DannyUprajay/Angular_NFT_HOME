@@ -116,19 +116,174 @@ a {
 }
 
 
+@media screen and (max-width: 1199px){
+  .price{
+    position: relative;
+    top: 20px;
+  }
+  .price span{
+    font-size: .7rem!important;
 
+  }
+  .user-img {
+   position: relative;
+    left: -20px;
+    top: 20px;
+  }
+}
 
+@media screen and (max-width: 767px){
+  button{
+    display: none;
+  }
+  .card small{
+    font-size: 1.1vh;
+    margin-left: -2px;
+    width: 200px;
+  }
+  .fa-arrow-up{
+    margin-left: -20px;
+  }
+  .fa-share-nodes{
+    display: none;
+  }
+  .fa-heart{
+    margin-left: -55px;
 
+  }
+  .populaireSell small:first-child {
+
+    font-size: .5rem;
+    position: relative;
+    top: 50px;
+    width: 80px;
+  }
+  .user-img{
+    position: relative;
+    top: -240px;
+    left: -20px;
+    width: 20px!important;
+    height: 20px!important;
+  }
+  .user-img small{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 542px){
+  .user-img{
+    position: relative;
+    top: -220px;
+    left: -20px;
+  }
+}
+@media screen and (max-width: 530px){
+  .user-img{
+    position: relative;
+    bottom: 120%;
+    left: -20px;
+
+  }
+  .fa-heart{
+    margin-left: -55px;
+    position: relative;
+    bottom: 120%;
+
+  }
+}
+@media screen and (max-width: 520px){
+  .card small{
+    font-size: 1vh;
+    margin-left: 2px;
+    width: 200px;
+  }
+  .fa-arrow-up{
+    margin-left: -30px;
+  }
+  .fa-heart{
+    margin-left: -65px;
+
+  }
+}
+@media screen and (max-width: 480px){
+  .card small{
+    font-size: 1vh;
+    margin-left: 0px;
+    width: 200px;
+  }
+  .fa-arrow-up{
+    font-size: .7rem;
+
+    margin-left: -30px;
+  }
+  .fa-heart{
+    margin-left: -70px;
+    position: relative;
+    bottom: 2px;
+    font-size: .7rem;
+
+  }
+}
+@media screen and (max-width: 470px){
+  .user-img{
+    position: relative;
+    top: -210px!important;
+    left: -20px;
+  }
+  .price{
+    display: none;
+  }
+  .priceMobile{
+    display: block!important;
+  }
+}
+@media screen and (max-width: 441px){
+  .card small:last-child{
+    font-size: 1vh;
+    width: 100px;
+  }
+  .fa-heart{
+    margin-left: 0px;
+    position: relative;
+    bottom: 2px;
+    font-size: .7rem;
+
+  }
+  .price{
+    display: none;
+  }
+  .priceMobile{
+    display: block!important;
+  }
+}
+@media screen and (max-width: 502px){
+  .user-img{
+    position: relative;
+    top: -210px;
+    left: -20px;
+  }
+}
 @media screen and (max-width: 430px) {
   button{
     display: none;
   }
 
-  /*.card{*/
-  /*  width: 160px;*/
-  /*  height: 300px;*/
+  .card small{
+    font-size: 1vh;
+    margin-right: -0px;
+    width: 200px;
+  }
+  .fa-arrow-up{
+    font-size: .7rem;
+    margin-left: 0px;
+  }
+  .fa-heart{
+    margin-left: 0px;
+    position: relative;
+    bottom: 2px;
+    font-size: .7rem;
 
-  /*}*/
+  }
 
   .card{
     width: 160px;
@@ -159,10 +314,10 @@ a {
     display: none;
   }
 
-  .user-img {
+  .user-img{
     position: relative;
-    right: -70%;
-    top: 23px;
+    top: -210px;
+    left: 10px;
   }
 
 .price{
@@ -178,20 +333,20 @@ a {
 
 
 .nft-imageMobile{
-  width: 25px;
-  height: 25px;
+
   position: relative;
-  top: -15px;
+  top: -8px;
 }
 
 
 }
 
+/*@media screen and (max-width: 418px){*/
+/*  .nftList{*/
+/*    padding-left:  2px!important;*/
 
-
-
-
-
+/*  }*/
+/*}*/
 
 .user-img {
   width: 35px;

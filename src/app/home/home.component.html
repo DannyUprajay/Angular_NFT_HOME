@@ -82,7 +82,14 @@
             <div class="home_content textHome" id="homeText">
               <h1>Découvrez et <br> <span >collectionnez</span> des <br> NFT extraordinaires</h1>
               <p>collectionnez et échangez les nft des meilleurs artistes !</p>
-              <button type="button" class="btn homebtn">Collectionnez maintenant !</button>
+
+              <div *ngIf="!checkIsLogged()">
+              <a routerLink="login"><button type="button" class="btn homebtn">Rejoignez-vous !</button></a>
+              </div>
+              <div *ngIf="checkIsLogged()">
+                <a><button type="button" class="btn homebtn">Salut {{userData?.username}} 🎈 !</button></a>
+              </div>
+
             </div>
           </div>
         </div>
@@ -141,9 +148,9 @@
       <div class="row text-center d-flex">
 
 
-        <div class=" col-6 col-md-6 col-lg-4 populaireSellTest">
+        <div class=" col-6 col-md-6 col-lg-4  populaireSellTest">
           <a routerLink="/nft/{{randomImage?.id}}" class="responsiveLink">
-          <div class="card mb-3 p-4 h-70">
+          <div class="card mb-3 p-4 h-70 card1">
             <h5 class="card-title fw-bold">{{randomImage?.name }}</h5>
 
             <img src="{{randomImage?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
@@ -151,7 +158,7 @@
             <div>
               <div class="card-body ">
 
-                <div class="d-flex justify-content-between">
+                <div class="d-flex cardNft justify-content-between">
                   <div class="d-flex align-items-center">
                     <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
                     <small>Le prix à augmenter de 0.24 ETH</small>
@@ -187,15 +194,15 @@
 
         <div class="col-6 col-md-6 col-lg-4  populaireSellTest">
           <a routerLink="/nft/{{randomImage1?.id}}" class="responsiveLink">
-          <div class="card mb-3 p-4 h-70">
-            <h5 class="card-title fw-bold">{{randomImage1?.name }}</h5>
+          <div class="card mb-3 p-4 h-70 card2">
+            <h5 class="card-title fw-bold ">{{randomImage1?.name }}</h5>
             <img src="{{randomImage1?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
                  alt="NFT Image">
             <div>
 
               <div class="card-body">
 
-                <div class="d-flex justify-content-between">
+                <div class="d-flex cardNft justify-content-between">
                   <div class="d-flex align-items-center">
                     <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
                     <small>Le prix à augmenter de 0.24 ETH</small>
@@ -229,14 +236,14 @@
 
         <div class="col-6 col-md-6 col-lg-4  populaireSellTest">
           <a routerLink="/nft/{{randomImage2?.id}}" class="responsiveLink">
-          <div class="card mb-3 p-4 h-70">
+          <div class="card mb-3 p-4 h-70 card3">
             <h5 class="card-title fw-bold">{{randomImage2?.name }}</h5>
             <img src="{{randomImage2?.pathImage}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
                  alt="NFT Image">
             <div>
               <div class="card-body">
 
-                <div class="d-flex justify-content-between">
+                <div class="d-flex cardNft justify-content-between">
                   <div class="d-flex align-items-center">
                     <i class="fa-solid fa-arrow-up me-2 " style="color: #54b068"></i>
                     <small>Le prix à augmenter de 0.24 ETH</small>
@@ -285,7 +292,7 @@
         <div class="row text-center d-flex">
 
           <div class="col-6 col-md-6 col-lg-4">
-            <div class="card mb-3 p-4 h-70">
+            <div class="card mb-3 p-4 h-70 card1">
               <h5 class="card-title fw-bold text-uppercase" >{{randomImage?.user.username }}</h5>
               <img src="{{randomImage?.user.profilPicture}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
                    alt="NFT Image">
@@ -309,7 +316,7 @@
           </div>
 
           <div class="col-6 col-md-6 col-lg-4">
-            <div class="card mb-3 p-4 h-70">
+            <div class="card mb-3 p-4 h-70 card2">
               <h5 class="card-title fw-bold text-uppercase" >{{randomImage1?.user.username }}</h5>
               <img src="{{randomImage1?.user.profilPicture}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
                    alt="NFT Image">
@@ -319,9 +326,9 @@
 
                   <div class="d-flex align-items-center justify-content-between">
 
-                    <div class="d-flex gap-2 textPopulaireUser">
+                    <div class="d-flex gap-2 follow textPopulaireUser">
                       <p class="m-0 w-100  fw-bold  border-bottom d-flex flex-column">Nft vendus  <span class=" fw-bold" style=" color: #344b8b">1.9k</span> </p>
-                      <p class="m-0 w-100  fw-bold border-bottom">Follow     <span class=" fw-bold" style="color: #344b8b"> 24.5k  </span> </p>
+                      <p class="m-0 w-100  fw-bold fol border-bottom">Follow     <span class=" fw-bold" style="color: #344b8b"> 2414.5k  </span> </p>
                       <p class="m-0  w-100 fw-bold border-bottom border-right " >Nft collectés <span class=" fw-bold" style="color: #344b8b"> 5k </span> </p>
 
                     </div>
@@ -332,7 +339,7 @@
           </div>
 
           <div class="col-6 col-md-6 col-lg-4">
-            <div class="card mb-3 p-4 h-70">
+            <div class="card mb-3 p-4 h-70 card3">
               <h5 class="card-title fw-bold text-uppercase ">{{randomImage2?.user.username  }}</h5>
               <img src="{{randomImage2?.user.profilPicture}}" class="nft-image img-fluid rounded-start w-100 image-3d-effect"
                    alt="NFT Image">
@@ -342,9 +349,9 @@
 
                   <div class="d-flex align-items-center justify-content-between">
 
-                    <div class="d-flex gap-2 textPopulaireUser">
+                    <div class="d-flex gap-2 follow textPopulaireUser">
                       <p class="m-0 w-100  fw-bold  border-bottom d-flex flex-column">Nft vendus  <span class=" fw-bold" style="color: #344b8b">1.3k</span> </p>
-                      <p class="m-0 w-100  fw-bold border-bottom">Follow     <span class=" fw-bold" style="color: #344b8b"> 23.5k  </span> </p>
+                      <p class="m-0 w-100  fol fw-bold border-bottom">Follow     <span class=" fw-bold" style="color: #344b8b"> 1145.4k  </span> </p>
                       <p class="m-0  w-100 fw-bold border-bottom border-right " >Nft collectés <span class=" fw-bold" style=" color: #344b8b"> 2k </span> </p>
 
                     </div>

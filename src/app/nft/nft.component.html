@@ -4,12 +4,12 @@
 
       <div class="color-home">
 
-        <div class="container populaireSell p-5">
-          <div class="row">
+        <div class="container nftList p-5">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
             <div *ngFor="let nft of nfts; let index = index;" class="col-6 col-md-6 col-lg-4 ">
               <a routerLink="/nft/{{nft.id}}">
 
-              <div class="card allCard mb-3 p-4 h-70">
+              <div class="card ms:gap-2 allCard mb-3 p-4 h-70">
 
                 <h5 class="card-title fw-bold text-center">{{nft.name}}</h5>
 
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="priceMobile">
-                      <small >Prix du Nft <span class=" fw-bold  ">{{nft.price}} ETH </span> </small>
+                      <small class="resss" >Prix du Nft <span class=" fw-bold  ">{{nft.price}} ETH </span> </small>
                     </div>
 
                     <div class="d-flex align-items-center justify-content-between">

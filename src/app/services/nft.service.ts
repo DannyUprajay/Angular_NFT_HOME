@@ -38,9 +38,9 @@ export class NftService {
       'Authorization': `Bearer ${token}`
     });
 
-    return this.http.post<result>(`${this.baseUrl}/nft/`, body, { headers })
-
+    return this.http.post<result>(`${this.baseUrl}/nft/new`, body, { headers });
   }
+
 
   deleteNft(id: number): Observable<result> {
     return this.http.delete<result>(`${this.baseUrl}/nft/` + id)

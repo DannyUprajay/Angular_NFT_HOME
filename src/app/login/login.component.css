@@ -250,3 +250,82 @@ footer a {
   color: #3c97bf;
   text-decoration: none;
 }
+
+.checkbox{
+  width: 10px;
+}
+.validation{
+  justify-content: center;
+  align-items: center;
+}
+.validation label{
+  font-size: .7rem;
+}
+
+@media screen and (max-width: 662px) {
+    .allForm input{
+      width: 270px!important;
+    }
+  .validation input{
+    width: 100px !important;
+  }
+  .gender input{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 566px) {
+  .allForm input{
+    width: 220px!important;
+  }
+  .validation input{
+    width: 100px !important;
+  }
+  .gender input{
+    width: 100% !important;
+  }
+  .social-container{
+    display: none;
+  }
+ .form-container h4{
+    font-size: 1rem;
+
+  }
+  .texth4{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 462px) {
+  .allForm input{
+    width: 200px!important;
+  }
+  .validation input{
+    width: 100px !important;
+  }
+  .gender input{
+    width: 100% !important;
+  }
+
+}
+@media screen and (max-width: 418px) {
+  .allForm input{
+    width: 170px!important;
+  }
+  .validation input{
+    width: 100px !important;
+  }
+  .gender input{
+    width: 100% !important;
+  }
+
+}
+
+@media screen and (max-width: 418px){
+  .gender input{
+    padding: 10px !important;
+    font-size: .1rem;
+  }
+  .gender label{
+    font-size: .8rem;
+  }
+}

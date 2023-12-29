@@ -106,6 +106,7 @@ export class CollectionComponent  implements OnInit{
       // window.location.reload();
       if (this.auth.isLogged()) {
         const token = this.auth.getToken();
+        console.log(token);
         if (token !== null) {
           const nft: NftInterface = {
             id: 0,
@@ -122,6 +123,7 @@ export class CollectionComponent  implements OnInit{
           };
           this.serviceNft.addNft(nft, token).subscribe(response => {
 
+
           });
         } else {
           console.log('User token is null');
@@ -132,6 +134,9 @@ export class CollectionComponent  implements OnInit{
       this.displayNftOfUserLoggin();
       this.messageNft = "Votre NFT à bien été créé";
       this.form.reset();
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
 
     } else {
       console.log('Form is invalid');
@@ -175,7 +180,6 @@ export class CollectionComponent  implements OnInit{
           (nfts: NftInterface[]) => {
             this.nfts = nfts.filter(nft => nft.user.username === loggedInUsername);
             this.nfts.forEach(nft => {
-              console.log('NFT de l\'utilisateur connecté :', nft.user.username);
             });
           },
           (error) => {
