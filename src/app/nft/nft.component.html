@@ -26,7 +26,9 @@
                       <div>
                         <i class="fa-solid fa-share-nodes me-2" style="cursor: pointer; color: purple"></i>
                         <button (click)="addFav(nft.id)" class="fav">
+                          <div *ngIf="checkIsLogged()">
                         <i class="fa-solid fa-heart" style="cursor: pointer; color: darkred"> </i>
+                            </div>
                         </button>
                       </div>
                     </div>
